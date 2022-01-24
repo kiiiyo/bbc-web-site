@@ -19,7 +19,7 @@ export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale } }) => {
               <div className="flex justify-between items-center">
                 <Link href="/">
                   <a className="flex justify-between items-center text-gray-800 hover:text-gray-700 transition-colors duration-200">
-                    <div className="overflow-hidden mr-2 w-8 h-8 rounded-full border-2 border-gray-400">
+                    <div className="overflow-hidden mr-3 w-12 h-12 rounded-full border-2 border-gray-400">
                       <Image
                         src="/assets/images/logo.png"
                         alt="BitBearClub"
@@ -39,18 +39,35 @@ export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale } }) => {
               <h3 className="mb-6 text-sm font-semibold text-gray-400">MENU</h3>
               <ul>
                 <li className="mt-6">
+                  <Link href={`/${locale}`}>
+                    <a className="font-normal text-gray-600 hover:underline">
+                      <span className="inline-block mr-3">🏠</span>
+                      <span className="inline-block">Home</span>
+                    </a>
+                  </Link>
+                </li>
+                <li className="mt-6">
                   <Link href={`/${locale}/about`}>
-                    <a className="font-normal text-gray-600 hover:underline">🐻 About</a>
+                    <a className="font-normal text-gray-600 hover:underline">
+                      <span className="inline-block mr-3">🐻</span>
+                      <span className="inline-block">About</span>
+                    </a>
                   </Link>
                 </li>
                 <li className="mt-6">
                   <Link href={`/${locale}/roadmap`}>
-                    <a className="font-normal text-gray-600 hover:underline">🏃 Roadmap</a>
+                    <a className="font-normal text-gray-600 hover:underline">
+                      <span className="inline-block mr-3">🏃</span>
+                      <span className="inline-block">Roadmap</span>
+                    </a>
                   </Link>
                 </li>
                 <li className="mt-6">
                   <Link href={`/${locale}/find`}>
-                    <a className="font-normal text-gray-600 hover:underline">🔍 Find</a>
+                    <a className="font-normal text-gray-600 hover:underline">
+                      <span className="inline-block mr-3">🔍</span>
+                      <span className="inline-block">Find</span>
+                    </a>
                   </Link>
                 </li>
               </ul>

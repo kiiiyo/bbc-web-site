@@ -10,8 +10,11 @@ export const HeroAbout: FC = () => {
       <div className={styles.bigStars}></div>
       <div className="container mx-auto">
         <div className="py-6 text-center md:py-12">
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tighter md:text-6xl">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">About</span>
+          <h1 className="mb-4 text-4xl font-extrabold md:text-6xl">
+            <span className="inline-block mr-3">🐻</span>
+            <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
+              About
+            </span>
           </h1>
           <div className="mx-auto max-w-3xl">
             <p className="px-6 mb-8 text-xl text-white">Here are the BitBears.</p>

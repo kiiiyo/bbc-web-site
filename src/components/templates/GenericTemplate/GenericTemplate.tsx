@@ -18,7 +18,7 @@ export const GenericTemplate: FC<GenericTemplateProps> = ({ globalHeader, global
       {OverlayMenu}
 
       <main>
-        <div className="mt-20">{children}</div>
+        <div className="mt-32">{children}</div>
       </main>
 
       {globalFooter}
