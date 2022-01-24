@@ -52,6 +52,7 @@ const LandingPage: NextPage<LandingPageProps> = ({ state: { page } }) => {
   if (!page) {
     return <ErrorPage statusCode={404} />
   }
+  console.log(page)
   return <Pages.HomePage />
 }
 

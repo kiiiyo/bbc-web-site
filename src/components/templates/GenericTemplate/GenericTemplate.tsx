@@ -16,12 +16,12 @@ export const GenericTemplate: FC<GenericTemplateProps> = ({ globalHeader, global
     <div className="flex overflow-hidden flex-col min-h-screen">
       {globalHeader}
       {OverlayMenu}
-      <div className="bg-gray-100">
-        <div className="container py-6 px-4 mx-auto">
-          <main>{children}</main>
-        </div>
-      </div>
-      <div>{globalFooter}</div>
+
+      <main>
+        <div className="mt-20">{children}</div>
+      </main>
+
+      {globalFooter}
     </div>
   )
 }

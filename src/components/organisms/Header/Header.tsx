@@ -25,6 +25,18 @@ export const Header: FC = () => {
               </a>
             </Link>
 
+            <nav className="flex-wrap justify-center items-center text-base md:py-1 md:pl-4 md:mr-auto md:ml-4">
+              <Link href="/ja/about">
+                <a className="mr-5 hover:text-gray-900">🐻 About</a>
+              </Link>
+              <Link href="/ja/roadmap">
+                <a className="mr-5 hover:text-gray-900">🏃 Roadmap</a>
+              </Link>
+              <Link href="/find">
+                <a className="mr-5 hover:text-gray-900">🔍 Find</a>
+              </Link>
+            </nav>
+
             <a
               className="flex items-center py-2 px-3 mx-1 text-sm font-medium leading-5 text-center text-white bg-blue-500 hover:bg-blue-600 rounded-md transition-colors duration-200 md:mx-0"
               href="https://opensea.io/BitBearClub"
