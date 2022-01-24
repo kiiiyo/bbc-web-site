@@ -32,7 +32,10 @@ export const HeaderPresenter: FC<HeaderPresenter> = ({ state: { locale } }) => {
 
             <nav className="flex-wrap justify-center items-center text-base md:py-1 md:pl-4 md:mr-auto md:ml-4">
               <Link href={`/${locale}/about`}>
-                <a className="mr-5 hover:text-gray-900">🐻 About</a>
+                <a className="mr-5 hover:text-gray-900">
+                  <span className="hidden md:inline-block">🐻</span>
+                  About
+                </a>
               </Link>
               <Link href={`/${locale}/roadmap`}>
                 <a className="mr-5 hover:text-gray-900">🏃 Roadmap</a>

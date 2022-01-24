@@ -1,0 +1,1 @@
+export { AboutNeo } from './AboutNeo'
