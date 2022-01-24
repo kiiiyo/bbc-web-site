@@ -1,10 +1,14 @@
-import type { NextPage } from 'next'
-import { Pages } from '@/components'
+import React, { useEffect } from 'react'
+import Head from 'next/head'
+import { getInitialLocale } from '@/utils/translations/getInitialLocale'
 
-//<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-
-const HomePage: NextPage = () => {
-  return <Pages.HomePage />
+export default function Index() {
+  useEffect(() => {
+    window.location.replace(`/${getInitialLocale()}`)
+  })
+  return (
+    <Head>
+      <meta name="robots" content="noindex, nofollow" />
+    </Head>
+  )
 }
-
-export default HomePage
