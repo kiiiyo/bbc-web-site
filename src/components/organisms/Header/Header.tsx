@@ -1,9 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
 import { FC } from 'react'
+//
+import { Hooks } from '@/features'
 
-export const Header: FC = () => {
+type HeaderPresenter = {
+  state: { locale: string }
+}
+
+export const HeaderPresenter: FC<HeaderPresenter> = ({ state: { locale } }) => {
   return (
     <header>
       <nav className="fixed z-30 w-full bg-white shadow">
@@ -26,13 +31,13 @@ export const Header: FC = () => {
             </Link>
 
             <nav className="flex-wrap justify-center items-center text-base md:py-1 md:pl-4 md:mr-auto md:ml-4">
-              <Link href="/ja/about">
+              <Link href={`/${locale}/about`}>
                 <a className="mr-5 hover:text-gray-900">🐻 About</a>
               </Link>
-              <Link href="/ja/roadmap">
+              <Link href={`/${locale}/roadmap`}>
                 <a className="mr-5 hover:text-gray-900">🏃 Roadmap</a>
               </Link>
-              <Link href="/find">
+              <Link href={`/${locale}/find`}>
                 <a className="mr-5 hover:text-gray-900">🔍 Find</a>
               </Link>
             </nav>
@@ -68,3 +73,19 @@ export const Header: FC = () => {
     </header>
   )
 }
+
+export const Header: FC = () => {
+  const {
+    state: { locale }
+  } = Hooks.Locale.useLocaleContext()
+
+  return (
+    <HeaderPresenter
+      state={{
+        locale: locale || 'ja'
+      }}
+    />
+  )
+}
+
+export default Header

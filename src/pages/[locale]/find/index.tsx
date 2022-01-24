@@ -12,7 +12,7 @@ type State = {
   }
 }
 
-type AboutPageProps = {
+type FindPageProps = {
   state: State
 }
 
@@ -32,16 +32,15 @@ export const getServerSideProps = withLocale(async (locale, { params }) => {
   }
 })
 
-const AboutPage: NextPage<AboutPageProps> = ({ state: { page } }) => {
+const FindPage: NextPage<FindPageProps> = ({ state: { page } }) => {
   if (!page) {
     return <ErrorPage statusCode={404} />
   }
-
   return (
     <Context.LocaleContext.LocaleContextProvider value={{ locale: page.locale }}>
-      <Pages.AboutPage />
+      <Pages.FindPage />
     </Context.LocaleContext.LocaleContextProvider>
   )
 }
 
-export default AboutPage
+export default FindPage

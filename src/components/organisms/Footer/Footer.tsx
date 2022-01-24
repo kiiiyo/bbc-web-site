@@ -1,11 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
 import { FC } from 'react'
+//
+import { Hooks } from '@/features'
 
-type Footer = {}
+//type FooterProps = {}
+type FooterPresenter = {
+  state: { locale: string }
+}
 
-export const Footer: FC<Footer> = () => {
+export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale } }) => {
   return (
     <footer>
       <div className="container p-4 py-12 mx-auto bg-white md:px-6">
@@ -35,18 +39,18 @@ export const Footer: FC<Footer> = () => {
               <h3 className="mb-6 text-sm font-semibold text-gray-400">MENU</h3>
               <ul>
                 <li className="mt-6">
-                  <Link href="/about">
+                  <Link href={`/${locale}/about`}>
                     <a className="font-normal text-gray-600 hover:underline">🐻 About</a>
                   </Link>
                 </li>
                 <li className="mt-6">
-                  <Link href="/roadmap">
+                  <Link href={`/${locale}/roadmap`}>
                     <a className="font-normal text-gray-600 hover:underline">🏃 Roadmap</a>
                   </Link>
                 </li>
                 <li className="mt-6">
-                  <Link href="/find-bear">
-                    <a className="font-normal text-gray-600 hover:underline">🔍 Find Bear</a>
+                  <Link href={`/${locale}/find`}>
+                    <a className="font-normal text-gray-600 hover:underline">🔍 Find</a>
                   </Link>
                 </li>
               </ul>
@@ -88,3 +92,19 @@ export const Footer: FC<Footer> = () => {
     </footer>
   )
 }
+
+export const Footer: FC = () => {
+  const {
+    state: { locale }
+  } = Hooks.Locale.useLocaleContext()
+
+  return (
+    <FooterPresenter
+      state={{
+        locale: locale || 'ja'
+      }}
+    />
+  )
+}
+
+export default Footer
