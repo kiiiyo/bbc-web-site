@@ -1,5 +1,6 @@
 import { Header } from './Header'
-import { HeroHome } from './HeroHome'
 import { Footer } from './Footer'
+import { HeroHome } from './HeroHome'
+import { HeroAbout } from './HeroAbout'
 //
-export { Header, HeroHome, Footer }
+export { Header, Footer, HeroHome, HeroAbout }
