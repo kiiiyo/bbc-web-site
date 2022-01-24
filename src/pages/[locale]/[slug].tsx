@@ -3,8 +3,6 @@ import ErrorPage from 'next/error'
 
 import { Pages } from '@/components'
 
-// //<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-
 import { withLocale } from '@/utils/translations/locales'
 import { isPreviewEnabled } from '@/utils/preview'
 
