@@ -12,7 +12,7 @@ type State = {
   }
 }
 
-type AboutPageProps = {
+type RoadmapPageProps = {
   state: State
 }
 
@@ -32,16 +32,15 @@ export const getServerSideProps = withLocale(async (locale, { params }) => {
   }
 })
 
-const AboutPage: NextPage<AboutPageProps> = ({ state: { page } }) => {
+export const RoadmapPage: NextPage<RoadmapPageProps> = ({ state: { page } }) => {
   if (!page) {
     return <ErrorPage statusCode={404} />
   }
-
   return (
     <Context.LocaleContext.LocaleContextProvider value={{ locale: page.locale }}>
-      <Pages.AboutPage />
+      <Pages.RoadmapPage />
     </Context.LocaleContext.LocaleContextProvider>
   )
 }
 
-export default AboutPage
+export default RoadmapPage

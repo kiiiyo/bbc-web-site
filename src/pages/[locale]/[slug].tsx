@@ -1,10 +1,8 @@
 import type { NextPage } from 'next'
 import ErrorPage from 'next/error'
-
+//
+import { Context } from '@/features'
 import { Pages } from '@/components'
-
-// //<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-
 import { withLocale } from '@/utils/translations/locales'
 import { isPreviewEnabled } from '@/utils/preview'
 
@@ -31,30 +29,24 @@ export const getServerSideProps = withLocale(async (locale, { params, query }) =
     preview,
     locale
   }
-  try {
-    return {
-      props: {
-        state: { page }
-      }
-    }
-  } catch (err) {
-    return {
-      redirect: {
-        permanent: false,
-        destination: '/404'
-      },
-      props: {
-        state: { page: undefined }
-      }
+
+  return {
+    props: {
+      state: { page }
     }
   }
 })
 
-const LandingPage: NextPage<LandingPageProps> = ({ state: { page } }) => {
+export const LandingPage: NextPage<LandingPageProps> = ({ state: { page } }) => {
   if (!page) {
     return <ErrorPage statusCode={404} />
   }
-  return <Pages.HomePage />
+
+  return (
+    <Context.LocaleContext.LocaleContextProvider value={{ locale: page.locale }}>
+      <Pages.HomePage />
+    </Context.LocaleContext.LocaleContextProvider>
+  )
 }
 
 export default LandingPage

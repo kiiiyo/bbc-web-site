@@ -4,14 +4,14 @@ import { Templates, Organisms } from '@/components'
 
 type State = {}
 
-export type HomePageProps = {
+export type FindPageProps = {
   state: State
 }
 
-export const HomePage: FC = () => {
+export const FindPage: FC = () => {
   return (
     <Templates.GenericTemplate globalHeader={<Organisms.Header />} globalFooter={<Organisms.Footer />}>
-      <Organisms.HeroHome />
+      FindPage
     </Templates.GenericTemplate>
   )
 }
