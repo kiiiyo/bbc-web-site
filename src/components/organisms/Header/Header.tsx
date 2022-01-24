@@ -12,11 +12,11 @@ export const HeaderPresenter: FC<HeaderPresenter> = ({ state: { locale } }) => {
   return (
     <header>
       <nav className="fixed z-30 w-full bg-white shadow">
-        <div className="container p-4 mx-auto md:px-6">
-          <div className="flex justify-between items-center">
+        <div className="container mx-auto md:px-6">
+          <div className="flex justify-between items-center p-4">
             <Link href="/">
               <a className="flex justify-between items-center text-gray-800 hover:text-gray-700 transition-colors duration-200">
-                <div className="overflow-hidden mr-2 w-8 h-8 rounded-full border-2 border-gray-400">
+                <div className="overflow-hidden mr-3 w-12 h-12 rounded-full border-2 border-gray-400">
                   <Image
                     src="/assets/images/logo.png"
                     alt="BitBearClub"
@@ -26,24 +26,9 @@ export const HeaderPresenter: FC<HeaderPresenter> = ({ state: { locale } }) => {
                   />
                 </div>
 
-                <span className="text-sm font-bold leading-none md:text-2xl">BitBearClub</span>
+                <span className="text-xl font-bold leading-none md:text-2xl">BitBearClub</span>
               </a>
             </Link>
-
-            <nav className="flex-wrap justify-center items-center text-base md:py-1 md:pl-4 md:mr-auto md:ml-4">
-              <Link href={`/${locale}/about`}>
-                <a className="mr-5 hover:text-gray-900">
-                  <span className="hidden md:inline-block">🐻</span>
-                  About
-                </a>
-              </Link>
-              <Link href={`/${locale}/roadmap`}>
-                <a className="mr-5 hover:text-gray-900">🏃 Roadmap</a>
-              </Link>
-              <Link href={`/${locale}/find`}>
-                <a className="mr-5 hover:text-gray-900">🔍 Find</a>
-              </Link>
-            </nav>
 
             <a
               className="flex items-center py-2 px-3 mx-1 text-sm font-medium leading-5 text-center text-white bg-blue-500 hover:bg-blue-600 rounded-md transition-colors duration-200 md:mx-0"
@@ -71,6 +56,32 @@ export const HeaderPresenter: FC<HeaderPresenter> = ({ state: { locale } }) => {
               <span className="font-bold">Opensea</span>
             </a>
           </div>
+          <nav className="flex-wrap justify-center items-center px-2 text-base md:px-0">
+            <Link href={`/${locale}/`}>
+              <a className="inline-block p-3 hover:text-gray-900">
+                <span className="hidden mr-3 md:inline-block">🏠</span>
+                <span className="inline-block">Home</span>
+              </a>
+            </Link>
+            <Link href={`/${locale}/about`}>
+              <a className="inline-block p-3 hover:text-gray-900">
+                <span className="hidden mr-3 md:inline-block">🐻</span>
+                <span className="inline-block">About</span>
+              </a>
+            </Link>
+            <Link href={`/${locale}/roadmap`}>
+              <a className="inline-block p-3 hover:text-gray-900">
+                <span className="hidden mr-3 md:inline-block">🏃</span>
+                <span className="inline-block">Roadmap</span>
+              </a>
+            </Link>
+            <Link href={`/${locale}/find`}>
+              <a className="inline-block p-3 hover:text-gray-900">
+                <span className="hidden mr-3 md:inline-block">🔍</span>
+                <span className="inline-block">Find</span>
+              </a>
+            </Link>
+          </nav>
         </div>
       </nav>
     </header>
