@@ -1,3 +1,3 @@
-import { FlagIcon } from '@heroicons/react/solid'
+import { FlagIcon, EyeIcon, EyeOffIcon } from '@heroicons/react/solid'
 
-export { FlagIcon }
+export { FlagIcon, EyeIcon, EyeOffIcon }

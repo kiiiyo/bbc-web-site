@@ -24,12 +24,12 @@ export const RoadmapSection: FC = () => {
                 <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">Q1</h2>
                 <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">Term: Jan - Mar</h3>
                 <ul>
-                  <li>【✅ 】 Bit Bear Club official site open .</li>
+                  <li>【🎉 】 Bit Bear Club official site open .</li>
                   <li>
                     【🏃】 Bit Bear Avatar Series NFT item <strong>512</strong> drop.
                   </li>
                   <li>
-                    【🏃】 Bit Bear New Series NFT item <strong>128</strong> drop.
+                    【🏃】 Bit Bear New Series NFT item <strong>64</strong> drop.
                   </li>
                   <li>
                     【🏃】 Twitter Follower <strong>1000</strong>.
@@ -51,7 +51,7 @@ export const RoadmapSection: FC = () => {
               <div className="grow pl-4">
                 <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">Q2</h2>
                 <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">Term: Apr - Jun</h3>
-                <p className="leading-relaxed">🤔 I&apos;m thinking about it.</p>
+                <p className="leading-relaxed">【🤔 】I&apos;m thinking about it.</p>
               </div>
             </div>
             <div className="flex relative pb-12">
@@ -64,7 +64,7 @@ export const RoadmapSection: FC = () => {
               <div className="grow pl-4">
                 <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">Q3</h2>
                 <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">Term: Jul - Sep</h3>
-                <p className="leading-relaxed">🤔 I&apos;m thinking about it.</p>
+                <p className="leading-relaxed">【🤔 】 I&apos;m thinking about it.</p>
               </div>
             </div>
             <div className="flex relative">
