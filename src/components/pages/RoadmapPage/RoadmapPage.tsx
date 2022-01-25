@@ -11,7 +11,16 @@ export type RoadmapProps = {
 export const RoadmapPage: FC = () => {
   return (
     <Templates.GenericTemplate globalHeader={<Organisms.Header />} globalFooter={<Organisms.Footer />}>
-      Roadmap
+      <section>
+        <div className=" bg-slate-50">
+          <Organisms.HeroRoadmap />
+          <div className="container px-6 mx-auto ">
+            <div className="pb-20">
+              <Organisms.RoadmapSection />
+            </div>
+          </div>
+        </div>
+      </section>
     </Templates.GenericTemplate>
   )
 }
