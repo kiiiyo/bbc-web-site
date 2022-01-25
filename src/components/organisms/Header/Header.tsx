@@ -2,13 +2,20 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FC } from 'react'
 //
+import type { TLanguage } from '@/types/language'
 import { Hooks } from '@/features'
 
-type HeaderPresenter = {
-  state: { locale: string }
+export type State = {
+  locale: 'ja' | 'en'
+  path: string
+  language: TLanguage
 }
 
-export const HeaderPresenter: FC<HeaderPresenter> = ({ state: { locale } }) => {
+export type THeaderPresenterProps = {
+  state: State
+}
+
+export const HeaderPresenter: FC<THeaderPresenterProps> = ({ state: { locale, language } }) => {
   return (
     <header>
       <nav className="fixed z-30 w-full bg-white shadow">
@@ -26,10 +33,19 @@ export const HeaderPresenter: FC<HeaderPresenter> = ({ state: { locale } }) => {
                   />
                 </div>
 
-                <span className="text-xl font-bold leading-none md:text-2xl">BitBearClub</span>
+                <span className="text-xl font-bold leading-none md:text-2xl">{language.common.meta.title}</span>
               </a>
             </Link>
 
+            <div className="flex mr-8 ml-auto">
+              <Link href="/ja">
+                <a className={`${locale === 'ja' ? 'font-bold' : ''} p-4 text-lg`}>JP</a>
+              </Link>
+              <span className="block py-4 text-lg">/</span>
+              <Link href="/en">
+                <a className={`${locale === 'en' ? 'font-bold' : ''} p-4 text-lg`}>EN</a>
+              </Link>
+            </div>
             <a
               className="flex items-center py-2 px-3 mx-1 text-sm font-medium leading-5 text-center text-white bg-blue-500 hover:bg-blue-600 rounded-md transition-colors duration-200 md:mx-0"
               href="https://opensea.io/BitBearClub"
@@ -60,25 +76,25 @@ export const HeaderPresenter: FC<HeaderPresenter> = ({ state: { locale } }) => {
             <Link href={`/${locale}/`}>
               <a className="inline-block p-3 hover:text-gray-900">
                 <span className="hidden mr-3 md:inline-block">🏠</span>
-                <span className="inline-block">Home</span>
+                <span className="inline-block">{language.common.headerMenu.home}</span>
               </a>
             </Link>
             <Link href={`/${locale}/about`}>
               <a className="inline-block p-3 hover:text-gray-900">
                 <span className="hidden mr-3 md:inline-block">🐻</span>
-                <span className="inline-block">About</span>
+                <span className="inline-block">{language.common.headerMenu.about}</span>
               </a>
             </Link>
             <Link href={`/${locale}/roadmap`}>
               <a className="inline-block p-3 hover:text-gray-900">
                 <span className="hidden mr-3 md:inline-block">🏃</span>
-                <span className="inline-block">Roadmap</span>
+                <span className="inline-block">{language.common.headerMenu.roadmap}</span>
               </a>
             </Link>
             <Link href={`/${locale}/find`}>
               <a className="inline-block p-3 hover:text-gray-900">
                 <span className="hidden mr-3 md:inline-block">🔍</span>
-                <span className="inline-block">Find</span>
+                <span className="inline-block">{language.common.headerMenu.find}</span>
               </a>
             </Link>
           </nav>
@@ -90,13 +106,15 @@ export const HeaderPresenter: FC<HeaderPresenter> = ({ state: { locale } }) => {
 
 export const Header: FC = () => {
   const {
-    state: { locale }
+    state: { locale, path, language }
   } = Hooks.Locale.useLocaleContext()
 
   return (
     <HeaderPresenter
       state={{
-        locale: locale || 'ja'
+        locale: locale || 'ja',
+        path,
+        language
       }}
     />
   )

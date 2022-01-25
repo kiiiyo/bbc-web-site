@@ -9,9 +9,9 @@ import { isPreviewEnabled } from '@/utils/preview'
 type State = {
   page:
     | {
-        slug: string
+        path: string
         preview: boolean
-        locale: string
+        locale: 'ja' | 'en'
       }
     | undefined
 }
@@ -20,12 +20,12 @@ type LandingPageProps = {
   state: State
 }
 
-export const getServerSideProps = withLocale(async (locale, { params, query }) => {
-  const slug = String(params?.slug ?? '/')
+export const getServerSideProps = withLocale(async (locale, { query, resolvedUrl }) => {
+  const path = String(resolvedUrl.split('?')) ?? '/'
   const preview = isPreviewEnabled(query)
 
   const page = {
-    slug,
+    path,
     preview,
     locale
   }
@@ -43,7 +43,7 @@ export const LandingPage: NextPage<LandingPageProps> = ({ state: { page } }) => 
   }
 
   return (
-    <Context.LocaleContext.LocaleContextProvider value={{ locale: page.locale }}>
+    <Context.LocaleContext.LocaleContextProvider value={{ locale: page.locale, path: page.path }}>
       <Pages.HomePage />
     </Context.LocaleContext.LocaleContextProvider>
   )

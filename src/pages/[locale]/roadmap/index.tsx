@@ -7,8 +7,9 @@ import { withLocale } from '@/utils/translations/locales'
 
 type State = {
   page: {
-    slug: string
-    locale: string
+    path: string
+    preview: boolean
+    locale: 'ja' | 'en'
   }
 }
 
@@ -16,12 +17,12 @@ type RoadmapPageProps = {
   state: State
 }
 
-export const getServerSideProps = withLocale(async (locale, { params }) => {
-  const slug = String(params?.slug ?? '/')
+export const getServerSideProps = withLocale(async (locale, { resolvedUrl }) => {
+  const path = String(resolvedUrl.split('?')) ?? '/'
 
   // TODO: エラーハンドリング
   const page = {
-    slug,
+    path,
     locale
   }
 
@@ -37,7 +38,7 @@ export const RoadmapPage: NextPage<RoadmapPageProps> = ({ state: { page } }) => 
     return <ErrorPage statusCode={404} />
   }
   return (
-    <Context.LocaleContext.LocaleContextProvider value={{ locale: page.locale }}>
+    <Context.LocaleContext.LocaleContextProvider value={{ locale: page.locale, path: page.path }}>
       <Pages.RoadmapPage />
     </Context.LocaleContext.LocaleContextProvider>
   )

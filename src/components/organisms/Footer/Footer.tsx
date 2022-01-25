@@ -2,14 +2,18 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FC } from 'react'
 //
+import { TLanguage } from '@/types/language'
 import { Hooks } from '@/features'
 
 //type FooterProps = {}
 type FooterPresenter = {
-  state: { locale: string }
+  state: {
+    locale: string
+    language: TLanguage
+  }
 }
 
-export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale } }) => {
+export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale, language } }) => {
   return (
     <footer>
       <div className="container p-4 py-12 mx-auto bg-white md:px-6">
@@ -29,11 +33,11 @@ export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale } }) => {
                       />
                     </div>
 
-                    <span className="text-sm font-bold leading-none md:text-2xl">BitBearClub</span>
+                    <span className="text-sm font-bold leading-none md:text-2xl">{language.common.meta.title}</span>
                   </a>
                 </Link>
               </div>
-              <p className="mt-4">A collector&#39;s NFT item project of bears using pixel art.</p>
+              <p className="mt-4">{language.common.meta.description}</p>
             </div>
             <div>
               <h3 className="mb-6 text-sm font-semibold text-gray-400">MENU</h3>
@@ -42,7 +46,7 @@ export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale } }) => {
                   <Link href={`/${locale}`}>
                     <a className="font-normal text-gray-600 hover:underline">
                       <span className="inline-block mr-3">🏠</span>
-                      <span className="inline-block">Home</span>
+                      <span className="inline-block">{language.common.footerMenu.home}</span>
                     </a>
                   </Link>
                 </li>
@@ -50,7 +54,7 @@ export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale } }) => {
                   <Link href={`/${locale}/about`}>
                     <a className="font-normal text-gray-600 hover:underline">
                       <span className="inline-block mr-3">🐻</span>
-                      <span className="inline-block">About</span>
+                      <span className="inline-block">{language.common.footerMenu.about}</span>
                     </a>
                   </Link>
                 </li>
@@ -58,7 +62,7 @@ export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale } }) => {
                   <Link href={`/${locale}/roadmap`}>
                     <a className="font-normal text-gray-600 hover:underline">
                       <span className="inline-block mr-3">🏃</span>
-                      <span className="inline-block">Roadmap</span>
+                      <span className="inline-block">{language.common.footerMenu.roadmap}</span>
                     </a>
                   </Link>
                 </li>
@@ -66,7 +70,7 @@ export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale } }) => {
                   <Link href={`/${locale}/find`}>
                     <a className="font-normal text-gray-600 hover:underline">
                       <span className="inline-block mr-3">🔍</span>
-                      <span className="inline-block">Find</span>
+                      <span className="inline-block">{language.common.footerMenu.find}</span>
                     </a>
                   </Link>
                 </li>
@@ -112,13 +116,14 @@ export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale } }) => {
 
 export const Footer: FC = () => {
   const {
-    state: { locale }
+    state: { locale, language }
   } = Hooks.Locale.useLocaleContext()
 
   return (
     <FooterPresenter
       state={{
-        locale: locale || 'ja'
+        locale: locale || 'ja',
+        language
       }}
     />
   )
