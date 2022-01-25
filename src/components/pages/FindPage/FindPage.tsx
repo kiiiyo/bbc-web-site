@@ -14,12 +14,12 @@ export const FindPage: FC = () => {
       <Organisms.Hero
         state={{
           title: (
-            <h1 className="mb-4 text-4xl font-extrabold tracking-tighter md:text-6xl">
+            <>
               <span className="inline-block mr-3">🔍</span>
               <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
                 Find
               </span>
-            </h1>
+            </>
           ),
           description: 'Find your favorite 🐻 BitBear!'
         }}

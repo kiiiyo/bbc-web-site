@@ -7,8 +7,9 @@ import { withLocale } from '@/utils/translations/locales'
 
 type State = {
   page: {
-    slug: string
-    locale: string
+    path: string
+    preview: boolean
+    locale: 'ja' | 'en'
   }
 }
 
@@ -16,12 +17,12 @@ type AboutPageProps = {
   state: State
 }
 
-export const getServerSideProps = withLocale(async (locale, { params }) => {
-  const slug = String(params?.slug ?? '/')
+export const getServerSideProps = withLocale(async (locale, { resolvedUrl }) => {
+  const path = String(resolvedUrl.split('?')) ?? '/'
 
   // TODO: エラーハンドリング
   const page = {
-    slug,
+    path,
     locale
   }
 
@@ -38,7 +39,7 @@ const AboutPage: NextPage<AboutPageProps> = ({ state: { page } }) => {
   }
 
   return (
-    <Context.LocaleContext.LocaleContextProvider value={{ locale: page.locale }}>
+    <Context.LocaleContext.LocaleContextProvider value={{ locale: page.locale, path: page.path }}>
       <Pages.AboutPage />
     </Context.LocaleContext.LocaleContextProvider>
   )

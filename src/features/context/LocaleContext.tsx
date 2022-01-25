@@ -1,9 +1,13 @@
-import { FC, createContext } from 'react'
-
-import type { Locale } from '@/utils/translations/locales'
+import { FC, createContext, useEffect, useState } from 'react'
+//
+import type { TLanguage } from '@/types/language'
+//
+import { Language } from '@/env'
 
 export type State = {
-  locale: Locale | null
+  locale: 'ja' | 'en'
+  path: string
+  language: TLanguage
 }
 
 export type LocaleContextValueType = {
@@ -12,7 +16,9 @@ export type LocaleContextValueType = {
 
 const initContextValue: LocaleContextValueType = {
   state: {
-    locale: null
+    locale: 'ja',
+    path: '/',
+    language: Language.JA
   }
 }
 
@@ -20,18 +26,27 @@ export const LocaleContext = createContext<LocaleContextValueType>(initContextVa
 
 interface LocaleProviderProps {
   value: {
-    locale: Locale
+    locale: 'ja' | 'en'
+    path: string
   }
 }
 
 export const useLocaleContext = (props: LocaleProviderProps): LocaleContextValueType => {
   const {
-    value: { locale }
+    value: { locale, path }
   } = props
+
+  const [language, setLanguage] = useState<TLanguage>(Language.JA)
+
+  useEffect(() => {
+    setLanguage(Language.changeLanguage(locale))
+  }, [locale, setLanguage])
 
   return {
     state: {
-      locale
+      locale,
+      path,
+      language
     }
   }
 }
