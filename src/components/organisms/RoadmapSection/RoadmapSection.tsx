@@ -1,15 +1,31 @@
 import { FC } from 'react'
 import Image from 'next/image'
 //
+import { TLanguage } from '@/types/language'
+import { Hooks } from '@/features'
 import { Atoms } from '@/components'
 
-export const RoadmapSection: FC = () => {
+type State = {
+  language: TLanguage
+}
+
+export type RoadmapSectionPresenterProps = {
+  state: State
+}
+
+export const RoadmapSectionPresenter: FC<RoadmapSectionPresenterProps> = ({ state: { language } }) => {
   return (
     <div>
       <div className="container mx-auto">
         <div className="flex flex-col mx-auto mt-8 w-full md:mt-16 lg:flex-row-reverse">
           <div className="object-cover object-center rounded-lg md:mt-0 lg:w-3/5">
-            <Image src="https://dummyimage.com/1200x630" alt="step" width={1200} height={630} />
+            <Image
+              src="/assets/images/mainvisual-roadmap.png"
+              alt="Roadmap"
+              className="rounded-lg"
+              width={1200}
+              height={630}
+            />
           </div>
           <div className="mt-6 md:py-6 md:pr-10 md:mt-0 lg:w-2/5">
             <h2 className="mb-6 text-4xl font-bold tracking-wider text-gray-900">🚀 2022</h2>
@@ -22,21 +38,15 @@ export const RoadmapSection: FC = () => {
               </div>
               <div className="grow pl-4">
                 <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">Q1</h2>
-                <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">Term: Jan - Mar</h3>
+                <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">
+                  {language.page.roadmapPage.section.q1.title}
+                </h3>
                 <ul>
-                  <li>【🎉 】 Bit Bear Club official site open .</li>
-                  <li>
-                    【🏃】 Bit Bear Avatar Series NFT item <strong>512</strong> drop.
-                  </li>
-                  <li>
-                    【🏃】 Bit Bear New Series NFT item <strong>64</strong> drop.
-                  </li>
-                  <li>
-                    【🏃】 Twitter Follower <strong>1000</strong>.
-                  </li>
-                  <li>
-                    【🏃】 OpenSea Volume Trade <strong>0.1</strong>.
-                  </li>
+                  <li>{language.page.roadmapPage.section.q1.objectives[0]}</li>
+                  <li>{language.page.roadmapPage.section.q1.objectives[1]}</li>
+                  <li>{language.page.roadmapPage.section.q1.objectives[2]}</li>
+                  <li>{language.page.roadmapPage.section.q1.objectives[3]}</li>
+                  <li>{language.page.roadmapPage.section.q1.objectives[4]}</li>
                 </ul>
               </div>
             </div>
@@ -50,8 +60,12 @@ export const RoadmapSection: FC = () => {
               </div>
               <div className="grow pl-4">
                 <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">Q2</h2>
-                <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">Term: Apr - Jun</h3>
-                <p className="leading-relaxed">【🤔 】I&apos;m thinking about it.</p>
+                <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">
+                  {language.page.roadmapPage.section.q2.title}
+                </h3>
+                <ul>
+                  <li>{language.page.roadmapPage.section.q2.objectives[0]}</li>
+                </ul>
               </div>
             </div>
             <div className="flex relative pb-12">
@@ -63,7 +77,9 @@ export const RoadmapSection: FC = () => {
               </div>
               <div className="grow pl-4">
                 <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">Q3</h2>
-                <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">Term: Jul - Sep</h3>
+                <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">
+                  {language.page.roadmapPage.section.q3.title}
+                </h3>
                 <p className="leading-relaxed">【🤔 】 I&apos;m thinking about it.</p>
               </div>
             </div>
@@ -73,17 +89,13 @@ export const RoadmapSection: FC = () => {
               </div>
               <div className="grow pl-4">
                 <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">Q4</h2>
-                <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">Term: Oct - Dec</h3>
+                <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">
+                  {language.page.roadmapPage.section.q4.title}
+                </h3>
                 <ul>
-                  <li>
-                    【🏃】 Bit Bear Cloub NFT Total drop <strong>4096</strong> . (😝 Maybe)
-                  </li>
-                  <li>
-                    【🏃】 Twitter Follower <strong>10000</strong>. - (😝 Maybe)
-                  </li>
-                  <li>
-                    【🏃】 OpenSea Volume Trade <strong>1.0</strong>. - (😝 Maybe)
-                  </li>
+                  <li>{language.page.roadmapPage.section.q4.objectives[0]}</li>
+                  <li>{language.page.roadmapPage.section.q4.objectives[1]}</li>
+                  <li>{language.page.roadmapPage.section.q4.objectives[2]}</li>
                 </ul>
               </div>
             </div>
@@ -93,3 +105,19 @@ export const RoadmapSection: FC = () => {
     </div>
   )
 }
+
+export const RoadmapSection: FC = () => {
+  const {
+    state: { language }
+  } = Hooks.Locale.useLocaleContext()
+
+  return (
+    <RoadmapSectionPresenter
+      state={{
+        language
+      }}
+    />
+  )
+}
+
+export default RoadmapSection
