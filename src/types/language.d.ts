@@ -48,5 +48,11 @@ export type TLanguage = {
         }
       }
     }
+    searchPage: {
+      hero: {
+        title: string
+        description: string
+      }
+    }
   }
 }

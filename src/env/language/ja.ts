@@ -62,6 +62,12 @@ export const language: TLanguage = {
           ]
         }
       }
+    },
+    searchPage: {
+      hero: {
+        title: '見つける',
+        description: 'あなたのお気に入り 🐻 BitBearを見つけよう!'
+      }
     }
   }
 }

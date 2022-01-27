@@ -1,12 +1,15 @@
 import { FC, useState, useCallback } from 'react'
+//
+import { TLanguage } from '@/types/language'
+import { Hooks } from '@/features'
 import { Atoms } from '@/components'
-import Image from 'next/image'
 
 export type TFindSectionDisplay = 'SHOW' | 'HIDE'
 
 export type TFindSectionPresenterProps = {
   state: {
     findSectionDisplay: TFindSectionDisplay
+    language: TLanguage
   }
   actions: {
     onDisplayButtonClick: (condition: TFindSectionDisplay) => void
@@ -78,17 +81,10 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
                 </div>
                 <div className="flex relative">
                   <div className="inline-flex overflow-hidden relative z-10 shrink-0 justify-center items-center w-10 h-10 text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-full">
-                    <Image
-                      className="w-full h-full"
-                      src="https://lh3.googleusercontent.com/U12mT7o2i4PbjeVQPe2yX4L4upgXl_QR9XefE-7h9EBuUCivaJppfT2RZv-_s8kH6O2MT6c1nHiQqcWKCnpHcpEp4AG3MftEJVbMU3k=w600"
-                      alt="Bit Bear Avatar Series #A0001"
-                      width="100%"
-                      height="100%"
-                    />
+                    <Atoms.GiftIcon className="w-5 h-5" />
                   </div>
                   <div className="grow pl-4">
-                    <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">Step3</h3>
-                    <h4 className="font-bold">🎁 Giveaway Campaign🎉</h4>
+                    <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">🎁 Giveaway Campaign🎉</h3>
                     <p>
                       We&apos;re running a campaign to find Baily! The first 64 people to arrive will giveaway an NFT
                     </p>
@@ -114,6 +110,10 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
 }
 
 export const FindSection: FC = () => {
+  const {
+    state: { language }
+  } = Hooks.Locale.useLocaleContext()
+
   const [findSectionDisplay, setFindSectionDisplay] = useState<TFindSectionDisplay>('SHOW')
 
   const onDisplayButtonClick = useCallback(
@@ -123,7 +123,7 @@ export const FindSection: FC = () => {
     [setFindSectionDisplay]
   )
 
-  return <FooterPresenter state={{ findSectionDisplay }} actions={{ onDisplayButtonClick }} />
+  return <FooterPresenter state={{ findSectionDisplay, language }} actions={{ onDisplayButtonClick }} />
 }
 
 export default FindSection
