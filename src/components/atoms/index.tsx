@@ -1,1 +1,1 @@
-export { FlagIcon, EyeIcon, EyeOffIcon, GiftIcon } from './icon'
+export { FlagIcon, EyeIcon, EyeOffIcon, GiftIcon, MailIcon, TwitterIcon, CheckIcon } from './icon'

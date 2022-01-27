@@ -71,5 +71,33 @@ export type TLanguage = {
         }
       }
     }
+    campaignPage: {
+      hero: {
+        title: string
+      }
+      section: {
+        content: {
+          bearName: string
+          description: React.ReactNode
+          requirement: {
+            title: string
+            lists: Array<string>
+          }
+        }
+        twitter: {
+          title: string
+          description: React.ReactNode
+        }
+        dm: {
+          title: string
+          description: React.ReactNode
+          secretWord: React.ReactNode
+        }
+        openSea: {
+          title: string
+          description: React.ReactNode
+        }
+      }
+    }
   }
 }

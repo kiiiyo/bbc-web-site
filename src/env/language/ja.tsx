@@ -99,6 +99,51 @@ export const language: TLanguage = {
           }
         }
       }
+    },
+    campaignPage: {
+      hero: {
+        title: '見つかっちゃった'
+      },
+      section: {
+        content: {
+          bearName: 'ベーリー',
+          description: (
+            <>
+              ボクを見つけてくれてありがとう。アバター用NFT画像を🎁 <strong>Giveaway</strong>するよ。
+            </>
+          ),
+          requirement: {
+            title: '参加条件',
+            lists: ['【✅ 】Twitterアカウントを持っている', '【✅ 】OpenSeaアカウントを持っている']
+          }
+        },
+        twitter: {
+          title: 'Twitterをフォロー',
+          description: 'この２つのTwitterアカウントをフォローしてもらえると嬉しいな🥰'
+        },
+        dm: {
+          title: '秘密の合言葉をDM',
+          description: (
+            <>
+              <strong>【秘密の合言葉】</strong>と<strong>【OpenSeaのウォレットアドレス】</strong>をDMで教えてください。
+            </>
+          ),
+          secretWord: (
+            <>
+              秘密の合言葉は👉 <strong>【ベーリー見つけた】</strong>
+            </>
+          )
+        },
+        openSea: {
+          title: 'OpenSeaの確認',
+          description: (
+            <>
+              @BitBearClubからDMの返信があります。正常におくられるとOpenSeaのProfileの<strong>Hidden</strong>
+              タブに送られています。
+            </>
+          )
+        }
+      }
     }
   }
 }
