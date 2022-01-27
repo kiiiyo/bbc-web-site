@@ -17,7 +17,7 @@ export type TFindSectionPresenterProps = {
 }
 
 export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
-  state: { findSectionDisplay },
+  state: { findSectionDisplay, language },
   actions: { onDisplayButtonClick }
 }) => {
   return (
@@ -25,7 +25,7 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
       <div className="container flex mx-auto">
         <div className="flex relative z-10 flex-col mx-4 mt-10 w-full bg-white rounded-lg shadow-md md:ml-auto md:w-1/2 lg:w-1/3">
           <div className="flex flex-row p-6">
-            <h2 className="text-xl font-bold">Find 🐻 BitBear</h2>
+            <h2 className="text-xl font-bold">{language.page.searchPage.section.title}</h2>
             {findSectionDisplay === 'SHOW' && (
               <button
                 className="ml-auto"
@@ -50,7 +50,7 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
           {findSectionDisplay === 'SHOW' && (
             <>
               <hr />
-              <div className="py-12 px-6">
+              <div className="py-8 px-6">
                 <div className="flex relative pb-4">
                   <div className="flex absolute inset-0 justify-center items-center w-10 h-full">
                     <div className="w-1 h-full bg-gray-200 pointer-events-none"></div>
@@ -59,10 +59,10 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
                     <Atoms.FlagIcon className="w-5 h-5" />
                   </div>
                   <div className="grow pl-4">
-                    <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">Step1</h3>
-                    <p>
-                      <strong>「See the bord」</strong> Click.
-                    </p>
+                    <h3 className="py-2 mb-1 text-xl font-bold tracking-wider text-gray-900">
+                      {language.page.searchPage.section.content.step1.title}
+                    </h3>
+                    <p>{language.page.searchPage.section.content.step1.description}</p>
                   </div>
                 </div>
                 <div className="flex relative pb-4">
@@ -73,10 +73,10 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
                     <Atoms.FlagIcon className="w-5 h-5" />
                   </div>
                   <div className="grow pl-4">
-                    <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">Step2</h3>
-                    <p>
-                      Click on the image of Opensea icon your favorite <strong>🐻 BitBear</strong> to see more details.
-                    </p>
+                    <h3 className="py-2 mb-1 text-xl font-bold tracking-wider text-gray-900">
+                      {language.page.searchPage.section.content.step2.title}
+                    </h3>
+                    <p>{language.page.searchPage.section.content.step2.description}</p>
                   </div>
                 </div>
                 <div className="flex relative">
@@ -84,10 +84,10 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
                     <Atoms.GiftIcon className="w-5 h-5" />
                   </div>
                   <div className="grow pl-4">
-                    <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">🎁 Giveaway Campaign🎉</h3>
-                    <p>
-                      We&apos;re running a campaign to find Baily! The first 64 people to arrive will giveaway an NFT
-                    </p>
+                    <h3 className="py-2 mb-1 text-xl font-bold tracking-wider text-gray-900">
+                      {language.page.searchPage.section.content.campaign.title}
+                    </h3>
+                    <p>{language.page.searchPage.section.content.campaign.description}</p>
                   </div>
                 </div>
               </div>
