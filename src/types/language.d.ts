@@ -48,5 +48,28 @@ export type TLanguage = {
         }
       }
     }
+    searchPage: {
+      hero: {
+        title: string
+        description: string
+      }
+      section: {
+        title: string
+        content: {
+          step1: {
+            title: string
+            description: React.ReactNode
+          }
+          step2: {
+            title: string
+            description: React.ReactNode
+          }
+          campaign: {
+            title: React.ReactNode
+            description: React.ReactNode
+          }
+        }
+      }
+    }
   }
 }

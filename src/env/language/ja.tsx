@@ -62,6 +62,43 @@ export const language: TLanguage = {
           ]
         }
       }
+    },
+    searchPage: {
+      hero: {
+        title: '見つける',
+        description: 'あなたのお気に入り 🐻 BitBearを見つけよう'
+      },
+      section: {
+        title: '🐻 BitBearの見つけ方',
+        content: {
+          step1: {
+            title: 'ステップ1',
+            description: (
+              <>
+                <strong>「See the bord」</strong> をクリックします。
+              </>
+            )
+          },
+          step2: {
+            title: 'ステップ2',
+            description: (
+              <>
+                この森の中にいる🐻 <strong>BitBear</strong>{' '}
+                の画像にOpenSeaのアイコンをクリックするとOpenSeaの詳細ページが見れます。
+              </>
+            )
+          },
+          campaign: {
+            title: '🎁 Giveaway キャンペーン開催中 🎉',
+            description: (
+              <>
+                <strong>先着64名様</strong>にBitBear NFT Giveaway
+                キャンペーン開催中。この森の中のベーリーという熊さんが応募方法を教えてくれるよ。{' '}
+              </>
+            )
+          }
+        }
+      }
     }
   }
 }

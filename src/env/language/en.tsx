@@ -63,6 +63,39 @@ export const language: TLanguage = {
           ]
         }
       }
+    },
+    searchPage: {
+      hero: {
+        title: 'Find',
+        description: 'Find your favorite 🐻 BitBear!'
+      },
+      section: {
+        title: 'Find 🐻 BitBear',
+        content: {
+          step1: {
+            title: 'Step1',
+            description: (
+              <>
+                <strong>「See the bord」</strong> Click.
+              </>
+            )
+          },
+          step2: {
+            title: 'Step2',
+            description: (
+              <>
+                Click on the image of Opensea icon your favorite 🐻 <strong>BitBear</strong> to see more details.
+              </>
+            )
+          },
+          campaign: {
+            title: '🎁 Giveaway Campaign 🎉',
+            description: (
+              <>We&#39;re running a campaign to find Baily! The first 64 people to arrive will giveaway an NFT</>
+            )
+          }
+        }
+      }
     }
   }
 }
