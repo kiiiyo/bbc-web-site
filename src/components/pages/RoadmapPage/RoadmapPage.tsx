@@ -1,14 +1,18 @@
 import { FC } from 'react'
 //
+import { TLanguage } from '@/types/language'
+import { Hooks } from '@/features'
 import { Templates, Organisms } from '@/components'
 
-type State = {}
+type State = {
+  language: TLanguage
+}
 
-export type RoadmapProps = {
+export type RoadmapPagePresenterProps = {
   state: State
 }
 
-export const RoadmapPage: FC = () => {
+export const RoadmapPagePresenter: FC<RoadmapPagePresenterProps> = ({ state: { language } }) => {
   return (
     <Templates.GenericTemplate globalHeader={<Organisms.Header />} globalFooter={<Organisms.Footer />}>
       <section>
@@ -19,11 +23,11 @@ export const RoadmapPage: FC = () => {
                 <>
                   <span className="inline-block mr-3">🏃</span>
                   <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
-                    Roadmap
+                    {language.page.roadmapPage.hero.title}
                   </span>
                 </>
               ),
-              description: 'Here is the roadmap that this Bit Bear Club is working towards.'
+              description: language.page.roadmapPage.hero.description
             }}
           />
           <div className="container px-6 mx-auto ">
@@ -36,3 +40,19 @@ export const RoadmapPage: FC = () => {
     </Templates.GenericTemplate>
   )
 }
+
+export const RoadmapPage: FC = () => {
+  const {
+    state: { language }
+  } = Hooks.Locale.useLocaleContext()
+
+  return (
+    <RoadmapPagePresenter
+      state={{
+        language
+      }}
+    />
+  )
+}
+
+export default RoadmapPage

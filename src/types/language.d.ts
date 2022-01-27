@@ -24,5 +24,29 @@ export type TLanguage = {
         description: string
       }
     }
+    roadmapPage: {
+      hero: {
+        title: string
+        description: string
+      }
+      section: {
+        q1: {
+          title: string
+          objectives: Array<string>
+        }
+        q2: {
+          title: string
+          objectives: Array<string>
+        }
+        q3: {
+          title: string
+          objectives: Array<string>
+        }
+        q4: {
+          title: string
+          objectives: Array<string>
+        }
+      }
+    }
   }
 }
