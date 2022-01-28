@@ -96,6 +96,45 @@ export const language: TLanguage = {
           }
         }
       }
+    },
+    campaignPage: {
+      hero: {
+        title: 'They found us.'
+      },
+      section: {
+        content: {
+          bearName: 'Baily',
+          description: <>Thank you for finding me. I&#39;ll giveaway you a picture for your avatar.</>,
+          requirement: {
+            title: 'Requirement',
+            lists: ['✅ You need to a Twitter account.', '✅ You need to a OpenSea account.']
+          },
+          term: {
+            title: 'Term',
+            description: '2022.02.01 - 2022.02.06'
+          }
+        },
+        twitter: {
+          title: 'Follow me on Twitter.',
+          description: <>I hope you&#39;ll follow these two Twitter accounts.</>
+        },
+        form: {
+          title: '✍️Answer the form',
+
+          secretWord: 'Secret word is 👉【I found Baily.】',
+          description: <>Please fill out this Google form.</>,
+          url: 'https://bit.ly/3G7uUyG'
+        },
+        openSea: {
+          title: 'I will DM the winner 💌.',
+          description: (
+            <>
+              You will receive a DM reply from the BitBearClub. If it is sent successfully, it will be sent to the{' '}
+              <strong>Hidden</strong> tab of the OpenSea profile.
+            </>
+          )
+        }
+      }
     }
   }
 }

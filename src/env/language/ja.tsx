@@ -99,6 +99,52 @@ export const language: TLanguage = {
           }
         }
       }
+    },
+    campaignPage: {
+      hero: {
+        title: '見つかっちゃった'
+      },
+      section: {
+        content: {
+          bearName: 'ベーリー',
+          description: (
+            <>
+              ボクを見つけてくれてありがとう。アバター用NFT画像を🎁 <strong>Giveaway</strong>するよ。
+            </>
+          ),
+          requirement: {
+            title: '参加条件',
+            lists: ['✅  Twitterアカウントを持っている', '✅  OpenSeaアカウントを持っている']
+          },
+          term: {
+            title: '開催期間',
+            description: '2022年02月01日(火) から 2022年02月06日(日) まで'
+          }
+        },
+        twitter: {
+          title: 'Twitterをフォロー',
+          description: 'この２つのTwitterアカウントをフォローしてもらえると嬉しいな🥰'
+        },
+        form: {
+          title: '✍️フォームに回答',
+          secretWord: (
+            <>
+              <strong>【秘密の合言葉】</strong>は👉 <strong>【ベーリー見つけた】</strong>
+            </>
+          ),
+          description: <>こちらのGoogleフォームにご回答ください。</>,
+          url: 'https://bit.ly/3r6Qi2u'
+        },
+        openSea: {
+          title: '当選者に💌 DMします',
+          description: (
+            <>
+              @BitBearClubからTwitterに当選のDMがあります。正常におくられるとOpenSeaのProfileの<strong>Hidden</strong>
+              タブに送られます。
+            </>
+          )
+        }
+      }
     }
   }
 }
