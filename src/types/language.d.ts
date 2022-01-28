@@ -79,6 +79,10 @@ export type TLanguage = {
         content: {
           bearName: string
           description: React.ReactNode
+          term: {
+            title: string
+            description: string
+          }
           requirement: {
             title: string
             lists: Array<string>
@@ -88,10 +92,11 @@ export type TLanguage = {
           title: string
           description: React.ReactNode
         }
-        dm: {
+        form: {
           title: string
           description: React.ReactNode
           secretWord: React.ReactNode
+          url: string
         }
         openSea: {
           title: string

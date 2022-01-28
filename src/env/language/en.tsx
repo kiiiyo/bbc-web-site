@@ -107,24 +107,26 @@ export const language: TLanguage = {
           description: <>Thank you for finding me. I&#39;ll giveaway you a picture for your avatar.</>,
           requirement: {
             title: 'Requirement',
-            lists: ['【✅ 】You need to a Twitter account.', '【✅ 】You need to a OpenSea account.']
+            lists: ['✅ You need to a Twitter account.', '✅ You need to a OpenSea account.']
+          },
+          term: {
+            title: 'Term',
+            description: '2022.02.01 - 2022.02.06'
           }
         },
         twitter: {
           title: 'Follow me on Twitter.',
           description: <>I hope you&#39;ll follow these two Twitter accounts.</>
         },
-        dm: {
-          title: 'DM me with your secret word.',
-          description: (
-            <>
-              Please let me know your <strong>Secret word</strong> and <strong>OpenSea wallet address</strong> via DM.
-            </>
-          ),
-          secretWord: 'Secret word is 👉【I found Baily.】'
+        form: {
+          title: '✍️Answer the form',
+
+          secretWord: 'Secret word is 👉【I found Baily.】',
+          description: <>Please fill out this Google form.</>,
+          url: 'https://bit.ly/3G7uUyG'
         },
         openSea: {
-          title: 'Checking OpenSea',
+          title: 'I will DM the winner 💌.',
           description: (
             <>
               You will receive a DM reply from the BitBearClub. If it is sent successfully, it will be sent to the{' '}

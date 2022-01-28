@@ -1,13 +1,19 @@
 import { FC } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { faClipboard } from '@fortawesome/free-solid-svg-icons'
 import { FlagIcon, EyeIcon, EyeOffIcon, GiftIcon, MailIcon, CheckIcon } from '@heroicons/react/solid'
 
 export type TIcon = {
   className: string
 }
 
+//clipboard-list
+
 const TwitterIcon: FC<TIcon> = ({ className }) => <FontAwesomeIcon {...className} icon={faTwitter} />
 
-export { FlagIcon, EyeIcon, EyeOffIcon, GiftIcon, MailIcon, TwitterIcon, CheckIcon }
+const ClipboardIcon: FC<TIcon> = ({ className }) => <FontAwesomeIcon {...className} icon={faClipboard} />
+const GoogleIcon: FC<TIcon> = ({ className }) => <FontAwesomeIcon {...className} icon={faGoogle} />
+
+export { FlagIcon, EyeIcon, EyeOffIcon, GiftIcon, MailIcon, TwitterIcon, CheckIcon, ClipboardIcon, GoogleIcon }

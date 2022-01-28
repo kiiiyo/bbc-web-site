@@ -114,32 +114,33 @@ export const language: TLanguage = {
           ),
           requirement: {
             title: '参加条件',
-            lists: ['【✅ 】Twitterアカウントを持っている', '【✅ 】OpenSeaアカウントを持っている']
+            lists: ['✅  Twitterアカウントを持っている', '✅  OpenSeaアカウントを持っている']
+          },
+          term: {
+            title: '開催期間',
+            description: '2022年02月01日(火) から 2022年02月06日(日) まで'
           }
         },
         twitter: {
           title: 'Twitterをフォロー',
           description: 'この２つのTwitterアカウントをフォローしてもらえると嬉しいな🥰'
         },
-        dm: {
-          title: '秘密の合言葉をDM',
-          description: (
-            <>
-              <strong>【秘密の合言葉】</strong>と<strong>【OpenSeaのウォレットアドレス】</strong>をDMで教えてください。
-            </>
-          ),
+        form: {
+          title: '✍️フォームに回答',
           secretWord: (
             <>
-              秘密の合言葉は👉 <strong>【ベーリー見つけた】</strong>
+              <strong>【秘密の合言葉】</strong>は👉 <strong>【ベーリー見つけた】</strong>
             </>
-          )
+          ),
+          description: <>こちらのGoogleフォームにご回答ください。</>,
+          url: 'https://bit.ly/3r6Qi2u'
         },
         openSea: {
-          title: 'OpenSeaの確認',
+          title: '当選者に💌 DMします',
           description: (
             <>
-              @BitBearClubからDMの返信があります。正常におくられるとOpenSeaのProfileの<strong>Hidden</strong>
-              タブに送られています。
+              @BitBearClubからTwitterに当選のDMがあります。正常におくられるとOpenSeaのProfileの<strong>Hidden</strong>
+              タブに送られます。
             </>
           )
         }
