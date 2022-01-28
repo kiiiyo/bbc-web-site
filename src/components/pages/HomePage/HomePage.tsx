@@ -15,7 +15,11 @@ export type THomePageProps = {
 
 export const HomePagePresenter: FC<THomePageProps> = ({ state: { language } }) => {
   return (
-    <Templates.GenericTemplate globalHeader={<Organisms.Header />} globalFooter={<Organisms.Footer />}>
+    <Templates.GenericTemplate
+      globalHeader={<Organisms.Header />}
+      globalFooter={<Organisms.Footer />}
+      OverlayMenu={<Organisms.OverlayMenu />}
+    >
       <Organisms.Hero
         state={{
           title: (

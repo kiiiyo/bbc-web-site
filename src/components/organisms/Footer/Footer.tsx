@@ -3,22 +3,24 @@ import Image from 'next/image'
 import { FC } from 'react'
 //
 import { TLanguage } from '@/types/language'
+import { Constants } from '@/env'
+import type { TMenuItem } from '@/types/common'
 import { Hooks } from '@/features'
 
 //type FooterProps = {}
 type FooterPresenter = {
   state: {
-    locale: string
     language: TLanguage
+    menuList: Array<TMenuItem>
   }
 }
 
-export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale, language } }) => {
+export const FooterPresenter: FC<FooterPresenter> = ({ state: { language, menuList } }) => {
   return (
     <footer>
-      <div className="container p-4 py-12 mx-auto bg-white md:px-6">
-        <div className="px-4 mx-auto w-full">
-          <div className="grid gap-12 lg:grid-cols-6 lg:gap-24">
+      <div className="container py-12 px-4 mx-auto bg-white md:px-6">
+        <div className="mx-auto w-full">
+          <div className="grid gap-12 lg:grid-cols-5 lg:gap-8">
             <div className="col-span-2">
               <div className="flex justify-between items-center">
                 <Link href="/">
@@ -42,38 +44,18 @@ export const FooterPresenter: FC<FooterPresenter> = ({ state: { locale, language
             <div>
               <h3 className="mb-6 text-sm font-semibold text-gray-400">MENU</h3>
               <ul>
-                <li className="mt-6">
-                  <Link href={`/${locale}`}>
-                    <a className="font-normal text-gray-600 hover:underline">
-                      <span className="inline-block mr-3">🏠</span>
-                      <span className="inline-block">{language.common.footerMenu.home}</span>
-                    </a>
-                  </Link>
-                </li>
-                <li className="mt-6">
-                  <Link href={`/${locale}/about`}>
-                    <a className="font-normal text-gray-600 hover:underline">
-                      <span className="inline-block mr-3">🐻</span>
-                      <span className="inline-block">{language.common.footerMenu.about}</span>
-                    </a>
-                  </Link>
-                </li>
-                <li className="mt-6">
-                  <Link href={`/${locale}/roadmap`}>
-                    <a className="font-normal text-gray-600 hover:underline">
-                      <span className="inline-block mr-3">🏃</span>
-                      <span className="inline-block">{language.common.footerMenu.roadmap}</span>
-                    </a>
-                  </Link>
-                </li>
-                <li className="mt-6">
-                  <Link href={`/${locale}/find`}>
-                    <a className="font-normal text-gray-600 hover:underline">
-                      <span className="inline-block mr-3">🔍</span>
-                      <span className="inline-block">{language.common.footerMenu.find}</span>
-                    </a>
-                  </Link>
-                </li>
+                {menuList.map((item: TMenuItem, inddex: number) => {
+                  return (
+                    <li key={inddex} className="mt-6">
+                      <Link href={item.path}>
+                        <a className="font-normal text-gray-600 hover:underline">
+                          <span className="inline-block mr-3">{item.icon}</span>
+                          <span className="inline-block">{item.label}</span>
+                        </a>
+                      </Link>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
             <div>
@@ -119,11 +101,13 @@ export const Footer: FC = () => {
     state: { locale, language }
   } = Hooks.Locale.useLocaleContext()
 
+  const localeState = locale || 'ja'
+
   return (
     <FooterPresenter
       state={{
-        locale: locale || 'ja',
-        language
+        language,
+        menuList: Constants.GLOBAL_MENU_LIST[`${localeState}`]
       }}
     />
   )

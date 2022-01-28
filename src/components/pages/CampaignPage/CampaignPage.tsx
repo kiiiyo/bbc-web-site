@@ -13,7 +13,11 @@ export type TCampaignPagePresenterProps = {
 
 export const CampaignPagePresenter: FC<TCampaignPagePresenterProps> = ({ state: { language } }) => {
   return (
-    <Templates.GenericTemplate globalHeader={<Organisms.Header />} globalFooter={<Organisms.Footer />}>
+    <Templates.GenericTemplate
+      globalHeader={<Organisms.Header />}
+      globalFooter={<Organisms.Footer />}
+      OverlayMenu={<Organisms.OverlayMenu />}
+    >
       <div className=" bg-slate-50">
         <Organisms.Hero
           state={{

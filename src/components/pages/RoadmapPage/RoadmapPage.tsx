@@ -14,7 +14,11 @@ export type RoadmapPagePresenterProps = {
 
 export const RoadmapPagePresenter: FC<RoadmapPagePresenterProps> = ({ state: { language } }) => {
   return (
-    <Templates.GenericTemplate globalHeader={<Organisms.Header />} globalFooter={<Organisms.Footer />}>
+    <Templates.GenericTemplate
+      globalHeader={<Organisms.Header />}
+      globalFooter={<Organisms.Footer />}
+      OverlayMenu={<Organisms.OverlayMenu />}
+    >
       <section>
         <div className=" bg-slate-50">
           <Organisms.Hero
