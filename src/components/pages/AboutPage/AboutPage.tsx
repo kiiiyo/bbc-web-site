@@ -10,7 +10,11 @@ export type AboutPageProps = {
 
 export const AboutPage: FC = () => {
   return (
-    <Templates.GenericTemplate globalHeader={<Organisms.Header />} globalFooter={<Organisms.Footer />}>
+    <Templates.GenericTemplate
+      globalHeader={<Organisms.Header />}
+      globalFooter={<Organisms.Footer />}
+      OverlayMenu={<Organisms.OverlayMenu />}
+    >
       <section>
         <div className=" bg-slate-50">
           <Organisms.Hero

@@ -7,5 +7,7 @@ export {
   TwitterIcon,
   CheckIcon,
   ClipboardIcon,
-  GoogleIcon
+  GoogleIcon,
+  CloseIcon,
+  MenuIcon
 } from './icon'

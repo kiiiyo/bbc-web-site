@@ -12,7 +12,11 @@ export type TFindPageProps = {
 
 export const FindPagePresenter: FC<TFindPageProps> = ({ state: { language } }) => {
   return (
-    <Templates.GenericTemplate globalHeader={<Organisms.Header />} globalFooter={<Organisms.Footer />}>
+    <Templates.GenericTemplate
+      globalHeader={<Organisms.Header />}
+      globalFooter={<Organisms.Footer />}
+      OverlayMenu={<Organisms.OverlayMenu />}
+    >
       <Organisms.Hero
         state={{
           title: (
