@@ -21,13 +21,18 @@ export const language: TLanguage = {
   },
   page: {
     homePage: {
+      title: 'Home',
       hero: {
         title: 'Hellow, Crypto World!',
         // prettier-ignore
         description: 'A collector\'s NFT item project of bears using pixel art.'
       }
     },
+    aboutPage: {
+      title: 'About'
+    },
     roadmapPage: {
+      title: 'Roadmap',
       hero: {
         title: 'Roadmap',
         // prettier-ignore
@@ -64,7 +69,8 @@ export const language: TLanguage = {
         }
       }
     },
-    searchPage: {
+    findPage: {
+      title: 'Find',
       hero: {
         title: 'Find',
         description: 'Find your favorite 🐻 BitBear!'
@@ -98,6 +104,7 @@ export const language: TLanguage = {
       }
     },
     campaignPage: {
+      title: 'Find',
       hero: {
         title: 'They found us.'
       },

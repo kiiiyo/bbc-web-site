@@ -1,5 +1,7 @@
 import { FC } from 'react'
+import Head from 'next/head'
 //
+import { Constants } from '@/env'
 import { TLanguage } from '@/types/language'
 import { Hooks } from '@/features'
 import { Templates, Organisms } from '@/components'
@@ -14,34 +16,41 @@ export type RoadmapPagePresenterProps = {
 
 export const RoadmapPagePresenter: FC<RoadmapPagePresenterProps> = ({ state: { language } }) => {
   return (
-    <Templates.GenericTemplate
-      globalHeader={<Organisms.Header />}
-      globalFooter={<Organisms.Footer />}
-      OverlayMenu={<Organisms.OverlayMenu />}
-    >
-      <section>
-        <div className=" bg-slate-50">
-          <Organisms.Hero
-            state={{
-              title: (
-                <>
-                  <span className="inline-block mr-3">🏃</span>
-                  <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
-                    {language.page.roadmapPage.hero.title}
-                  </span>
-                </>
-              ),
-              description: language.page.roadmapPage.hero.description
-            }}
-          />
-          <div className="container px-6 mx-auto ">
-            <div className="pb-20">
-              <Organisms.RoadmapSection />
+    <>
+      <Head>
+        <title>
+          {language.page.roadmapPage.title} - {Constants.SITE_TITLE}
+        </title>
+      </Head>
+      <Templates.GenericTemplate
+        globalHeader={<Organisms.Header />}
+        globalFooter={<Organisms.Footer />}
+        OverlayMenu={<Organisms.OverlayMenu />}
+      >
+        <section>
+          <div className=" bg-slate-50">
+            <Organisms.Hero
+              state={{
+                title: (
+                  <>
+                    <span className="inline-block mr-3">🏃</span>
+                    <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
+                      {language.page.roadmapPage.hero.title}
+                    </span>
+                  </>
+                ),
+                description: language.page.roadmapPage.hero.description
+              }}
+            />
+            <div className="container px-6 mx-auto ">
+              <div className="pb-20">
+                <Organisms.RoadmapSection />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </Templates.GenericTemplate>
+        </section>
+      </Templates.GenericTemplate>
+    </>
   )
 }
 

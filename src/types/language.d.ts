@@ -19,12 +19,17 @@ export type TLanguage = {
   }
   page: {
     homePage: {
+      title: string
       hero: {
         title: string
         description: string
       }
     }
+    aboutPage: {
+      title: string
+    }
     roadmapPage: {
+      title: string
       hero: {
         title: string
         description: string
@@ -48,7 +53,8 @@ export type TLanguage = {
         }
       }
     }
-    searchPage: {
+    findPage: {
+      title: string
       hero: {
         title: string
         description: string
@@ -72,6 +78,7 @@ export type TLanguage = {
       }
     }
     campaignPage: {
+      title: string
       hero: {
         title: string
       }
