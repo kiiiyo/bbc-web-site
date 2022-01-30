@@ -25,6 +25,21 @@ export const language: TLanguage = {
         title: 'Hellow, Crypto World!',
         // prettier-ignore
         description: 'BitBearClubは🐻 クマをモチーフにしたピクセルアートをNFTの世界に届けるコレクターズプロジェクトです。'
+      },
+      section: {
+        about: {
+          title: 'ようこそ🐻🙌',
+          description:
+            'ボク達のオフィシャルサイトに来てくれてありがとう！いろいろな表情のBitBear達を紹介しています。お楽しみコンテンツも用意してるから楽しんでもらえると嬉しいです。',
+          buttonLabel: 'BitBearもっと知る'
+        },
+        campaign: {
+          title: '🎉 キャンペーン 🎉',
+          subTitle: '🎁 Giveaway Event 🎁',
+          description:
+            'オフィシャルサイトオープン記念、サイト内に隠れているベーリーを見つけると抽選でNFTがもらえるイベントを実施中です！',
+          buttonLabel: 'このページにいるかも'
+        }
       }
     },
     aboutPage: {

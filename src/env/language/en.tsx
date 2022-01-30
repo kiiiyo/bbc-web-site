@@ -26,6 +26,21 @@ export const language: TLanguage = {
         title: 'Hellow, Crypto World!',
         // prettier-ignore
         description: 'A collector\'s NFT item project of bears using pixel art.'
+      },
+      section: {
+        about: {
+          title: 'Welcome🐻🙌',
+          // prettier-ignore
+          description: 'Thank you for visiting our official site! Here you&#39;ll find BitBears with various expressions. We&#39;ve prepared some fun contents, so we hope you enjoy them.',
+          buttonLabel: 'More'
+        },
+        campaign: {
+          title: '🎉 Campaign 🎉',
+          subTitle: '🎁 Giveaway Event 🎁',
+          description:
+            'To celebrate the opening of the official site, we are holding an event where you can win NFTs by drawing lots when you find the hidden Baileys in the site!',
+          buttonLabel: 'He could be on this page.'
+        }
       }
     },
     aboutPage: {

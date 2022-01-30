@@ -1,3 +1,5 @@
+export type TLocale = 'ja' | 'en'
+
 export type TLanguage = {
   common: {
     meta: {
@@ -23,6 +25,19 @@ export type TLanguage = {
       hero: {
         title: string
         description: string
+      }
+      section: {
+        about: {
+          title: string
+          description: string
+          buttonLabel: string
+        }
+        campaign: {
+          title: string
+          subTitle: string
+          description: string
+          buttonLabel: string
+        }
       }
     }
     aboutPage: {

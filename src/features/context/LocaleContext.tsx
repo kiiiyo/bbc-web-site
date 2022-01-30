@@ -1,11 +1,11 @@
 import { FC, createContext, useEffect, useState } from 'react'
 //
-import type { TLanguage } from '@/types/language'
+import type { TLanguage, TLocale } from '@/types/language'
 //
 import { Language } from '@/env'
 
 export type State = {
-  locale: 'ja' | 'en'
+  locale: TLocale
   path: string
   language: TLanguage
 }

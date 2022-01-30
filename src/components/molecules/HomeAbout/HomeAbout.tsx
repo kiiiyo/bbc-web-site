@@ -2,9 +2,18 @@ import { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 //
+import { Hooks } from '@/features'
 import { Atoms } from '@/components'
+import type { TLanguage, TLocale } from '@/types/language'
 
-export const HomeAbout: FC = () => {
+export type THomeAboutPresenterProps = {
+  state: {
+    locale: TLocale
+    language: TLanguage
+  }
+}
+
+export const HomeAboutPresenter: FC<THomeAboutPresenterProps> = ({ state: { locale, language } }) => {
   return (
     <div className="border-b-2 border-gray-200 border-solid">
       <div className="container py-8 px-6 mx-auto md:py-16">
@@ -20,15 +29,14 @@ export const HomeAbout: FC = () => {
             />
           </div>
           <div className="w-full lg:pl-10 lg:mt-0 lg:w-1/2">
-            <h1 className="mt-8 text-4xl font-medium text-gray-900 md:mt-4">ようこそ！</h1>
-            <p className="mt-6 break-words">TextTextTextTextTextTextTextTextTextTextTextTextText</p>
+            <h1 className="mt-8 text-4xl font-medium text-gray-900 md:mt-4">
+              {language.page.homePage.section.about.title}
+            </h1>
+            <p className="mt-6 leading-8">{language.page.homePage.section.about.description}</p>
 
-            <Link href="https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Name&search[stringTraits][0][values][0]=Neo&search[sortAscending]=true&search[sortBy]=PRICE">
-              <a
-                target="_blank"
-                className="inline-flex items-center py-3 px-5 mx-1 mt-8 text-lg leading-5 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200 md:mx-0 md:mt-16"
-              >
-                <span>BitBearもっと知る</span>
+            <Link href={`/${locale}/about`}>
+              <a className="inline-flex items-center py-3 px-5 mx-1 mt-8 text-lg leading-5 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200 md:mx-0 md:mt-16">
+                <span>{language.page.homePage.section.about.buttonLabel}</span>
                 <Atoms.ArrowSmRightIcon className="ml-4 w-6 h-6" />
               </a>
             </Link>
@@ -38,3 +46,13 @@ export const HomeAbout: FC = () => {
     </div>
   )
 }
+
+export const HomeAbout: FC = () => {
+  const {
+    state: { language, locale }
+  } = Hooks.Locale.useLocaleContext()
+
+  return <HomeAboutPresenter state={{ language, locale }} />
+}
+
+export default HomeAbout

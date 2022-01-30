@@ -1,26 +1,27 @@
 import { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-
+//
+import { Hooks } from '@/features'
 import { Atoms } from '@/components'
+import type { TLanguage, TLocale } from '@/types/language'
 
-export type THomeCampaignProps = {
+export type THomeCampaignPresenterProps = {
   state: {
-    link: string
+    locale: TLocale
+    language: TLanguage
   }
 }
 
-export const HomeCampaign: FC<THomeCampaignProps> = ({ state: { link } }) => {
+export const HomeCampaignPresenter: FC<THomeCampaignPresenterProps> = ({ state: { locale, language } }) => {
   return (
     <section>
       <div className="container py-8 px-6 mx-auto md:py-16">
         <div>
           <div className="text-center">
-            <p className="font-bold">🎉 キャンペーン🎉</p>
-            <h2 className=" text-3xl font-bold">🎁 Giveaway Event 🎁</h2>
-            <p className="mt-4">
-              オフィシャルサイトオープン記念、サイト内に隠れているベーリーを見つけると抽選でNFTがもらえるイベントを実施中です！
-            </p>
+            <h2 className="font-bold">{language.page.homePage.section.campaign.title}</h2>
+            <h3 className=" text-3xl font-bold">{language.page.homePage.section.campaign.subTitle}</h3>
+            <p className="mt-4">{language.page.homePage.section.campaign.description}</p>
           </div>
           <div className="object-cover object-top overflow-hidden mx-auto mt-8 w-full rounded md:mt-16 md:h-80 lg:object-center lg:w-1/2">
             {/* Lang */}
@@ -35,12 +36,9 @@ export const HomeCampaign: FC<THomeCampaignProps> = ({ state: { link } }) => {
             />
           </div>
           <div className="mt-8 md:flex md:justify-center md:mt-16">
-            <Link href={link}>
-              <a
-                target="_blank"
-                className="inline-flex items-center py-3 px-5 mx-auto text-lg leading-5 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200 md:mx-0"
-              >
-                <span>このページにいるかも</span>
+            <Link href={`/${locale}/find`}>
+              <a className="inline-flex items-center py-3 px-5 mx-auto text-lg leading-5 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200 md:mx-0">
+                <span>{language.page.homePage.section.campaign.buttonLabel}</span>
                 <Atoms.ArrowSmRightIcon className="ml-2 w-6 h-6" />
               </a>
             </Link>
@@ -50,3 +48,13 @@ export const HomeCampaign: FC<THomeCampaignProps> = ({ state: { link } }) => {
     </section>
   )
 }
+
+export const HomeCampaign: FC = () => {
+  const {
+    state: { language, locale }
+  } = Hooks.Locale.useLocaleContext()
+
+  return <HomeCampaignPresenter state={{ language, locale }} />
+}
+
+export default HomeCampaign

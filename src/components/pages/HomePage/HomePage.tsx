@@ -9,14 +9,13 @@ import type { TLanguage } from '@/types/language'
 
 type State = {
   language: TLanguage
-  locale: 'ja' | 'en'
 }
 
 export type THomePageProps = {
   state: State
 }
 
-export const HomePagePresenter: FC<THomePageProps> = ({ state: { language, locale } }) => {
+export const HomePagePresenter: FC<THomePageProps> = ({ state: { language } }) => {
   return (
     <>
       <Head>
@@ -51,7 +50,7 @@ export const HomePagePresenter: FC<THomePageProps> = ({ state: { language, local
           }}
         />
         <Molecules.HomeAbout />
-        <Molecules.HomeCampaign state={{ link: `/${locale}/find` }} />
+        <Molecules.HomeCampaign />
       </Templates.GenericTemplate>
     </>
   )
@@ -59,14 +58,13 @@ export const HomePagePresenter: FC<THomePageProps> = ({ state: { language, local
 
 export const HomePage: FC = () => {
   const {
-    state: { language, locale }
+    state: { language }
   } = Hooks.Locale.useLocaleContext()
 
   return (
     <HomePagePresenter
       state={{
-        language,
-        locale
+        language
       }}
     />
   )
