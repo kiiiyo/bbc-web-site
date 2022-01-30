@@ -21,13 +21,33 @@ export const language: TLanguage = {
   },
   page: {
     homePage: {
+      title: 'Home',
       hero: {
         title: 'Hellow, Crypto World!',
         // prettier-ignore
         description: 'A collector\'s NFT item project of bears using pixel art.'
+      },
+      section: {
+        about: {
+          title: 'Welcome🐻🙌',
+          // prettier-ignore
+          description: 'Thank you for visiting our official site! Here you&#39;ll find BitBears with various expressions. We&#39;ve prepared some fun contents, so we hope you enjoy them.',
+          buttonLabel: 'More'
+        },
+        campaign: {
+          title: '🎉 Campaign 🎉',
+          subTitle: '🎁 Giveaway Event 🎁',
+          description:
+            'To celebrate the opening of the official site, we are holding an event where you can win NFTs by drawing lots when you find the hidden Baileys in the site!',
+          buttonLabel: 'He could be on this page.'
+        }
       }
     },
+    aboutPage: {
+      title: 'About'
+    },
     roadmapPage: {
+      title: 'Roadmap',
       hero: {
         title: 'Roadmap',
         // prettier-ignore
@@ -64,7 +84,8 @@ export const language: TLanguage = {
         }
       }
     },
-    searchPage: {
+    findPage: {
+      title: 'Find',
       hero: {
         title: 'Find',
         description: 'Find your favorite 🐻 BitBear!'
@@ -98,6 +119,7 @@ export const language: TLanguage = {
       }
     },
     campaignPage: {
+      title: 'Find',
       hero: {
         title: 'They found us.'
       },

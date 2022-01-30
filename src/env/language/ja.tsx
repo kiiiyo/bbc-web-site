@@ -20,13 +20,33 @@ export const language: TLanguage = {
   },
   page: {
     homePage: {
+      title: 'ホーム',
       hero: {
         title: 'Hellow, Crypto World!',
         // prettier-ignore
         description: 'BitBearClubは🐻 クマをモチーフにしたピクセルアートをNFTの世界に届けるコレクターズプロジェクトです。'
+      },
+      section: {
+        about: {
+          title: 'ようこそ🐻🙌',
+          description:
+            'ボク達のオフィシャルサイトに来てくれてありがとう！いろいろな表情のBitBear達を紹介しています。お楽しみコンテンツも用意してるから楽しんでもらえると嬉しいです。',
+          buttonLabel: 'BitBearもっと知る'
+        },
+        campaign: {
+          title: '🎉 キャンペーン 🎉',
+          subTitle: '🎁 Giveaway Event 🎁',
+          description:
+            'オフィシャルサイトオープン記念、サイト内に隠れているベーリーを見つけると抽選でNFTがもらえるイベントを実施中です！',
+          buttonLabel: 'このページにいるかも'
+        }
       }
     },
+    aboutPage: {
+      title: 'ボク達について'
+    },
     roadmapPage: {
+      title: 'ロードマップ',
       hero: {
         title: 'ロードマップ',
         // prettier-ignore
@@ -63,7 +83,8 @@ export const language: TLanguage = {
         }
       }
     },
-    searchPage: {
+    findPage: {
+      title: '見つける',
       hero: {
         title: '見つける',
         description: 'あなたのお気に入り 🐻 BitBearを見つけよう'
@@ -101,6 +122,7 @@ export const language: TLanguage = {
       }
     },
     campaignPage: {
+      title: '見つかっちゃった',
       hero: {
         title: '見つかっちゃった'
       },

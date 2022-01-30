@@ -18,7 +18,7 @@ export const AboutMoo: FC = () => {
       <div className="w-full lg:pr-10 lg:mt-0 lg:w-1/2">
         <h2 className="mt-4 text-sm tracking-widest text-gray-500 lg:mt-0">🐻 BEAR NAME</h2>
         <h1 className="my-1 text-3xl font-medium text-gray-900 ">Moo</h1>
-        <p className="mt-6">TextTextTextTextTextTextTextTextTextTextTextTextText</p>
+        <p className="mt-6 break-words">TextTextTextTextTextTextTextTextTextTextTextTextText</p>
         <h3 className="mt-4 text-xl font-medium text-gray-900">Avatar</h3>
         <div className="flex mt-2">
           <Link href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/85612792707671471240665121138616411211534411599642434463980733055135626821633">

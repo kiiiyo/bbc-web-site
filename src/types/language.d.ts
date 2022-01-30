@@ -1,3 +1,5 @@
+export type TLocale = 'ja' | 'en'
+
 export type TLanguage = {
   common: {
     meta: {
@@ -19,12 +21,30 @@ export type TLanguage = {
   }
   page: {
     homePage: {
+      title: string
       hero: {
         title: string
         description: string
       }
+      section: {
+        about: {
+          title: string
+          description: string
+          buttonLabel: string
+        }
+        campaign: {
+          title: string
+          subTitle: string
+          description: string
+          buttonLabel: string
+        }
+      }
+    }
+    aboutPage: {
+      title: string
     }
     roadmapPage: {
+      title: string
       hero: {
         title: string
         description: string
@@ -48,7 +68,8 @@ export type TLanguage = {
         }
       }
     }
-    searchPage: {
+    findPage: {
+      title: string
       hero: {
         title: string
         description: string
@@ -72,6 +93,7 @@ export type TLanguage = {
       }
     }
     campaignPage: {
+      title: string
       hero: {
         title: string
       }

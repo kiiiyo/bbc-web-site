@@ -25,7 +25,7 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
       <div className="container flex mx-auto">
         <div className="flex relative z-10 flex-col mx-4 mt-10 w-full bg-white rounded-lg shadow-md md:ml-auto md:w-1/2 lg:w-1/3">
           <div className="flex flex-row p-6">
-            <h2 className="text-xl font-bold">{language.page.searchPage.section.title}</h2>
+            <h2 className="text-xl font-bold">{language.page.findPage.section.title}</h2>
             {findSectionDisplay === 'SHOW' && (
               <button
                 className="ml-auto"
@@ -60,9 +60,9 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
                   </div>
                   <div className="grow pl-4">
                     <h3 className="py-2 mb-1 text-xl font-bold tracking-wider text-gray-900">
-                      {language.page.searchPage.section.content.step1.title}
+                      {language.page.findPage.section.content.step1.title}
                     </h3>
-                    <p>{language.page.searchPage.section.content.step1.description}</p>
+                    <p>{language.page.findPage.section.content.step1.description}</p>
                   </div>
                 </div>
                 <div className="flex relative pb-4">
@@ -74,9 +74,9 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
                   </div>
                   <div className="grow pl-4">
                     <h3 className="py-2 mb-1 text-xl font-bold tracking-wider text-gray-900">
-                      {language.page.searchPage.section.content.step2.title}
+                      {language.page.findPage.section.content.step2.title}
                     </h3>
-                    <p>{language.page.searchPage.section.content.step2.description}</p>
+                    <p>{language.page.findPage.section.content.step2.description}</p>
                   </div>
                 </div>
                 <div className="flex relative">
@@ -85,9 +85,9 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
                   </div>
                   <div className="grow pl-4">
                     <h3 className="py-2 mb-1 text-xl font-bold tracking-wider text-gray-900">
-                      {language.page.searchPage.section.content.campaign.title}
+                      {language.page.findPage.section.content.campaign.title}
                     </h3>
-                    <p>{language.page.searchPage.section.content.campaign.description}</p>
+                    <p>{language.page.findPage.section.content.campaign.description}</p>
                     <h4 className="py-2 mt-4 font-bold tracking-wider text-gray-900">参加条件</h4>
                     <ul>
                       <li>【✅ 】Twitterアカウントを持っている</li>
