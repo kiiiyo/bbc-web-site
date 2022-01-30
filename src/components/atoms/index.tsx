@@ -9,5 +9,6 @@ export {
   ClipboardIcon,
   GoogleIcon,
   CloseIcon,
-  MenuIcon
+  MenuIcon,
+  ArrowSmRightIcon
 } from './icon'

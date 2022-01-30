@@ -4,18 +4,19 @@ import Head from 'next/head'
 //
 import { Constants } from '@/env'
 import { Hooks } from '@/features'
-import { Templates, Organisms } from '@/components'
+import { Templates, Organisms, Molecules } from '@/components'
 import type { TLanguage } from '@/types/language'
 
 type State = {
   language: TLanguage
+  locale: 'ja' | 'en'
 }
 
 export type THomePageProps = {
   state: State
 }
 
-export const HomePagePresenter: FC<THomePageProps> = ({ state: { language } }) => {
+export const HomePagePresenter: FC<THomePageProps> = ({ state: { language, locale } }) => {
   return (
     <>
       <Head>
@@ -37,7 +38,7 @@ export const HomePagePresenter: FC<THomePageProps> = ({ state: { language } }) =
             ),
             description: language.page.homePage.hero.description,
             image: (
-              <div className="overflow-hidden relative z-10 justify-items-center items-center mx-auto mt-6 w-24 h-24 rounded-full border-2 border-gray-400">
+              <div className="overflow-hidden relative z-10 justify-items-center items-center mx-auto mt-6 w-24 h-24 rounded-full border-2 border-white">
                 <Image
                   src="/assets/images/hero-image.gif"
                   alt="BitBear Neo"
@@ -49,6 +50,8 @@ export const HomePagePresenter: FC<THomePageProps> = ({ state: { language } }) =
             )
           }}
         />
+        <Molecules.HomeAbout />
+        <Molecules.HomeCampaign state={{ link: `/${locale}/find` }} />
       </Templates.GenericTemplate>
     </>
   )
@@ -56,13 +59,14 @@ export const HomePagePresenter: FC<THomePageProps> = ({ state: { language } }) =
 
 export const HomePage: FC = () => {
   const {
-    state: { language }
+    state: { language, locale }
   } = Hooks.Locale.useLocaleContext()
 
   return (
     <HomePagePresenter
       state={{
-        language
+        language,
+        locale
       }}
     />
   )
