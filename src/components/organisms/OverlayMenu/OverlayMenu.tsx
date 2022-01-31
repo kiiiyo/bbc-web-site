@@ -1,6 +1,7 @@
-import { FC } from 'react'
+import { FC, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 //
 import { Constants } from '@/env'
 import { Hooks, Context } from '@/features'
@@ -22,7 +23,8 @@ export type TOverlayMenuPresenterProps = {
     menuList: Array<TMenuItem>
   }
   actions: {
-    onCloseButtonClick: (condition: Context.AppContext.TOverlayMenuDisplay) => void
+    onCloseButtonClick: () => void
+    onMenuItemClick: (path: string) => void
   }
 }
 
@@ -30,7 +32,7 @@ export type TOverlayMenuPresenterProps = {
 
 export const OverlayMenuPresenter: FC<TOverlayMenuPresenterProps> = ({
   state: { isMobile, locale, language, overlayMenuDisplay, menuList },
-  actions: { onCloseButtonClick }
+  actions: { onCloseButtonClick, onMenuItemClick }
 }) => {
   return isMobile && overlayMenuDisplay === 'SHOW' ? (
     <div className="overflow-y-auto fixed inset-0 z-50 min-h-screen">
@@ -61,7 +63,7 @@ export const OverlayMenuPresenter: FC<TOverlayMenuPresenterProps> = ({
           <button
             type="button"
             onClick={() => {
-              onCloseButtonClick('HIDE')
+              onCloseButtonClick()
             }}
           >
             <Atoms.CloseIcon className="h-8 text-white" />
@@ -71,17 +73,15 @@ export const OverlayMenuPresenter: FC<TOverlayMenuPresenterProps> = ({
           {menuList.map((menuItem: TMenuItem, index: number) => {
             return (
               <li key={index}>
-                <Link href={menuItem.path}>
-                  <a
-                    onClick={() => {
-                      onCloseButtonClick('HIDE')
-                    }}
-                    className="block py-4 text-2xl font-bold text-white"
-                  >
-                    <span className="mr-3 md:inline-block">{menuItem.icon}</span>
-                    <span className="inline-block">{menuItem.label}</span>
-                  </a>
-                </Link>
+                <button
+                  onClick={() => {
+                    onMenuItemClick(menuItem.path)
+                  }}
+                  className="block py-4 text-2xl font-bold text-white"
+                >
+                  <span className="mr-3 md:inline-block">{menuItem.icon}</span>
+                  <span className="inline-block">{menuItem.label}</span>
+                </button>
               </li>
             )
           })}
@@ -92,6 +92,7 @@ export const OverlayMenuPresenter: FC<TOverlayMenuPresenterProps> = ({
 }
 
 export const OverlayMenu: FC = () => {
+  const router = useRouter()
   const {
     state: { overlayMenuDisplay, isMobile },
     actions: { handleOverlayMenuDisplay }
@@ -103,6 +104,18 @@ export const OverlayMenu: FC = () => {
 
   const localeState = locale || 'ja'
 
+  const onMenuItemClick = useCallback(
+    (path: string) => {
+      router.push(path)
+      handleOverlayMenuDisplay('HIDE')
+    },
+    [handleOverlayMenuDisplay, router]
+  )
+
+  const onCloseButtonClick = useCallback(() => {
+    handleOverlayMenuDisplay('HIDE')
+  }, [handleOverlayMenuDisplay])
+
   return (
     <OverlayMenuPresenter
       state={{
@@ -113,7 +126,8 @@ export const OverlayMenu: FC = () => {
         menuList: Constants.GLOBAL_MENU_LIST[`${localeState}`]
       }}
       actions={{
-        onCloseButtonClick: handleOverlayMenuDisplay
+        onCloseButtonClick,
+        onMenuItemClick
       }}
     />
   )

@@ -13,7 +13,7 @@ export const GLOBAL_MENU_LIST = {
     {
       name: 'ABOUT',
       icon: '🐻',
-      label: '僕たちについて',
+      label: '達について',
       path: '/ja/about'
     },
     {
