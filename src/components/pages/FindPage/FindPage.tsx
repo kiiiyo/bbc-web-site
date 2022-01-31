@@ -17,7 +17,7 @@ export const FindPagePresenter: FC<TFindPageProps> = ({ state: { language } }) =
     <>
       <Head>
         <title>
-          {language.page.campaignPage.title} - {Constants.SITE_TITLE}
+          {language.page.findPage.title} - {Constants.SITE_TITLE}
         </title>
       </Head>
 

@@ -17,9 +17,9 @@ export const CampaignSectionPresenter: FC<TCampaignPagePresenterProps> = ({ stat
     <div className="flex flex-col mx-auto mt-24 lg:flex-row lg:w-4/5">
       <div className="object-cover object-top overflow-hidden w-full h-64 rounded lg:object-center lg:w-1/2 lg:h-auto">
         <Image
-          alt="Bear Name Baily"
+          alt="Bear Name Bearly"
           className=""
-          src="/assets/images/mainvisual-baily.png"
+          src="/assets/images/mainvisual-bearly.png"
           layout={'responsive'}
           width={960}
           height={640}

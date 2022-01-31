@@ -25,7 +25,7 @@ export const FooterPresenter: FC<FooterPresenter> = ({ state: { language, menuLi
               <div className="flex justify-between items-center">
                 <Link href="/">
                   <a className="flex justify-between items-center text-gray-800 hover:text-gray-700 transition-colors duration-200">
-                    <div className="overflow-hidden mr-3 w-12 h-12 rounded-full border-2 border-gray-400">
+                    <div className="overflow-hidden z-10 mr-3 w-12 h-12 rounded-full border-2 border-gray-400">
                       <Image
                         src="/assets/images/logo.png"
                         alt="BitBearClub"

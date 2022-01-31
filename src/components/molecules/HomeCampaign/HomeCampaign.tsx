@@ -28,9 +28,9 @@ export const HomeCampaignPresenter: FC<THomeCampaignPresenterProps> = ({ state: 
             {/* Lang */}
 
             <Image
-              alt="Find Beary"
+              alt="Find Bearly"
               className="rounded-lg"
-              src="/assets/images/mainvisual-home-beary.png"
+              src="/assets/images/mainvisual-home-bearly.png"
               layout={'responsive'}
               width={1200}
               height={630}

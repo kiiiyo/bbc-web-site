@@ -40,8 +40,8 @@ export const CampaignPagePresenter: FC<TCampaignPagePresenterProps> = ({ state: 
               image: (
                 <div className="overflow-hidden relative z-10 justify-items-center items-center mx-auto mt-6 w-24 h-24 rounded-full border-2 border-gray-400">
                   <Image
-                    src="/assets/images/avatar-baily.png"
-                    alt="BitBear Neo"
+                    src="/assets/images/avatar-bearly.png"
+                    alt="BitBear Bearly"
                     className="object-cover"
                     width="100%"
                     height="100%"

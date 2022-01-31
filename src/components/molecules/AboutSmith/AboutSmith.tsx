@@ -56,7 +56,7 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
           >
             <Image
               className="w-full h-full"
@@ -77,7 +77,7 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
           >
             <Image
               className="w-full h-full"
@@ -98,7 +98,7 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
           >
             <Image
               className="w-full h-full"
@@ -119,7 +119,7 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
           >
             <Image
               className="w-full h-full"
@@ -140,7 +140,7 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
           >
             <Image
               className="w-full h-full"

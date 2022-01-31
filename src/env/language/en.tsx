@@ -44,7 +44,7 @@ export const language: TLanguage = {
           title: '🎉 Campaign 🎉',
           subTitle: '🎁 Giveaway Event 🎁',
           description:
-            'To celebrate the opening of the official site, we are holding an event where you can win NFTs by drawing lots when you find the hidden Baileys in the site!',
+            'To celebrate the opening of the official site, we are holding an event where you can win NFTs by drawing lots when you find the hidden Bearly in the site!',
           buttonLabel: 'He could be on this page.'
         }
       }

@@ -7,13 +7,13 @@ export const language: TLanguage = {
     },
     headerMenu: {
       home: 'ホーム',
-      about: 'ボク達について',
+      about: '達について',
       roadmap: 'ロードマップ',
       find: '見つける'
     },
     footerMenu: {
       home: 'ホーム',
-      about: 'ボク達について',
+      about: '達について',
       roadmap: 'ロードマップ',
       find: '見つける'
     }
@@ -46,15 +46,15 @@ export const language: TLanguage = {
           title: '🎉 キャンペーン 🎉',
           subTitle: '🎁 Giveaway Event 🎁',
           description:
-            'オフィシャルサイトオープン記念、サイト内に隠れているベーリーを見つけると抽選でNFTがもらえるイベントを実施中です！',
+            'オフィシャルサイトオープン記念、サイト内に隠れているベアリーを見つけると抽選でNFTがもらえるイベントを実施中です!',
           buttonLabel: 'このページにいるかも'
         }
       }
     },
     aboutPage: {
-      title: 'ボク達について',
+      title: '🐻 達について',
       hero: {
-        title: 'ボク達について',
+        title: '達について',
         description: 'BitBear達をご紹介します。'
       },
       section: {
@@ -170,8 +170,9 @@ export const language: TLanguage = {
             title: '🎁 Giveaway キャンペーン開催中 🎉',
             description: (
               <>
-                <strong>先着64名様</strong>にBitBear NFT Giveaway
-                キャンペーン開催中。この森の中のベーリーという熊さんが応募方法を教えてくれるよ。{' '}
+                <strong>抽選で64名様にBitBear NFT Giveaway キャンペーン開催中。</strong>この森の中の
+                <strong>ベアリーという🐻 さん</strong>
+                が応募方法を教えてくれるよ。
               </>
             )
           }
