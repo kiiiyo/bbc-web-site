@@ -4,9 +4,9 @@ export type Locale = string
 // cheap trick
 export const UnknownLocale = Symbol('unknown-locale')
 // FIX me
-export const defaultLocale: Locale = 'ja'
+export const defaultLocale: Locale = 'en'
 
-export const availableLocales: Locale[] = [defaultLocale, 'en']
+export const availableLocales: Locale[] = [defaultLocale, 'ja']
 
 // for a potential locale picker
 // export const languageNames = {

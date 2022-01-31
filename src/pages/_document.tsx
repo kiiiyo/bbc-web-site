@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 const CustomDocument = () => {
   const url = 'https://bitbearclub.art'
-  const title = 'Bit Bear Club'
+  const title = 'BitBearClub'
   // prettier-ignore
   const description = 'A collector\'s NFT item project of bears using pixel art.'
 
