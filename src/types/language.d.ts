@@ -1,4 +1,4 @@
-export type TLocale = 'ja' | 'en'
+import { ReactNode } from 'react'
 
 export type TLanguage = {
   common: {
@@ -29,7 +29,7 @@ export type TLanguage = {
       section: {
         about: {
           title: string
-          description: string
+          description: ReactNode
           buttonLabel: string
         }
         campaign: {

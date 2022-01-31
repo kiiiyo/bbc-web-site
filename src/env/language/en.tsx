@@ -30,8 +30,14 @@ export const language: TLanguage = {
       section: {
         about: {
           title: 'Welcome🐻🙌',
-          // prettier-ignore
-          description: 'Thank you for visiting our official site! Here you&#39;ll find BitBears with various expressions. We&#39;ve prepared some fun contents, so we hope you enjoy them.',
+          description: (
+            <>
+              Welcome to the official BitBearClub website! The BitBears on this site are 🎓 students studying art and
+              design at 🎨 NFT Art College in 🌏 Crypto World . They are very expressive✨ and cute. They are very
+              expressive✨ and cute💕. They are very expressive and cute.
+            </>
+          ),
+
           buttonLabel: 'More'
         },
         campaign: {

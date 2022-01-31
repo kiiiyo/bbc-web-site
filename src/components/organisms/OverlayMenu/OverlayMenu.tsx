@@ -8,13 +8,15 @@ import { Atoms } from '@/components'
 //
 import type { TLanguage } from '@/types/language'
 import type { TMenuItem } from '@/types/common'
+import type { TLocale } from '@/types/locale'
+
 //
 import styles from './OverlayMenu.module.scss'
 
 export type TOverlayMenuPresenterProps = {
   state: {
     isMobile: boolean
-    locale: 'ja' | 'en'
+    locale: TLocale
     language: TLanguage
     overlayMenuDisplay: Context.AppContext.TOverlayMenuDisplay
     menuList: Array<TMenuItem>

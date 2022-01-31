@@ -1,6 +1,7 @@
 import { FC, createContext, useEffect, useState } from 'react'
 //
-import type { TLanguage, TLocale } from '@/types/language'
+import type { TLanguage } from '@/types/language'
+import type { TLocale } from '@/types/locale'
 //
 import { Language } from '@/env'
 
