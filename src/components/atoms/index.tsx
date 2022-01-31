@@ -1,3 +1,5 @@
+export { GoogleTagManager } from './GoogleTagManager/'
+
 export {
   FlagIcon,
   EyeIcon,
