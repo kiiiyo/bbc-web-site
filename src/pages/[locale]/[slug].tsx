@@ -5,13 +5,14 @@ import { Context } from '@/features'
 import { Pages } from '@/components'
 import { withLocale } from '@/utils/translations/locales'
 import { isPreviewEnabled } from '@/utils/preview'
+import { TLocale } from '@/types/locale'
 
 type State = {
   page:
     | {
         path: string
         preview: boolean
-        locale: 'ja' | 'en'
+        locale: TLocale
       }
     | undefined
 }

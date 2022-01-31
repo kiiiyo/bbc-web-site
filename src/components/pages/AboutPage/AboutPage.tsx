@@ -15,7 +15,6 @@ export type AboutPageProps = {
 }
 
 export const AboutPagePresenter: FC<AboutPageProps> = ({ state: { language } }) => {
-  console.log(language)
   return (
     <>
       <Head>
@@ -36,11 +35,11 @@ export const AboutPagePresenter: FC<AboutPageProps> = ({ state: { language } }) 
                   <>
                     <span className="inline-block mr-3">🐻</span>
                     <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
-                      About
+                      {language.page.aboutPage.hero.title}
                     </span>
                   </>
                 ),
-                description: 'Here are the BitBears.'
+                description: language.page.aboutPage.hero.description
               }}
             />
             <div className="container px-6 mx-auto ">

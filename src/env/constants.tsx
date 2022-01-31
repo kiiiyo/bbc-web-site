@@ -1,6 +1,6 @@
 export const MOBILE_BREAK_POINT_SIZE = 767
 
-export const SITE_TITLE = 'Bit Bear Club'
+export const SITE_TITLE = 'BitBearClub'
 
 export const GLOBAL_MENU_LIST = {
   ja: [
