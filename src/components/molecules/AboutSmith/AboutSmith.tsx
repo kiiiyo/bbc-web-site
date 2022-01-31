@@ -1,8 +1,19 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { FC } from 'react'
+//
+import { Hooks } from '@/features'
+import type { TLanguage } from '@/types/language'
+import type { TLocale } from '@/types/locale'
 
-export const AboutSmith: FC = () => {
+export type TAboutSmithPresenterProps = {
+  state: {
+    locale: TLocale
+    language: TLanguage
+  }
+}
+
+export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({ state: { language } }) => {
   return (
     <div className="flex flex-col mx-auto mt-24 lg:flex-row lg:w-4/5">
       <div className="object-cover object-top overflow-hidden w-full h-64 rounded lg:object-center lg:w-1/2 lg:h-auto">
@@ -17,9 +28,11 @@ export const AboutSmith: FC = () => {
       </div>
       <div className="w-full lg:pl-10 lg:mt-0 lg:w-1/2">
         <h2 className="mt-4 text-sm tracking-widest text-gray-500 lg:mt-0">🐻 BEAR NAME</h2>
-        <h1 className="my-1 text-3xl font-medium text-gray-900 ">Smith</h1>
-        <p className="mt-6 break-words">TextTextTextTextTextTextTextTextTextTextTextTextText</p>
-        <h3 className="mt-4 text-xl font-medium text-gray-900">Avatar</h3>
+        <h1 className="mt-4 mb-2 text-3xl font-bold text-gray-900 lg:text-5xl">
+          {language.page.aboutPage.section.smith.name}
+        </h1>
+        <p className="mt-6 leading-8">{language.page.aboutPage.section.smith.description}</p>
+        <h3 className="mt-8 text-xl font-medium text-gray-900">Avatar Series</h3>
         <div className="flex mt-2">
           <Link href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/85612792707671471240665121138616411211534411599642434463980733055135626821633">
             <a
@@ -121,3 +134,13 @@ export const AboutSmith: FC = () => {
     </div>
   )
 }
+
+export const AboutSmith: FC = () => {
+  const {
+    state: { language, locale }
+  } = Hooks.Locale.useLocaleContext()
+
+  return <AboutSmithPresenter state={{ language, locale }} />
+}
+
+export default AboutSmith

@@ -42,6 +42,28 @@ export type TLanguage = {
     }
     aboutPage: {
       title: string
+      hero: {
+        title: string
+        description: string
+      }
+      section: {
+        neo: {
+          name: string
+          description: ReactNode
+        }
+        moo: {
+          name: string
+          description: ReactNode
+        }
+        smith: {
+          name: string
+          description: ReactNode
+        }
+        oracle: {
+          name: string
+          description: ReactNode
+        }
+      }
     }
     roadmapPage: {
       title: string
