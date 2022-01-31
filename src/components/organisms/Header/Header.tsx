@@ -7,10 +7,11 @@ import { Hooks, Context } from '@/features'
 import { Atoms } from '@/components'
 //
 import type { TLanguage } from '@/types/language'
+import type { TLocale } from '@/types/locale'
 import type { TMenuItem } from '@/types/common'
 
 export type State = {
-  locale: 'ja' | 'en'
+  locale: TLocale
   path: string
   language: TLanguage
   menuList: Array<TMenuItem>

@@ -4,8 +4,8 @@ import { FC } from 'react'
 //
 import { TLanguage } from '@/types/language'
 import { Constants } from '@/env'
-import type { TMenuItem } from '@/types/common'
 import { Hooks } from '@/features'
+import type { TMenuItem } from '@/types/common'
 
 //type FooterProps = {}
 type FooterPresenter = {

@@ -29,8 +29,17 @@ export const language: TLanguage = {
       section: {
         about: {
           title: 'ようこそ🐻🙌',
-          description:
-            'ボク達のオフィシャルサイトに来てくれてありがとう！いろいろな表情のBitBear達を紹介しています。お楽しみコンテンツも用意してるから楽しんでもらえると嬉しいです。',
+          description: (
+            <>
+              BitBearClubオフィシャルサイトへようこそ!
+              <br />
+              このサイトにいるBitBear達は、<strong>🌏 Crypto World</strong>にある
+              <strong>🎨 NFT Art College</strong>
+              でアートやデザインを学んでいる🎓 学生達です。
+              <br />
+              彼らはとても表情豊か✨ で可愛い💕 やつらです。そんな彼らの様子を👀 見ていていってください。
+            </>
+          ),
           buttonLabel: 'BitBearもっと知る'
         },
         campaign: {

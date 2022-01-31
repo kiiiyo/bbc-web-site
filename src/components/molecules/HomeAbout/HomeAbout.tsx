@@ -4,7 +4,8 @@ import Image from 'next/image'
 //
 import { Hooks } from '@/features'
 import { Atoms } from '@/components'
-import type { TLanguage, TLocale } from '@/types/language'
+import type { TLanguage } from '@/types/language'
+import type { TLocale } from '@/types/locale'
 
 export type THomeAboutPresenterProps = {
   state: {
