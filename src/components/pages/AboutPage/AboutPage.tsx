@@ -15,7 +15,6 @@ export type AboutPageProps = {
 }
 
 export const AboutPagePresenter: FC<AboutPageProps> = ({ state: { language } }) => {
-  console.log(language)
   return (
     <>
       <Head>
