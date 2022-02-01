@@ -27,7 +27,9 @@ export const HomeCampaignPresenter: FC<THomeCampaignPresenterProps> = ({ state: 
               {language.page.campaignPage.section.content.term.title}
             </h4>
             <p>{language.page.campaignPage.section.content.term.description}</p>
-            <p className="mt-4 mb-2 text-3xl font-bold text-gray-900 lg:text-5xl">残り64名</p>
+            <p className="mt-4 mb-2 text-3xl font-bold text-gray-900 lg:text-5xl">
+              {language.page.homePage.section.campaign.currentPeople}
+            </p>
           </div>
           <div className="object-cover object-top overflow-hidden mx-auto mt-8 w-full rounded md:mt-16 md:h-80 lg:object-center lg:w-1/2">
             <Image
