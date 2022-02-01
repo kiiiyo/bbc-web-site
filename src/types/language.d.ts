@@ -35,6 +35,7 @@ export type TLanguage = {
         campaign: {
           title: string
           subTitle: string
+          currentPeople: string
           description: string
           buttonLabel: string
         }
@@ -110,6 +111,7 @@ export type TLanguage = {
           campaign: {
             title: React.ReactNode
             description: React.ReactNode
+            currentPeople: string
             requirement: {
               title: string
               list: Array<string>

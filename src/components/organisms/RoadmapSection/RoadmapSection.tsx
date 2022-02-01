@@ -80,7 +80,7 @@ export const RoadmapSectionPresenter: FC<RoadmapSectionPresenterProps> = ({ stat
                 <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">
                   {language.page.roadmapPage.section.q3.title}
                 </h3>
-                <p className="leading-relaxed">【🤔 】 I&apos;m thinking about it.</p>
+                <p className="leading-relaxed">{language.page.roadmapPage.section.q3.objectives[0]}</p>
               </div>
             </div>
             <div className="flex relative">
