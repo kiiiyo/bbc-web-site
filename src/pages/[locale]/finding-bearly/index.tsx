@@ -33,7 +33,7 @@ export const getServerSideProps = withLocale(async (locale, { resolvedUrl }) => 
   }
 })
 
-const FindingBailyPage: NextPage<FindPageProps> = ({ state: { page } }) => {
+const FindingBearlyPage: NextPage<FindPageProps> = ({ state: { page } }) => {
   if (!page) {
     return <ErrorPage statusCode={404} />
   }
@@ -44,4 +44,4 @@ const FindingBailyPage: NextPage<FindPageProps> = ({ state: { page } }) => {
   )
 }
 
-export default FindingBailyPage
+export default FindingBearlyPage

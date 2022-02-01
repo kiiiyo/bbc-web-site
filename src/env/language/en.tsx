@@ -167,8 +167,15 @@ export const language: TLanguage = {
           campaign: {
             title: '🎁 Giveaway Campaign 🎉',
             description: (
-              <>We&#39;re running a campaign to find Baily! The first 64 people to arrive will giveaway an NFT</>
-            )
+              <>
+                The BitBear NFT Giveaway campaign is underway with 64 winners drawn.
+                <strong>A bear named 🐻 Bearly in the woods will tell you how to enter.</strong>
+              </>
+            ),
+            requirement: {
+              title: 'Requirement',
+              list: ['✅ You have a Twitter account.', '✅ You have a OpenSea account.']
+            }
           }
         }
       }

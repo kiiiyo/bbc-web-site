@@ -97,10 +97,12 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
                       {language.page.findPage.section.content.campaign.title}
                     </h3>
                     <p>{language.page.findPage.section.content.campaign.description}</p>
-                    <h4 className="py-2 mt-4 font-bold tracking-wider text-gray-900">参加条件</h4>
+                    <h4 className="py-2 mt-4 font-bold tracking-wider text-gray-900">
+                      {language.page.findPage.section.content.campaign.requirement.title}
+                    </h4>
                     <ul>
-                      <li>【✅ 】Twitterアカウントを持っている</li>
-                      <li>【✅ 】OpenSeaアカウントを持っている</li>
+                      <li>{language.page.findPage.section.content.campaign.requirement.list[0]}</li>
+                      <li>{language.page.findPage.section.content.campaign.requirement.list[1]}</li>
                     </ul>
                   </div>
                 </div>
