@@ -162,8 +162,8 @@ export const language: TLanguage = {
             title: 'ステップ2',
             description: (
               <>
-                この森の中にいる🐻 <strong>BitBear</strong>{' '}
-                の画像にOpenSeaのアイコンをクリックするとOpenSeaの詳細ページが見れます。
+                この森の中にいる🐻 <strong>BitBear</strong>
+                のオレンジアイコンをクリックするとOpenSeaの詳細ページが見れます。
               </>
             )
           },

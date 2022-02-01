@@ -159,7 +159,7 @@ export const language: TLanguage = {
             title: 'Step2',
             description: (
               <>
-                Click on the image of Opensea icon your favorite 🐻 <strong>BitBear</strong> to see more details.
+                Click on the orange icon your favorite 🐻 <strong>BitBear</strong> to see more details.
               </>
             )
           },
