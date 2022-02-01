@@ -45,7 +45,8 @@ export const language: TLanguage = {
           subTitle: '🎁 Giveaway Event 🎁',
           description:
             'To celebrate the opening of the official site, we are holding an event where you can win NFTs by drawing lots when you find the hidden Bearly in the site!',
-          buttonLabel: 'He could be on this page.'
+          buttonLabel: 'He could be on this page.',
+          currentPeople: '64 people left.'
         }
       }
     },
@@ -93,9 +94,7 @@ export const language: TLanguage = {
             <>
               Oracle is a second year panda at NFT Art College attending from 🇨🇳 China Server. He&#39;s majoring in
               digital art, including 3DCG and VFX. He&#39;s a little quiet and always 🖥️ staring at his computer, but on
-              his days off he&#39;s a kind-hearted guy who cooks Chinese food for everyone. He&#39;s a bit quiet and
-              always staring at his computer, but on his days off he&#39;s a kind-hearted guy who cooks Chinese food for
-              everyone.
+              his days off he&#39;s a kind-hearted guy who cooks 🥟 Chinese food for everyone.
             </>
           )
         }
@@ -112,29 +111,29 @@ export const language: TLanguage = {
         q1: {
           title: 'Term: Jan - Mar',
           objectives: [
-            '【🎉 】 Bit Bear Club official site open .',
-            '【🏃】 Bit Bear Avatar Series NFT item 512 drop.',
-            '【🏃】 Bit Bear New Series NFT item 64 drop.',
-            '【🏃】 Twitter Follower 1000.',
-            '【🏃】 OpenSea Volume Trade 0.1.'
+            '🎉 Bit Bear Club official site open .',
+            '🏃 Bit Bear Avatar Series NFT item 512 drop.',
+            '🏃 Bit Bear New Series NFT item 64 drop.',
+            '🏃 Twitter Follower 1000.',
+            '🏃 OpenSea Volume Trade 0.1.'
           ]
         },
         q2: {
           title: 'Term: Apr - Jun',
           // prettier-ignore
-          objectives: ['【🤔 】I\'m thinking about it.']
+          objectives: ['🤔 I\'m thinking about it.']
         },
         q3: {
           title: 'Term: Jul - Sep',
           // prettier-ignore
-          objectives: ['【🤔 】I\'m thinking about it.']
+          objectives: ['🤔 I\'m thinking about it.']
         },
         q4: {
           title: 'Term: Oct - Dec',
           objectives: [
-            '【🏃】 Bit Bear Cloub NFT Total drop 4096 . (😝 Maybe)',
-            '【🏃】 Twitter Follower 10000. - (😝 Maybe)',
-            '【🏃】 OpenSea Volume Trade 1.0. - (😝 Maybe)'
+            '🏃 Bit Bear Cloub NFT Total drop 4096 . (😝 Maybe)',
+            '🏃 Twitter Follower 10000. - (😝 Maybe)',
+            '🏃 OpenSea Volume Trade 1.0. - (😝 Maybe)'
           ]
         }
       }
@@ -172,6 +171,7 @@ export const language: TLanguage = {
                 <strong>A bear named 🐻 Bearly in the woods will tell you how to enter.</strong>
               </>
             ),
+            currentPeople: '64 people left.',
             requirement: {
               title: 'Requirement',
               list: ['✅ You have a Twitter account.', '✅ You have a OpenSea account.']

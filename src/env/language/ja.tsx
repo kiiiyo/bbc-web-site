@@ -47,7 +47,8 @@ export const language: TLanguage = {
           subTitle: '🎁 Giveaway Event 🎁',
           description:
             'オフィシャルサイトオープン記念、サイト内に隠れているベアリーを見つけると抽選でNFTがもらえるイベントを実施中です!',
-          buttonLabel: 'このページにいるかも'
+          buttonLabel: 'このページにいるかも',
+          currentPeople: '残り64人'
         }
       }
     },
@@ -63,8 +64,8 @@ export const language: TLanguage = {
           description: (
             <>
               ネオは<strong>🇮🇸 アイスランドサーバー</strong>から通っているNFT Art College の１年生の
-              <strong>白熊</strong>だよ。彼は🎨 ピクセルアートを専攻いて、🤩 おしゃべりで、🍭 食いしん坊、😝
-              おっちょこちょいなやつなんだ。そんなネオを他のBitBear達は弟分として可愛いがってるみたい。
+              <strong>ホッキョクグマ</strong>だよ。彼は🎨 ピクセルアートを専攻しているんだ。🤩 おしゃべりで、🍭
+              食いしん坊、😝 おっちょこちょいなやつなんだ。そんなネオを他のBitBear達は弟分として可愛いがってるみたい。
             </>
           )
         },
@@ -95,7 +96,7 @@ export const language: TLanguage = {
           description: (
             <>
               オラクルは<strong>🇨🇳 中国サーバー</strong>から通っているNFT Art College の２年生の<strong>パンダ</strong>
-              。彼は3DCGやVFXなどのデジタルアートを専攻している。ちょっと物静かでいつも🖥️
+              。彼は3DCGやVFXなどのデジタルアートを専攻しているんだ。ちょっと物静かでいつも🖥️
               パソコンとにらめっこしてるけど、休日は🥟 中国料理をみんなに作ってくれる心優しいやつなんだ。
             </>
           )
@@ -113,29 +114,29 @@ export const language: TLanguage = {
         q1: {
           title: '期間: 1月 - 3月',
           objectives: [
-            '【🎉 】 Bit Bear Club official site open .',
-            '【🏃】 Bit Bear Avatar Series NFT item 512 drop.',
-            '【🏃】 Bit Bear New Series NFT item 64 drop.',
-            '【🏃】 Twitter Follower 1000.',
-            '【🏃】 OpenSea Volume Trade 0.1.'
+            '🎉  Bit Bear Club official site open .',
+            '🏃 Bit Bear Avatar Series NFT item 512 drop.',
+            '🏃 Bit Bear New Series NFT item 64 drop.',
+            '🏃 Twitter Follower 1000.',
+            '🏃 OpenSea Volume Trade 0.1.'
           ]
         },
         q2: {
           title: '期間: 4月 - 6月',
           // prettier-ignore
-          objectives: ['【🤔 】I\'m thinking about it.']
+          objectives: ['🤔 I\'m thinking about it.']
         },
         q3: {
           title: '期間: 7月 - 9月',
           // prettier-ignore
-          objectives: ['【🤔 】I\'m thinking about it.']
+          objectives: ['🤔 I\'m thinking about it.']
         },
         q4: {
           title: '期間: 10月 - 12月',
           objectives: [
-            '【🏃】 Bit Bear Cloub NFT Total drop 4096 . (😝 Maybe)',
-            '【🏃】 Twitter Follower 10000. - (😝 Maybe)',
-            '【🏃】 OpenSea Volume Trade 1.0. - (😝 Maybe)'
+            '🏃 Bit Bear Cloub NFT Total drop 4096 . (😝 Maybe)',
+            '🏃 Twitter Follower 10000. - (😝 Maybe)',
+            '🏃 OpenSea Volume Trade 1.0. - (😝 Maybe)'
           ]
         }
       }
@@ -175,6 +176,7 @@ export const language: TLanguage = {
                 が応募方法を教えてくれるよ。
               </>
             ),
+            currentPeople: '残り64人',
             requirement: {
               title: '参加条件',
               list: ['✅ Twitterアカウントを持っている', '✅ OpenSeaアカウントを持っている']

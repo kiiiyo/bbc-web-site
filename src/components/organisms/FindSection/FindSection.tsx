@@ -24,7 +24,7 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
   actions: { onDisplayButtonClick, handleLoadingCondition }
 }) => {
   return (
-    <div className="relative" style={{ height: 860 }}>
+    <div className="relative" style={{ minHeight: 640 }}>
       <div className="container flex mx-auto">
         <div className="flex relative z-10 flex-col mx-4 mt-10 w-full bg-white rounded-lg shadow-md md:ml-auto md:w-1/2 lg:w-1/3">
           <div className="flex flex-row p-6">
@@ -101,6 +101,7 @@ export const FooterPresenter: FC<TFindSectionPresenterProps> = ({
                       {language.page.campaignPage.section.content.term.title}
                     </h4>
                     <p>{language.page.campaignPage.section.content.term.description}</p>
+                    <p className="mt-4 mb-2 font-bold text-gray-900 lg:text-xl">残り64名</p>
                     <h4 className="py-2 mt-4 font-bold tracking-wider text-gray-900">
                       {language.page.findPage.section.content.campaign.requirement.title}
                     </h4>
