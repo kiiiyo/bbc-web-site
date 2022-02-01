@@ -190,7 +190,7 @@ export const language: TLanguage = {
       },
       section: {
         content: {
-          bearName: 'ベーリー',
+          bearName: 'ベアリー',
           description: (
             <>
               ボクを見つけてくれてありがとう。アバター用NFT画像を🎁 <strong>Giveaway</strong>するよ。
@@ -202,7 +202,7 @@ export const language: TLanguage = {
           },
           term: {
             title: '開催期間',
-            description: '2022年02月01日(火) から 2022年02月06日(日) まで'
+            description: '2022年02月01日(火) から 2022年02月28日(月) まで'
           }
         },
         twitter: {
@@ -213,7 +213,7 @@ export const language: TLanguage = {
           title: '✍️フォームに回答',
           secretWord: (
             <>
-              <strong>【秘密の合言葉】</strong>は👉 <strong>【ベーリー見つけた】</strong>
+              <strong>【秘密の合言葉】</strong>は👉👉👉 <strong>【ベーリー見つけた】👈👈👈</strong>
             </>
           ),
           description: <>こちらのGoogleフォームにご回答ください。</>,

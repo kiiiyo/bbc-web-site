@@ -187,7 +187,7 @@ export const language: TLanguage = {
       },
       section: {
         content: {
-          bearName: 'Baily',
+          bearName: 'Bearly',
           description: <>Thank you for finding me. I&#39;ll giveaway you a picture for your avatar.</>,
           requirement: {
             title: 'Requirement',
@@ -195,7 +195,7 @@ export const language: TLanguage = {
           },
           term: {
             title: 'Term',
-            description: '2022.02.01 - 2022.02.06'
+            description: '2022.02.01 - 2022.02.28'
           }
         },
         twitter: {
@@ -205,7 +205,7 @@ export const language: TLanguage = {
         form: {
           title: '✍️Answer the form',
 
-          secretWord: 'Secret word is 👉【I found Baily.】',
+          secretWord: 'Secret word is 👉👉👉【I found Baily.】👈👈👈',
           description: <>Please fill out this Google form.</>,
           url: 'https://bit.ly/3G7uUyG'
         },
