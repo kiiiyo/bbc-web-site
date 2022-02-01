@@ -205,7 +205,7 @@ export const language: TLanguage = {
         form: {
           title: '✍️Answer the form',
 
-          secretWord: 'Secret word is 👉👉👉【I found Baily.】👈👈👈',
+          secretWord: 'Secret word is 👉👉👉【I found Bearly.】👈👈👈',
           description: <>Please fill out this Google form.</>,
           url: 'https://bit.ly/3G7uUyG'
         },

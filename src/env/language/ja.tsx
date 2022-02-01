@@ -215,7 +215,7 @@ export const language: TLanguage = {
           title: '✍️フォームに回答',
           secretWord: (
             <>
-              <strong>【秘密の合言葉】</strong>は👉👉👉 <strong>【ベーリー見つけた】👈👈👈</strong>
+              <strong>【秘密の合言葉】</strong>は👉👉👉 <strong>【ベアリー見つけた】👈👈👈</strong>
             </>
           ),
           description: <>こちらのGoogleフォームにご回答ください。</>,
