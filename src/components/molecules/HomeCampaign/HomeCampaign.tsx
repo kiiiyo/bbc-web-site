@@ -23,10 +23,12 @@ export const HomeCampaignPresenter: FC<THomeCampaignPresenterProps> = ({ state: 
             <h2 className="font-bold">{language.page.homePage.section.campaign.title}</h2>
             <h3 className=" text-3xl font-bold">{language.page.homePage.section.campaign.subTitle}</h3>
             <p className="mt-4">{language.page.homePage.section.campaign.description}</p>
+            <h4 className="py-2 mt-4 text-lg font-bold text-gray-900">
+              {language.page.campaignPage.section.content.term.title}
+            </h4>
+            <p>{language.page.campaignPage.section.content.term.description}</p>
           </div>
           <div className="object-cover object-top overflow-hidden mx-auto mt-8 w-full rounded md:mt-16 md:h-80 lg:object-center lg:w-1/2">
-            {/* Lang */}
-
             <Image
               alt="Find Bearly"
               className="rounded-lg"

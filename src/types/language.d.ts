@@ -110,6 +110,10 @@ export type TLanguage = {
           campaign: {
             title: React.ReactNode
             description: React.ReactNode
+            requirement: {
+              title: string
+              list: Array<string>
+            }
           }
         }
       }
