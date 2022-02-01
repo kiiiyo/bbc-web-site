@@ -35,7 +35,7 @@ export const language: TLanguage = {
               <br />
               このサイトにいるBitBear達は、<strong>🌏 Crypto World</strong>にある
               <strong>🎨 NFT Art College</strong>
-              でアートやデザインを学んでいる🎓 学生達です。
+              でアートやデザインを学んでいる🎓🐻 学生達です。
               <br />
               彼らはとても表情豊か✨ で可愛い💕 やつらです。そんな彼らの様子を👀 見ていていってください。
             </>
