@@ -103,6 +103,7 @@ export type TLanguage = {
           step1: {
             title: string
             description: React.ReactNode
+            buttonLabel: string
           }
           step2: {
             title: string

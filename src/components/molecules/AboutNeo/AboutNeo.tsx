@@ -53,10 +53,10 @@ export const AboutNeoPresenter: FC<TAboutNeoPresenterProps> = ({ state: { langua
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full "
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-neo-001.gif"
               alt="Bit Bear Avatar Series #A0001"
               layout={'responsive'}
@@ -75,10 +75,10 @@ export const AboutNeoPresenter: FC<TAboutNeoPresenterProps> = ({ state: { langua
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-24 h-24 rounded-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-neo-002.png"
               alt="Bit Bear Avatar Series #A0027"
               layout={'responsive'}
@@ -97,10 +97,10 @@ export const AboutNeoPresenter: FC<TAboutNeoPresenterProps> = ({ state: { langua
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-24 h-24 rounded-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-neo-003.png"
               alt="Bit Bear Avatar Series #A0165"
               layout={'responsive'}
@@ -119,10 +119,10 @@ export const AboutNeoPresenter: FC<TAboutNeoPresenterProps> = ({ state: { langua
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-24 h-24 rounded-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-neo-004.png"
               alt="Bit Bear Avatar Series #A0145"
               layout={'responsive'}
@@ -141,10 +141,10 @@ export const AboutNeoPresenter: FC<TAboutNeoPresenterProps> = ({ state: { langua
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-24 h-24 rounded-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-neo-005.png"
               alt="Bit Bear Avatar Series #A0129"
               layout={'responsive'}

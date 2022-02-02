@@ -63,7 +63,7 @@ export const language: TLanguage = {
           name: 'ネオ',
           description: (
             <>
-              ネオは<strong>🇮🇸 アイスランドサーバー</strong>から通っているNFT Art College の１年生の
+              ネオは<strong>🇮🇸 アイスランドサーバー</strong>から通っている<strong>NFT Art College</strong> の１年生の
               <strong>ホッキョクグマ</strong>だよ。彼は🎨 ピクセルアートを専攻しているんだ。🤩 おしゃべりで、🍭
               食いしん坊、😝 おっちょこちょいなやつなんだ。そんなネオを他のBitBear達は弟分として可愛いがってるみたい。
             </>
@@ -73,7 +73,7 @@ export const language: TLanguage = {
           name: 'モー',
           description: (
             <>
-              モーは<strong>🇨🇦 カナダサーバー</strong>から通っているNFT Art College の２年生の
+              モーは<strong>🇨🇦 カナダサーバー</strong>から通っている<strong>NFT Art College</strong> の２年生の
               <strong>アラスカヒグマ</strong>
               。彼は油彩画を専攻していて、おおらかでのんびり屋な性格をしてるんだ。いつも🍁
               メープルシロップを片手にもって✍️ 授業を受けてるんだよ。
@@ -84,7 +84,7 @@ export const language: TLanguage = {
           name: 'スミス',
           description: (
             <>
-              スミスは<strong>🇯🇵 日本サーバー</strong>から通っているNFT Art College の２年生の
+              スミスは<strong>🇯🇵 日本サーバー</strong>から通っている <strong>NFT Art College</strong> の２年生の
               <strong>ツキノワグマ</strong>。彼は木工工芸を専攻しているんだ。 いつも🐟
               鮭を口の中でクチャクチャしていて自由奔放な性格でちょっとした🔫
               トラブルメーカーなんだけど、友情に対しては✨義理堅い一面あったりするんだ。なかなか憎めないやつなんだ。
@@ -95,7 +95,8 @@ export const language: TLanguage = {
           name: 'オラクル',
           description: (
             <>
-              オラクルは<strong>🇨🇳 中国サーバー</strong>から通っているNFT Art College の２年生の<strong>パンダ</strong>
+              オラクルは<strong>🇨🇳 中国サーバー</strong>から通っている<strong>NFT Art College</strong> の２年生の
+              <strong>パンダ</strong>
               。彼は3DCGやVFXなどのデジタルアートを専攻しているんだ。ちょっと物静かでいつも🖥️
               パソコンとにらめっこしてるけど、休日は🥟 中国料理をみんなに作ってくれる心優しいやつなんだ。
             </>
@@ -154,9 +155,11 @@ export const language: TLanguage = {
             title: 'ステップ1',
             description: (
               <>
-                <strong>「See the bord」</strong> をクリックします。
+                <strong>「BitBearを見つける」</strong>をクリックして、<strong>「See the bord」</strong>
+                を選択してください。
               </>
-            )
+            ),
+            buttonLabel: 'BitBearを見つける'
           },
           step2: {
             title: 'ステップ2',

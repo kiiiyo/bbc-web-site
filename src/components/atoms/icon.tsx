@@ -12,7 +12,8 @@ import {
   CheckIcon,
   XIcon as CloseIcon,
   MenuIcon,
-  ArrowSmRightIcon
+  ArrowSmRightIcon,
+  SearchIcon
 } from '@heroicons/react/solid'
 
 export type TIcon = {
@@ -38,5 +39,6 @@ export {
   GoogleIcon,
   CloseIcon,
   MenuIcon,
-  ArrowSmRightIcon
+  ArrowSmRightIcon,
+  SearchIcon
 }

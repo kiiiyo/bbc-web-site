@@ -53,10 +53,10 @@ export const AboutMooPresenter: FC<TAboutMooPresenterProps> = ({ state: { langua
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 mr-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-moo-001.gif"
               alt="Bit Bear Avatar Series #A0002"
               layout={'responsive'}
@@ -75,10 +75,10 @@ export const AboutMooPresenter: FC<TAboutMooPresenterProps> = ({ state: { langua
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-moo-002.png"
               alt="Bit Bear Avatar Series #A0036"
               layout={'responsive'}
@@ -97,10 +97,10 @@ export const AboutMooPresenter: FC<TAboutMooPresenterProps> = ({ state: { langua
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-moo-003.png"
               layout={'responsive'}
               alt="Bit Bear Avatar Series #A0077"
@@ -119,10 +119,10 @@ export const AboutMooPresenter: FC<TAboutMooPresenterProps> = ({ state: { langua
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-moo-004.png"
               layout={'responsive'}
               alt="Bit Bear Avatar Series #A0138"
@@ -141,10 +141,10 @@ export const AboutMooPresenter: FC<TAboutMooPresenterProps> = ({ state: { langua
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-moo-005.png"
               layout={'responsive'}
               alt="Bit Bear Avatar Series #A0122"

@@ -21,11 +21,16 @@ export const FindPagePresenter: FC<TFindPageProps> = ({ state: { language } }) =
         </title>
       </Head>
 
-      <Templates.GenericTemplate
+      <Templates.DisplayInlineFrameTemplate
         state={{
           globalHeader: <Organisms.Header />,
           globalFooter: <Organisms.Footer />,
-          overlayMenu: <Organisms.OverlayMenu />
+          overlayMenu: <Organisms.OverlayMenu />,
+          overlayInlineFrame: (
+            <Organisms.OverlayInlineFrame
+              state={{ url: 'https://miro.com/app/live-embed/uXjVOUbSxqw=/?moveToViewport=-9319,-867,16725,8576' }}
+            />
+          )
         }}
       >
         <Organisms.Hero
@@ -42,7 +47,7 @@ export const FindPagePresenter: FC<TFindPageProps> = ({ state: { language } }) =
           }}
         />
         <Organisms.FindSection />
-      </Templates.GenericTemplate>
+      </Templates.DisplayInlineFrameTemplate>
     </>
   )
 }
