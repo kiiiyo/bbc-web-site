@@ -24,9 +24,11 @@ export const HomePagePresenter: FC<THomePageProps> = ({ state: { language } }) =
         </title>
       </Head>
       <Templates.GenericTemplate
-        globalHeader={<Organisms.Header />}
-        globalFooter={<Organisms.Footer />}
-        OverlayMenu={<Organisms.OverlayMenu />}
+        state={{
+          globalHeader: <Organisms.Header />,
+          globalFooter: <Organisms.Footer />,
+          overlayMenu: <Organisms.OverlayMenu />
+        }}
       >
         <Organisms.Hero
           state={{

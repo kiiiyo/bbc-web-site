@@ -22,9 +22,11 @@ export const CampaignPagePresenter: FC<TCampaignPagePresenterProps> = ({ state: 
         </title>
       </Head>
       <Templates.GenericTemplate
-        globalHeader={<Organisms.Header />}
-        globalFooter={<Organisms.Footer />}
-        OverlayMenu={<Organisms.OverlayMenu />}
+        state={{
+          globalHeader: <Organisms.Header />,
+          globalFooter: <Organisms.Footer />,
+          overlayMenu: <Organisms.OverlayMenu />
+        }}
       >
         <div className=" bg-slate-50">
           <Organisms.Hero
