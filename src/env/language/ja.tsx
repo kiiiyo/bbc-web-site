@@ -155,9 +155,11 @@ export const language: TLanguage = {
             title: 'ステップ1',
             description: (
               <>
-                <strong>「See the bord」</strong> をクリックします。
+                <strong>「BitBearを見つける」</strong>をクリックして、<strong>「See the bord」</strong>
+                を選択してください。
               </>
-            )
+            ),
+            buttonLabel: 'BitBearを見つける'
           },
           step2: {
             title: 'ステップ2',

@@ -3,6 +3,7 @@ import React, { FC, createContext, useState, useCallback, useEffect } from 'reac
 import { Constants } from '@/env'
 
 export type TOverlayMenuDisplay = 'SHOW' | 'HIDE'
+export type TOverlayInlineFrameDisplay = 'SHOW' | 'HIDE'
 
 export type State = {
   screenSize: {
@@ -11,10 +12,12 @@ export type State = {
   }
   isMobile: boolean
   overlayMenuDisplay: TOverlayMenuDisplay
+  overlayInlineFrameDisplay: TOverlayMenuDisplay
 }
 
 export type Actions = {
   handleOverlayMenuDisplay: (condition: TOverlayMenuDisplay) => void
+  handleOverlayInlineFrameDisplay: (condition: TOverlayInlineFrameDisplay) => void
 }
 
 export type AppContextValueType = {
@@ -27,6 +30,7 @@ export type AppContextValueType = {
 const initContextValue: AppContextValueType = {
   state: {
     overlayMenuDisplay: 'HIDE',
+    overlayInlineFrameDisplay: 'HIDE',
     screenSize: {
       width: 0,
       height: 0
@@ -35,7 +39,9 @@ const initContextValue: AppContextValueType = {
   },
   actions: {
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    handleOverlayMenuDisplay: () => {}
+    handleOverlayMenuDisplay: () => {},
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    handleOverlayInlineFrameDisplay: () => {}
   }
 }
 
@@ -46,6 +52,7 @@ export const AppContext = createContext<AppContextValueType>(initContextValue)
 export const useAppContext = (): AppContextValueType => {
   // State
   const [overlayMenuDisplay, setOverlayMenuDisplay] = useState<TOverlayMenuDisplay>('HIDE')
+  const [overlayInlineFrameDisplay, setOverlayInlineFrameDisplay] = useState<TOverlayInlineFrameDisplay>('HIDE')
 
   const [screenSize, setScreenSize] = useState({
     width: 0,
@@ -58,6 +65,13 @@ export const useAppContext = (): AppContextValueType => {
       setOverlayMenuDisplay(condition)
     },
     [setOverlayMenuDisplay]
+  )
+
+  const handleOverlayInlineFrameDisplay = useCallback(
+    (condition) => {
+      setOverlayInlineFrameDisplay(condition)
+    },
+    [setOverlayInlineFrameDisplay]
   )
 
   useEffect(() => {
@@ -80,9 +94,10 @@ export const useAppContext = (): AppContextValueType => {
     state: {
       screenSize,
       isMobile: screenSize.width <= Constants.MOBILE_BREAK_POINT_SIZE,
-      overlayMenuDisplay
+      overlayMenuDisplay,
+      overlayInlineFrameDisplay
     },
-    actions: { handleOverlayMenuDisplay }
+    actions: { handleOverlayMenuDisplay, handleOverlayInlineFrameDisplay }
   }
 }
 

@@ -1,0 +1,1 @@
+export { DisplayInlineFrameTemplate } from './DisplayInlineFrameTemplate'

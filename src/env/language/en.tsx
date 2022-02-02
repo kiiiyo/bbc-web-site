@@ -151,9 +151,10 @@ export const language: TLanguage = {
             title: 'Step1',
             description: (
               <>
-                <strong>「See the bord」</strong> Click.
+                Click on <strong>「Find BitBear」</strong> and select <strong>「See the bord」</strong>.
               </>
-            )
+            ),
+            buttonLabel: 'Find BitBea'
           },
           step2: {
             title: 'Step2',

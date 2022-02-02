@@ -12,5 +12,6 @@ export {
   GoogleIcon,
   CloseIcon,
   MenuIcon,
-  ArrowSmRightIcon
+  ArrowSmRightIcon,
+  SearchIcon
 } from './icon'
