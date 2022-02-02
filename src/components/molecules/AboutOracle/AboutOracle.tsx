@@ -27,11 +27,11 @@ export const AboutOraclePresenter: FC<TAboutOraclePresenterProps> = ({
   actions: { onAvatarClick }
 }) => {
   return (
-    <div className="flex flex-col mx-auto mt-24 lg:flex-row-reverse lg:w-4/5">
+    <div className="flex flex-col mx-auto mt-16 lg:flex-row-reverse lg:mt-24 lg:w-4/5">
       <div className="object-cover object-top overflow-hidden w-full h-64 rounded lg:object-center lg:w-1/2 lg:h-auto">
         <Image
-          alt="Bear Name Moo"
-          className=""
+          alt="Bear Name Oracle"
+          className="rounded-lg"
           src="/assets/images/body-oracle.png"
           layout={'responsive'}
           width={960}

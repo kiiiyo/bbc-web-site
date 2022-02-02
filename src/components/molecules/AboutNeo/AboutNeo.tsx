@@ -24,11 +24,11 @@ export type TAboutNeoPresenterProps = {
 
 export const AboutNeoPresenter: FC<TAboutNeoPresenterProps> = ({ state: { language }, actions: { onAvatarClick } }) => {
   return (
-    <div className="flex flex-col mx-auto mt-24 lg:flex-row lg:w-4/5">
+    <div className="flex flex-col mx-auto mt-8 lg:flex-row lg:mt-24 lg:w-4/5">
       <div className="object-cover object-top overflow-hidden w-full h-64 rounded lg:object-center lg:w-1/2 lg:h-auto">
         <Image
           alt="Bear Name Neo"
-          className=""
+          className="rounded-lg"
           src="/assets/images/body-neo.png"
           layout={'responsive'}
           width={960}

@@ -27,11 +27,11 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
   actions: { onAvatarClick }
 }) => {
   return (
-    <div className="flex flex-col mx-auto mt-24 lg:flex-row lg:w-4/5">
+    <div className="flex flex-col mx-auto mt-16 lg:flex-row lg:mt-24 lg:w-4/5">
       <div className="object-cover object-top overflow-hidden w-full h-64 rounded lg:object-center lg:w-1/2 lg:h-auto">
         <Image
-          alt="Bear Name Neo"
-          className=""
+          alt="Bear Name Smith"
+          className="rounded-lg"
           src="/assets/images/body-smith.png"
           layout={'responsive'}
           width={960}
