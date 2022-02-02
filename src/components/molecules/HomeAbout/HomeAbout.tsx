@@ -19,9 +19,9 @@ export const HomeAboutPresenter: FC<THomeAboutPresenterProps> = ({ state: { loca
     <div className="border-b-2 border-gray-200 border-solid">
       <div className="container py-8 px-6 mx-auto md:py-16">
         <div className="flex flex-col mx-auto lg:flex-row lg:w-4/5">
-          <div className="object-cover object-top overflow-hidden w-full h-64 rounded lg:object-center lg:w-1/2 lg:h-auto">
+          <div className="object-cover object-top overflow-hidden w-full rounded lg:object-center lg:w-1/2 lg:h-auto">
             <Image
-              alt="Bit Bear Club"
+              alt="BitBearClub"
               className="rounded-lg"
               src="/assets/images/ogp.png"
               layout={'responsive'}

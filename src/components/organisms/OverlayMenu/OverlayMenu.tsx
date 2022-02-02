@@ -66,7 +66,7 @@ export const OverlayMenuPresenter: FC<TOverlayMenuPresenterProps> = ({
               onCloseButtonClick()
             }}
           >
-            <Atoms.CloseIcon className="h-8 text-white" />
+            <Atoms.CloseIcon className="h-10 text-white" />
           </button>
         </div>
         <ul className="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-8 md:text-sm md:font-medium">

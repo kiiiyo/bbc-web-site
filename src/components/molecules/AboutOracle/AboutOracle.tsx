@@ -27,11 +27,11 @@ export const AboutOraclePresenter: FC<TAboutOraclePresenterProps> = ({
   actions: { onAvatarClick }
 }) => {
   return (
-    <div className="flex flex-col mx-auto mt-24 lg:flex-row-reverse lg:w-4/5">
+    <div className="flex flex-col mx-auto mt-16 lg:flex-row-reverse lg:mt-24 lg:w-4/5">
       <div className="object-cover object-top overflow-hidden w-full h-64 rounded lg:object-center lg:w-1/2 lg:h-auto">
         <Image
-          alt="Bear Name Moo"
-          className=""
+          alt="Bear Name Oracle"
+          className="rounded-lg"
           src="/assets/images/body-oracle.png"
           layout={'responsive'}
           width={960}
@@ -56,12 +56,13 @@ export const AboutOraclePresenter: FC<TAboutOraclePresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/TJ801KduQXX5tpiJPizIAEM7Gdj6tqKTL6cXeZfzeXuMooMUAyM9VpK8bWP03MbU8dpHm2WY66tL7QwDKqrzVx9mUD8R_cZpOe40=w600"
+              src="/assets/images/about/thumbnail-oracle-001.gif"
               alt="Bit Bear Avatar Series #A0004"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -77,12 +78,13 @@ export const AboutOraclePresenter: FC<TAboutOraclePresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/YXoghlccNvBsIqrdmAs3ytafg_mYOSADEO95Cq4Iy4_X7FpXYzYzWsQ7gO2yfK68nFKwwOHZirmUrqpaN0W6fG95dn7xUFY_Tdb-Osk=w600"
+              src="/assets/images/about/thumbnail-oracle-002.png"
               alt="Bit Bear Avatar Series #A0021"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -98,12 +100,13 @@ export const AboutOraclePresenter: FC<TAboutOraclePresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/eqNxV1S-8DoMeFFwaW_LdJgzaSRu8o6yuJ5qOmdSHuY-WYDtNVfDeeKtDwDqaIoSGF9PVwCBMt93KmMOQaRuvQ-T9zvQwLG6kwvHTQ=w600"
+              src="/assets/images/about/thumbnail-oracle-003.png"
               alt="Bit Bear Avatar Series #A0004"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -119,12 +122,13 @@ export const AboutOraclePresenter: FC<TAboutOraclePresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/XKyVCWwqJgMj3l0OUpmW4_GcQJ6UCG28M4L3jQMqoDPt23sdE1c9qtm9sT-XIfa2Mv3wMSIuB3PXUf58TioIRsK7dKL-wkkQjxDZ=w600"
+              src="/assets/images/about/thumbnail-oracle-004.png"
               alt="Bit Bear Avatar Series #A0111"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -140,12 +144,13 @@ export const AboutOraclePresenter: FC<TAboutOraclePresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/-j4w8OYwK81Tojm3nZPgDJXRdP8BQzQXbuCgzOW7JQYpILt-RuP1mJHRaVCIWr3pqKSjPRJKTo5tFbHbI1pfNLp5iVzfBUV1VtG7JA=w600"
+              src="/assets/images/about/thumbnail-oracle-005.png"
               alt="Bit Bear Avatar Series #A0004"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />

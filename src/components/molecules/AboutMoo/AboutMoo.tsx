@@ -24,11 +24,11 @@ export type TAboutMooPresenterProps = {
 
 export const AboutMooPresenter: FC<TAboutMooPresenterProps> = ({ state: { language }, actions: { onAvatarClick } }) => {
   return (
-    <div className="flex flex-col mx-auto mt-24 lg:flex-row-reverse lg:w-4/5">
+    <div className="flex flex-col mx-auto mt-16 lg:flex-row-reverse lg:mt-24 lg:w-4/5">
       <div className="object-cover object-top overflow-hidden w-full h-64 rounded lg:object-center lg:w-1/2 lg:h-auto">
         <Image
           alt="Bear Name Moo"
-          className=""
+          className="rounded-lg"
           src="/assets/images/body-moo.png"
           layout={'responsive'}
           width={960}
@@ -53,12 +53,13 @@ export const AboutMooPresenter: FC<TAboutMooPresenterProps> = ({ state: { langua
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/EDDGV0HgHYmOsuQkVEicLKBp95jamITUuhLH43UJxaaK_UT3Z6jK0WmoUCJuV78BzB5YF-NCIhjUk_l8TPcB38j8DI7edeQwCpHfRu8=w600"
+              src="/assets/images/about/thumbnail-moo-001.gif"
               alt="Bit Bear Avatar Series #A0002"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -70,16 +71,17 @@ export const AboutMooPresenter: FC<TAboutMooPresenterProps> = ({ state: { langua
                 pageType: 'about',
                 bearName: 'moo',
                 nftId: 'A0036',
-                link: 'https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/85612792707671471240665121138616411211534411599642434463980733100215603560449'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Vivid%20Color&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/9FspIqgbxnfxjRkvlJ6cFMALACLpSJ0yWghvxNl-Anm-6-g4gJ8PIRDS0OfBLIisFkbQjyH4UXfmrD2YEzN9dJdJaD-FD_yiOHeZ=w600"
+              src="/assets/images/about/thumbnail-moo-002.png"
               alt="Bit Bear Avatar Series #A0036"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -91,15 +93,16 @@ export const AboutMooPresenter: FC<TAboutMooPresenterProps> = ({ state: { langua
                 pageType: 'about',
                 bearName: 'moo',
                 nftId: 'A0077',
-                link: 'https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/85612792707671471240665121138616411211534411599642434463980733146395091927041'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Emerald%20Blue&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/TVhDxDe0CF6tmfSTOgookmRqxfGPMtsnuV7ERM2cgmn4RUawrNIVd4Y16mOHBKU24NWQZTurZG0eikT7Rq0ls6xdxRXsUycIb3UUGw=w600"
+              src="/assets/images/about/thumbnail-moo-003.png"
+              layout={'responsive'}
               alt="Bit Bear Avatar Series #A0077"
               width="100%"
               height="100%"
@@ -112,15 +115,16 @@ export const AboutMooPresenter: FC<TAboutMooPresenterProps> = ({ state: { langua
                 pageType: 'about',
                 bearName: 'moo',
                 nftId: 'A0138',
-                link: 'https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/85612792707671471240665121138616411211534411599642434463980733204669208199169'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Glasses&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/XmSgYAEowM7-8B5AqDMdJ1TbQbjj1cTHyvUz7KLYF9DXf8sbdIo80Ajx-IkXPsu9ao9pZ7aEAIl4wEgS3ecEHEynmVR9wFJMK6mN=w600"
+              src="/assets/images/about/thumbnail-moo-004.png"
+              layout={'responsive'}
               alt="Bit Bear Avatar Series #A0138"
               width="100%"
               height="100%"
@@ -133,15 +137,16 @@ export const AboutMooPresenter: FC<TAboutMooPresenterProps> = ({ state: { langua
                 pageType: 'about',
                 bearName: 'moo',
                 nftId: 'A0122',
-                link: 'https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/85612792707671471240665121138616411211534411599642434463980733052936603566081'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Bear%20and%20Beer&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/hKPrNPQHooFjebJyKIHypTYFZonWctQCorWmSbkuGQ1h9QCiJh5FPSQ_sjClxya7S5_t5SHy0IGKZRFH_-cJLgToqgOQhyp2_vKV=w600"
+              src="/assets/images/about/thumbnail-moo-005.png"
+              layout={'responsive'}
               alt="Bit Bear Avatar Series #A0122"
               width="100%"
               height="100%"

@@ -64,21 +64,28 @@ export const FooterPresenter: FC<FooterPresenter> = ({ state: { language, menuLi
                 <li className="mt-6">
                   <Link href="https://opensea.io/BitBearClub">
                     <a target="_blank" className="font-normal text-gray-600 hover:underline">
-                      OpenSea
+                      <span className="inline-block">OpenSea</span>
                     </a>
                   </Link>
                 </li>
                 <li className="mt-6">
                   <Link href="https://twitter.com/BitBearClub">
                     <a target="_blank" className="font-normal text-gray-600 hover:underline">
-                      Twitter
+                      <span className="inline-block">Twitter</span>
                     </a>
                   </Link>
                 </li>
                 <li className="mt-6">
                   <Link href="https://www.instagram.com/bit_bear_club/">
                     <a target="_blank" className="font-normal text-gray-600 hover:underline">
-                      Instagram
+                      <span className="inline-block">Instagram</span>
+                    </a>
+                  </Link>
+                </li>
+                <li className="mt-6">
+                  <Link href="https://linktr.ee/BitBearClub">
+                    <a target="_blank" className="font-normal text-gray-600 hover:underline">
+                      <span className="inline-block">Linktree</span>
                     </a>
                   </Link>
                 </li>
