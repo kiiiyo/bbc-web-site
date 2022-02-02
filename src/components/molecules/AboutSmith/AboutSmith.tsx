@@ -50,18 +50,19 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
             onClick={() => {
               onAvatarClick({
                 pageType: 'about',
-                bearName: 'neo',
+                bearName: 'smith',
                 nftId: 'A0003',
                 link: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/85612792707671471240665121138616411211534411599642434463980733057334650077185'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/O-iTUITSPsutNj01VpCSvv_sqefp1gmqnHXM0LyqHTZGsgJig5YmlVGY3lsGcoOIkt8PilKLjPGLgoKuEddgsUIpoWyZqOx9Z1YBeiU=w600"
-              alt="Bit Bear Avatar Series #A0001"
+              src="/assets/images/about/thumbnail-smith-001.gif"
+              layout={'responsive'}
+              alt="Bit Bear Avatar Series #A0003"
               width="100%"
               height="100%"
             />
@@ -71,18 +72,19 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
             onClick={() => {
               onAvatarClick({
                 pageType: 'about',
-                bearName: 'neo',
+                bearName: 'smith',
                 nftId: 'A0163',
-                link: 'https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/85612792707671471240665121138616411211534411599642434463980733232156998893569'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Potty&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/RvKhelY8PKYDCYgVybnLaEY0rgNqpnmNkOd2UAIbgupPyJDqXTr86qBzd2qNC2HIxHBojPRKY-wkJM9mmuz3mH0XE6J4hRA4yZLcffw=w600"
+              src="/assets/images/about/thumbnail-smith-002.png"
               alt="Bit Bear Avatar Series #A0163"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -92,18 +94,19 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
             onClick={() => {
               onAvatarClick({
                 pageType: 'about',
-                bearName: 'neo',
+                bearName: 'smith',
                 nftId: 'A0106',
-                link: 'https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/85612792707671471240665121138616411211534411599642434463980733178280929132545'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Cap&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/3uGE4gK5vI_SralTioI6P9-60sMG5u1NJ3tV6x6UgsLnsixZRIk0bgZUNY85DzYdR_k1ZO81jj1czOs3ZU4FhwBkwiNtLemf6GrxFQ=w600"
+              src="/assets/images/about/thumbnail-smith-003.png"
               alt="Bit Bear Avatar Series #A0106"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -113,18 +116,19 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
             onClick={() => {
               onAvatarClick({
                 pageType: 'about',
-                bearName: 'neo',
+                bearName: 'smith',
                 nftId: 'A0147',
-                link: 'https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/85612792707671471240665121138616411211534411599642434463980733214564812849153'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Sauna&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/nVJ7SkQQ8gdjle7vR-goHUQOj0Nq5Dr6vWzyPfFkqmoBU2OWYG1x-ghWqZ6R7xces3Fql0bLtrW0qBYlHaiwUnE4SQQsQ4zofOoO=w600"
+              src="/assets/images/about/thumbnail-smith-004.png"
               alt="Bit Bear Avatar Series #A0147"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -134,18 +138,19 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
             onClick={() => {
               onAvatarClick({
                 pageType: 'about',
-                bearName: 'neo',
+                bearName: 'smith',
                 nftId: 'A0123',
-                link: 'https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/85612792707671471240665121138616411211534411599642434463980733054036115193857'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Bear%20and%20Beer&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
               className="w-full h-full"
-              src="https://lh3.googleusercontent.com/T7E1PW3tJ1tItTrAxP6M8khI9kWDJhuueqq1BHMH9T2v8oEhidMDoZ3OzkMvlA3o7GW_Yo_8ZLkuGLcSXorldPxlLM9Fk3oohESkERo=w600"
+              src="/assets/images/about/thumbnail-smith-005.png"
               alt="Bit Bear Avatar Series #A0123"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />

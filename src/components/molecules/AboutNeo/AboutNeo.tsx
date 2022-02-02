@@ -49,16 +49,17 @@ export const AboutNeoPresenter: FC<TAboutNeoPresenterProps> = ({ state: { langua
                 pageType: 'about',
                 bearName: 'neo',
                 nftId: 'A0001',
-                link: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/85612792707671471240665121138616411211534411599642434463980733055135626821633'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Origin&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
-              src="https://lh3.googleusercontent.com/U12mT7o2i4PbjeVQPe2yX4L4upgXl_QR9XefE-7h9EBuUCivaJppfT2RZv-_s8kH6O2MT6c1nHiQqcWKCnpHcpEp4AG3MftEJVbMU3k=w600"
+              className="w-full h-full "
+              src="/assets/images/about/thumbnail-neo-001.gif"
               alt="Bit Bear Avatar Series #A0001"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -70,16 +71,17 @@ export const AboutNeoPresenter: FC<TAboutNeoPresenterProps> = ({ state: { langua
                 pageType: 'about',
                 bearName: 'neo',
                 nftId: 'A0092',
-                link: 'https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/85612792707671471240665121138616411211534411599642434463980733162887766343681'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Einstein%20Style&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
-              src="https://lh3.googleusercontent.com/FTio0ZczDyvoIhtURBmemAjdgXxZc77EjYUjqshmYvhnA4tRQq6Bo7BQr5etR2w2QGDcTikwB0Nl0u8f_vcbx993aRlRrVh4hQQN3g=w600"
+              className="w-24 h-24 rounded-full"
+              src="/assets/images/about/thumbnail-neo-002.png"
               alt="Bit Bear Avatar Series #A0027"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -95,12 +97,13 @@ export const AboutNeoPresenter: FC<TAboutNeoPresenterProps> = ({ state: { langua
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
-              src="https://lh3.googleusercontent.com/MWgaD2UZriokYfsgzjo3zRUhmyZUPstlMf70JM6w6XTflSHmzZl0IdRsyqXIWw-iKrwcfDuO5LWiROokT_5qLhAKcXBZvfyImsUaT8g=w600"
-              alt=""
+              className="w-24 h-24 rounded-full"
+              src="/assets/images/about/thumbnail-neo-003.png"
+              alt="Bit Bear Avatar Series #A0165"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -112,18 +115,19 @@ export const AboutNeoPresenter: FC<TAboutNeoPresenterProps> = ({ state: { langua
                 pageType: 'about',
                 bearName: 'neo',
                 nftId: 'A0145',
-                link: 'https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/85612792707671471240665121138616411211534411599642434463980733212365789593601'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Potty&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
-              src="https://lh3.googleusercontent.com/RXv4R8a5XIFvFOb7VBhAdKCCTukdgdEGkLKkOU7QsDy4AQzCAIyntzfCH1zvgmNiBE4xToCI6ldyw7PgsmSHb17cmTl_K_8JLR0mtH0=w600"
-              alt=""
-              width="100%"
+              className="w-24 h-24 rounded-full"
+              src="/assets/images/about/thumbnail-neo-004.png"
+              alt="Bit Bear Avatar Series #A0145"
+              layout={'responsive'}
               height="100%"
+              width="100%"
             />
           </button>
 
@@ -133,16 +137,17 @@ export const AboutNeoPresenter: FC<TAboutNeoPresenterProps> = ({ state: { langua
                 pageType: 'about',
                 bearName: 'neo',
                 nftId: 'A0129',
-                link: 'https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/85612792707671471240665121138616411211534411599642434463980733194773603549185'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Sauna&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full"
+            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
-              src="https://lh3.googleusercontent.com/48uzoBnmx3lAzsPQxwPOALrczPm0nG3hxayEh78rFv7XhppjL7j3TREHHIPdwiJEic2Q7pdKyHYOQmHyWs1Ylxc_qWd4Uk3B3RMllQ=w600"
-              alt=""
+              className="w-24 h-24 rounded-full"
+              src="/assets/images/about/thumbnail-neo-005.png"
+              alt="Bit Bear Avatar Series #A0129"
+              layout={'responsive'}
               width="100%"
               height="100%"
             />
@@ -156,7 +161,7 @@ export const AboutNeoPresenter: FC<TAboutNeoPresenterProps> = ({ state: { langua
                 pageType: 'about',
                 bearName: 'neo',
                 nftId: '',
-                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Name&search[stringTraits][0][values][0]=Neo&search[sortAscending]=true&search[sortBy]=PRICE'
+                link: 'https://opensea.io/assets/bit-bear-club-avatar-series?search[stringTraits][0][name]=Edition&search[stringTraits][0][values][0]=Bear%20And%20Beer&search[sortAscending]=true&search[sortBy]=PRICE'
               })
               //
             }}
