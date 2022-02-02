@@ -56,10 +56,10 @@ export const AboutOraclePresenter: FC<TAboutOraclePresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-oracle-001.gif"
               alt="Bit Bear Avatar Series #A0004"
               layout={'responsive'}
@@ -78,10 +78,10 @@ export const AboutOraclePresenter: FC<TAboutOraclePresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-oracle-002.png"
               alt="Bit Bear Avatar Series #A0021"
               layout={'responsive'}
@@ -100,10 +100,10 @@ export const AboutOraclePresenter: FC<TAboutOraclePresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-oracle-003.png"
               alt="Bit Bear Avatar Series #A0004"
               layout={'responsive'}
@@ -122,10 +122,10 @@ export const AboutOraclePresenter: FC<TAboutOraclePresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-oracle-004.png"
               alt="Bit Bear Avatar Series #A0111"
               layout={'responsive'}
@@ -144,10 +144,10 @@ export const AboutOraclePresenter: FC<TAboutOraclePresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-oracle-005.png"
               alt="Bit Bear Avatar Series #A0004"
               layout={'responsive'}

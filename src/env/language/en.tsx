@@ -61,9 +61,9 @@ export const language: TLanguage = {
           name: 'Neo',
           description: (
             <>
-              Neo is a first year student at NFT Art College from 🇮🇸 Iceland Server. He is a 🎨 pixel art major. 🤩
-              talkative, 🍭 foodie, 😝 and a bit of a doofus.The other BitBears seem to love Neo as their little
-              brother.
+              Neo is a first year student at <strong>NFT Art College</strong> from 🇮🇸 Iceland Server. He is a 🎨 pixel
+              art major. 🤩 talkative, 🍭 foodie, 😝 and a bit of a doofus.The other BitBears seem to love Neo as their
+              little brother.
             </>
           )
         },
@@ -71,9 +71,9 @@ export const language: TLanguage = {
           name: 'Moo',
           description: (
             <>
-              Moo is an Alaskan brown bear who is a sophomore at NFT Art College attending from 🇨🇦 Canada Server.
-              He&#39;s majoring in oil painting, and he&#39;s got a generous and laid-back personality. Always🍁
-              He&#39;s always in class ✍️ with a handful of maple syrup.
+              Moo is an Alaskan brown bear who is a sophomore at <strong>NFT Art College</strong> attending from 🇨🇦
+              Canada Server. He&#39;s majoring in oil painting, and he&#39;s got a generous and laid-back personality.
+              Always🍁 He&#39;s always in class ✍️ with a handful of maple syrup.
             </>
           )
         },
@@ -81,10 +81,10 @@ export const language: TLanguage = {
           name: 'Smith',
           description: (
             <>
-              Smith is a black bear who is a sophomore at NFT Art College attending from 🇯🇵 Japan Server. He&#39;s
-              majoring in wood craft. Always 🐟 salmon in his mouth all the time, and he&#39;s a bit of a 🔫
-              troublemaker with a free-spirited personality.He&#39;s a bit of a troublemaker, but he&#39;s also very
-              loyal to his friends. He&#39;s a hard guy to hate.
+              Smith is a black bear who is a sophomore at <strong>NFT Art College</strong> attending from 🇯🇵 Japan
+              Server. He&#39;s majoring in wood craft. Always 🐟 salmon in his mouth all the time, and he&#39;s a bit of
+              a 🔫 troublemaker with a free-spirited personality.He&#39;s a bit of a troublemaker, but he&#39;s also
+              very loyal to his friends. He&#39;s a hard guy to hate.
             </>
           )
         },
@@ -92,9 +92,9 @@ export const language: TLanguage = {
           name: 'Oracle',
           description: (
             <>
-              Oracle is a second year panda at NFT Art College attending from 🇨🇳 China Server. He&#39;s majoring in
-              digital art, including 3DCG and VFX. He&#39;s a little quiet and always 🖥️ staring at his computer, but on
-              his days off he&#39;s a kind-hearted guy who cooks 🥟 Chinese food for everyone.
+              Oracle is a second year panda at <strong>NFT Art College</strong> attending from 🇨🇳 China Server. He&#39;s
+              majoring in digital art, including 3DCG and VFX. He&#39;s a little quiet and always 🖥️ staring at his
+              computer, but on his days off he&#39;s a kind-hearted guy who cooks 🥟 Chinese food for everyone.
             </>
           )
         }

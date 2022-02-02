@@ -56,10 +56,10 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-smith-001.gif"
               layout={'responsive'}
               alt="Bit Bear Avatar Series #A0003"
@@ -78,10 +78,10 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-smith-002.png"
               alt="Bit Bear Avatar Series #A0163"
               layout={'responsive'}
@@ -100,10 +100,10 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-smith-003.png"
               alt="Bit Bear Avatar Series #A0106"
               layout={'responsive'}
@@ -122,10 +122,10 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-smith-004.png"
               alt="Bit Bear Avatar Series #A0147"
               layout={'responsive'}
@@ -144,10 +144,10 @@ export const AboutSmithPresenter: FC<TAboutSmithPresenterProps> = ({
               })
               //
             }}
-            className="block overflow-hidden z-10 -ml-4 w-24 h-24 rounded-full border-4 border-white"
+            className="block overflow-hidden z-10 p-0 my-0 -ml-4 w-24 h-24 rounded-full border-4 border-white"
           >
             <Image
-              className="w-full h-full"
+              className="m-0 w-full h-full"
               src="/assets/images/about/thumbnail-smith-005.png"
               alt="Bit Bear Avatar Series #A0123"
               layout={'responsive'}
