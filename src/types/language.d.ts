@@ -36,6 +36,7 @@ export type TLanguage = {
           title: string
           subTitle: string
           currentPeople: string
+          currentOwner: ReactNode
           description: string
           buttonLabel: string
         }
@@ -103,16 +104,17 @@ export type TLanguage = {
           step1: {
             title: string
             description: React.ReactNode
-            buttonLabel: string
           }
           step2: {
             title: string
             description: React.ReactNode
+            buttonLabel: string
           }
           campaign: {
             title: React.ReactNode
             description: React.ReactNode
             currentPeople: string
+            currentOwner: ReactNode
             requirement: {
               title: string
               list: Array<string>

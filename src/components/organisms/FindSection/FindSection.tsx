@@ -72,7 +72,10 @@ export const FindSectionPresenter: FC<TFindSectionPresenterProps> = ({
                   {language.page.campaignPage.section.content.term.title}
                 </h4>
                 <p>{language.page.campaignPage.section.content.term.description}</p>
-                <p className="mt-4 mb-2 font-bold text-gray-900 lg:text-xl">残り64名</p>
+                <p className="mt-4">{language.page.findPage.section.content.campaign.currentOwner}</p>
+                <p className="mt-4 mb-2 text-xl font-bold text-gray-900 lg:text-2xl">
+                  {language.page.findPage.section.content.campaign.currentPeople}
+                </p>
                 <h4 className="py-2 mt-4 font-bold tracking-wider text-gray-900">
                   {language.page.findPage.section.content.campaign.requirement.title}
                 </h4>
@@ -94,19 +97,9 @@ export const FindSectionPresenter: FC<TFindSectionPresenterProps> = ({
                   {language.page.findPage.section.content.step1.title}
                 </h3>
                 <p>{language.page.findPage.section.content.step1.description}</p>
-
-                <button
-                  onClick={() => {
-                    onDisplayInlineFrameButtonClick('SHOW')
-                  }}
-                  className="inline-flex items-center py-4 px-8 mx-1 mt-4 text-sm font-medium leading-5 text-center text-white bg-blue-500 hover:bg-blue-600 rounded-md transition-colors duration-200 md:mx-0"
-                >
-                  <Atoms.SearchIcon className="mr-2 w-5 h-5" />
-                  <span>{language.page.findPage.section.content.step1.buttonLabel}</span>
-                </button>
               </div>
             </div>
-            <div className="flex relative">
+            <div className="flex relative ">
               <div className="inline-flex relative z-10 shrink-0 justify-center items-center w-10 h-10 text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-full">
                 <Atoms.FlagIcon className="w-5 h-5" />
               </div>
@@ -115,6 +108,16 @@ export const FindSectionPresenter: FC<TFindSectionPresenterProps> = ({
                   {language.page.findPage.section.content.step2.title}
                 </h3>
                 <p>{language.page.findPage.section.content.step2.description}</p>
+
+                <button
+                  onClick={() => {
+                    onDisplayInlineFrameButtonClick('SHOW')
+                  }}
+                  className="inline-flex items-center py-4 px-8 mx-1 mt-4 text-sm font-medium leading-5 text-center text-white bg-blue-500 hover:bg-blue-600 rounded-md transition-colors duration-200 md:mx-0"
+                >
+                  <Atoms.SearchIcon className="mr-2 w-5 h-5" />
+                  <span>{language.page.findPage.section.content.step2.buttonLabel}</span>
+                </button>
               </div>
             </div>
           </div>
