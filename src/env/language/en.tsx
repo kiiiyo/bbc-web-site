@@ -166,7 +166,7 @@ export const language: TLanguage = {
                 Click on <strong>「Find BitBear」</strong> and select <strong>「See the bord」</strong>.
               </>
             ),
-            buttonLabel: 'Find BitBea'
+            buttonLabel: 'Find BitBear'
           },
           campaign: {
             title: '🎁 Giveaway Campaign 🎉',
