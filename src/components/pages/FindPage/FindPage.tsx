@@ -28,7 +28,7 @@ export const FindPagePresenter: FC<TFindPageProps> = ({ state: { language } }) =
           overlayMenu: <Organisms.OverlayMenu />,
           overlayInlineFrame: (
             <Organisms.OverlayInlineFrame
-              state={{ url: 'https://miro.com/app/live-embed/uXjVOUbSxqw=/?moveToViewport=-9319,-867,16725,8576' }}
+              state={{ url: 'https://miro.com/app/live-embed/uXjVOUbSxqw=/?moveToViewport=-2189,-1518,3779,3898' }}
             />
           )
         }}
