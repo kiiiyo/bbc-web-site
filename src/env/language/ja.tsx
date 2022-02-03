@@ -48,7 +48,12 @@ export const language: TLanguage = {
           description:
             'オフィシャルサイトオープン記念、サイト内に隠れているベアリーを見つけると抽選でNFTがもらえるイベントを実施中です!',
           buttonLabel: 'このページにいるかも',
-          currentPeople: '残り64人'
+          currentPeople: '残り63人',
+          currentOwner: (
+            <>
+              🐻 ベアリーが<strong className="text-xl font-bold"> 1名 </strong>の❤️ オーナーさんにお迎えいただきました🎉
+            </>
+          )
         }
       }
     },
@@ -155,20 +160,20 @@ export const language: TLanguage = {
             title: 'ステップ1',
             description: (
               <>
-                <strong>「BitBearを見つける」</strong>をクリックして、<strong>「See the bord」</strong>
-                を選択してください。
+                この森の中にいる🐻 <strong>BitBear</strong>
+                のオレンジアイコンをクリックするとOpenSeaの詳細ページが見れます。
               </>
-            ),
-            buttonLabel: 'BitBearを見つける'
+            )
           },
           step2: {
             title: 'ステップ2',
             description: (
               <>
-                この森の中にいる🐻 <strong>BitBear</strong>
-                のオレンジアイコンをクリックするとOpenSeaの詳細ページが見れます。
+                <strong>「BitBearを見つける」</strong>をクリックして、<strong>「See the bord」</strong>
+                を選択してください。
               </>
-            )
+            ),
+            buttonLabel: 'BitBearを見つける'
           },
           campaign: {
             title: '🎁 Giveaway キャンペーン開催中 🎉',
@@ -179,7 +184,14 @@ export const language: TLanguage = {
                 が応募方法を教えてくれるよ。
               </>
             ),
-            currentPeople: '残り64人',
+
+            currentPeople: '残り63人',
+            currentOwner: (
+              <>
+                🐻 ベアリーが<strong className="text-xl font-bold"> 1名 </strong>の❤️
+                オーナーさんにお迎えいただきました🎉
+              </>
+            ),
             requirement: {
               title: '参加条件',
               list: ['✅ Twitterアカウントを持っている', '✅ OpenSeaアカウントを持っている']

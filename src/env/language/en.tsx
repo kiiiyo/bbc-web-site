@@ -46,7 +46,12 @@ export const language: TLanguage = {
           description:
             'To celebrate the opening of the official site, we are holding an event where you can win NFTs by drawing lots when you find the hidden Bearly in the site!',
           buttonLabel: 'He could be on this page.',
-          currentPeople: '64 people left.'
+          currentOwner: (
+            <>
+              We&#39;ve been welcomed by the owner, who has <strong className="text-xl font-bold"> 1 </strong> 🐻 Beary.
+            </>
+          ),
+          currentPeople: '63 people left.'
         }
       }
     },
@@ -151,18 +156,18 @@ export const language: TLanguage = {
             title: 'Step1',
             description: (
               <>
-                Click on <strong>「Find BitBear」</strong> and select <strong>「See the bord」</strong>.
+                Click on the orange icon your favorite 🐻 <strong>BitBear</strong> to see more details.
               </>
-            ),
-            buttonLabel: 'Find BitBea'
+            )
           },
           step2: {
             title: 'Step2',
             description: (
               <>
-                Click on the orange icon your favorite 🐻 <strong>BitBear</strong> to see more details.
+                Click on <strong>「Find BitBear」</strong> and select <strong>「See the bord」</strong>.
               </>
-            )
+            ),
+            buttonLabel: 'Find BitBea'
           },
           campaign: {
             title: '🎁 Giveaway Campaign 🎉',
@@ -172,7 +177,13 @@ export const language: TLanguage = {
                 <strong>A bear named 🐻 Bearly in the woods will tell you how to enter.</strong>
               </>
             ),
-            currentPeople: '64 people left.',
+            currentPeople: '63 people left.',
+            currentOwner: (
+              <>
+                We&#39;ve been welcomed by the owner, who has <strong className="text-xl font-bold"> 1 </strong> 🐻
+                Beary.
+              </>
+            ),
             requirement: {
               title: 'Requirement',
               list: ['✅ You have a Twitter account.', '✅ You have a OpenSea account.']

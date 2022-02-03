@@ -29,7 +29,6 @@ export const OverlayInlineFramePresenter: FC<TOverlayInlineFramePresenterProps> 
   state: { isLoading, url, overlayInlineFrameDisplay },
   actions: { onCloseButtonClick, handleLoadingCondition }
 }) => {
-  console.log('isLoading', isLoading)
   return overlayInlineFrameDisplay === 'SHOW' ? (
     <div className="overflow-y-auto fixed inset-0 z-50 min-h-screen">
       <div className="flex overflow-hidden relative items-center px-4 min-h-screen bg-gray-300 transition-opacity">

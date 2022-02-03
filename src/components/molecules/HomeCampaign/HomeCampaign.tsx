@@ -27,6 +27,7 @@ export const HomeCampaignPresenter: FC<THomeCampaignPresenterProps> = ({ state: 
               {language.page.campaignPage.section.content.term.title}
             </h4>
             <p>{language.page.campaignPage.section.content.term.description}</p>
+            <p className="mt-4 mb-2 ">{language.page.homePage.section.campaign.currentOwner}</p>
             <p className="mt-4 mb-2 text-3xl font-bold text-gray-900 lg:text-5xl">
               {language.page.homePage.section.campaign.currentPeople}
             </p>
