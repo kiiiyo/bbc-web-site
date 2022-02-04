@@ -47,10 +47,10 @@ export const language: TLanguage = {
           buttonLabel: 'He could be on this page.',
           currentOwner: (
             <>
-              We&#39;ve been welcomed by the owner, who has <strong className="text-xl font-bold"> 2 </strong> 🐻 Beary.
+              We&#39;ve been welcomed by the owner, who has <strong className="text-xl font-bold"> 4 </strong> 🐻 Beary.
             </>
           ),
-          currentPeople: '62 people left.'
+          currentPeople: '60 people left.'
         }
       }
     },
@@ -176,10 +176,10 @@ export const language: TLanguage = {
                 <strong>A bear named 🐻 Bearly in the woods will tell you how to enter.</strong>
               </>
             ),
-            currentPeople: '62 people left.',
+            currentPeople: '60 people left.',
             currentOwner: (
               <>
-                We&#39;ve been welcomed by the owner, who has <strong className="text-xl font-bold"> 2 </strong> 🐻
+                We&#39;ve been welcomed by the owner, who has <strong className="text-xl font-bold"> 4 </strong> 🐻
                 Beary.
               </>
             ),
