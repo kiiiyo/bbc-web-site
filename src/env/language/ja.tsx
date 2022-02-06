@@ -48,10 +48,10 @@ export const language: TLanguage = {
           description:
             'オフィシャルサイトオープン記念、サイト内に隠れているベアリーを見つけると抽選でNFTがもらえるイベントを実施中です!',
           buttonLabel: 'このページにいるかも',
-          currentPeople: '残り58人',
+          currentPeople: '残り55人',
           currentOwner: (
             <>
-              🐻 ベアリーが<strong className="text-xl font-bold"> 6名 </strong>の❤️ オーナーさんにお迎えいただきました🎉
+              🐻 ベアリーが<strong className="text-xl font-bold"> 9名 </strong>の❤️ オーナーさんにお迎えいただきました🎉
             </>
           )
         }
@@ -185,10 +185,10 @@ export const language: TLanguage = {
               </>
             ),
 
-            currentPeople: '残り58人',
+            currentPeople: '残り55人',
             currentOwner: (
               <>
-                🐻 ベアリーが<strong className="text-xl font-bold"> 6名 </strong>の❤️
+                🐻 ベアリーが<strong className="text-xl font-bold"> 9名 </strong>の❤️
                 オーナーさんにお迎えいただきました🎉
               </>
             ),
