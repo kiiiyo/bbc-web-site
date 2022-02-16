@@ -1,48 +1,64 @@
-import type { NextPage } from 'next'
+import type { NextPage, InferGetStaticPropsType, GetStaticPaths, GetStaticProps } from 'next'
+import { ParsedUrlQuery } from 'node:querystring'
 import ErrorPage from 'next/error'
 //
 import { Context } from '@/features'
 import { Pages } from '@/components'
-import { withLocale } from '@/utils/translations/locales'
+import { getLocale, UnknownLocale } from '@/utils/translations/locales'
+
+type BearCollectionPageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 type State = {
   page: {
-    path: string
-    preview: boolean
-    locale: 'ja' | 'en'
+    locale?: string | typeof UnknownLocale
   }
 }
 
-type AboutPageProps = {
+type TBearsStaticProps = {
   state: State
 }
 
-export const getServerSideProps = withLocale(async (locale, { resolvedUrl }) => {
-  const path = String(resolvedUrl.split('?')) ?? '/'
+type TBearsParams = ParsedUrlQuery & {
+  locale: string
+}
 
-  // TODO: エラーハンドリング
-  const page = {
-    path,
-    locale
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: ['/ja/bears', '/en/bears'],
+    fallback: false
   }
+}
+
+export const getStaticProps: GetStaticProps<TBearsStaticProps, TBearsParams> = async ({ params }) => {
+  const locale = getLocale(params?.locale)
 
   return {
     props: {
-      state: { page }
+      state: {
+        page: {
+          locale
+        }
+      }
     }
   }
-})
+}
 
-const AboutPage: NextPage<AboutPageProps> = ({ state: { page } }) => {
-  if (!page) {
+const BearCollectionPage: NextPage<BearCollectionPageProps> = ({
+  state: {
+    page: { locale }
+  }
+}) => {
+  if (locale === undefined || locale === typeof UnknownLocale || typeof locale !== 'string') {
     return <ErrorPage statusCode={404} />
   }
 
+  const path = typeof locale === 'string' ? '/${locale}/bears' : '/ja/bears'
+
   return (
-    <Context.LocaleContext.LocaleContextProvider value={{ locale: page.locale, path: page.path }}>
+    <Context.LocaleContext.LocaleContextProvider value={{ locale: locale as 'en' | 'ja', path }}>
       <Pages.BearsPage />
     </Context.LocaleContext.LocaleContextProvider>
   )
 }
 
-export default AboutPage
+export default BearCollectionPage
