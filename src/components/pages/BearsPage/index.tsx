@@ -1,1 +1,0 @@
-export { BearsPage } from './BearsPage'

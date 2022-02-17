@@ -12,7 +12,8 @@
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest test --coverage"
+    "test:coverage": "jest test --coverage",
+    "contentful-typescript-codegen": "contentful-typescript-codegen --output src/types/contentful.d.ts"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -27,6 +28,7 @@
     "sass": "^1.49.0"
   },
   "devDependencies": {
+    "@contentful/rich-text-types": "^15.11.1",
     "@swc/core": "^1.2.133",
     "@swc/jest": "^0.2.17",
     "@testing-library/dom": "^8.11.2",
@@ -38,6 +40,9 @@
     "@types/react": "17.0.38",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "autoprefixer": "^10.4.2",
+    "contentful-management": "^8.1.2",
+    "contentful-typescript-codegen": "^3.2.3",
+    "dotenv": "^16.0.0",
     "eslint": "8.6.0",
     "eslint-config-next": "12.0.8",
     "eslint-config-prettier": "^8.3.0",

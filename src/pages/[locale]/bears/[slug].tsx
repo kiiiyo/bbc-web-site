@@ -6,36 +6,46 @@ import { Domain, Context, Usecase } from '@/features'
 import { Pages } from '@/components'
 import { getLocale, UnknownLocale } from '@/utils/translations/locales'
 
-type BearCollectionPageProps = InferGetStaticPropsType<typeof getStaticProps>
+type BearSinglePageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 type State = {
   page: {
     locale?: string | typeof UnknownLocale
     collection: Domain.Bear.Collection | null
+    content: null
   }
 }
 
-type TBearsStaticProps = {
+type TBearStaticProps = {
   state: State
 }
 
-type TBearsParams = ParsedUrlQuery & {
+type TBearParams = ParsedUrlQuery & {
   locale: string
+  slug: string
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  // TODO: 切り出す
+  const availableLocales = ['ja', 'en']
+  const slugs = ['neo', 'moo', 'smith', 'oracle', 'link', 'thomas', 'trinity', 'dujour']
+  const paths = availableLocales.map((local) => slugs.map((slug) => `/${local}/bears/${slug}`))
+
   return {
-    paths: ['/ja/bears', '/en/bears'],
+    // TODO: うまくなおす
+    paths: paths[0].concat(paths[1]),
     fallback: false
   }
 }
 
-export const getStaticProps: GetStaticProps<TBearsStaticProps, TBearsParams> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<TBearStaticProps, TBearParams> = async ({ params }) => {
   const locale = getLocale(params?.locale)
   let collection = null
+  const content = null
 
   if (locale === 'ja' || locale === 'en') {
     collection = await Usecase.Bear.bearCollection({ locale })
+    //bearDetail = await Usecase.Bear.bearCollection({ locale })
   }
 
   return {
@@ -43,6 +53,7 @@ export const getStaticProps: GetStaticProps<TBearsStaticProps, TBearsParams> = a
       state: {
         page: {
           locale,
+          content,
           collection
         }
       }
@@ -50,7 +61,7 @@ export const getStaticProps: GetStaticProps<TBearsStaticProps, TBearsParams> = a
   }
 }
 
-const BearCollectionPage: NextPage<BearCollectionPageProps> = ({
+const BearSinglePage: NextPage<BearSinglePageProps> = ({
   state: {
     page: { locale, collection }
   }
@@ -68,4 +79,4 @@ const BearCollectionPage: NextPage<BearCollectionPageProps> = ({
   )
 }
 
-export default BearCollectionPage
+export default BearSinglePage

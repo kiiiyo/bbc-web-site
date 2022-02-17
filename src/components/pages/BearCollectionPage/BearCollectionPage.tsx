@@ -1,24 +1,31 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import Head from 'next/head'
+import Link from 'next/link'
 //
 import { Constants } from '@/env'
-import { Hooks } from '@/features'
+import { Hooks, Domain } from '@/features'
 import { Templates, Organisms } from '@/components'
 import type { TLanguage } from '@/types/language'
 import type { TLocale } from '@/types/locale'
 
-type State = {
-  language: TLanguage
-  locale: TLocale
-}
-
 export type TBearCollectionPageProps = {
-  state: State
+  state: {
+    collection: Domain.Bear.Collection | null
+  }
 }
 
-export const BearCollectionPagePresenter: FC<TBearCollectionPageProps> = ({ state: { language, locale } }) => {
+export type TBearCollectionPagePresenterProps = {
+  state: {
+    language: TLanguage
+    locale: TLocale
+    collection: Domain.Bear.Collection | null
+  }
+}
+
+export const BearCollectionPagePresenter: FC<TBearCollectionPagePresenterProps> = ({
+  state: { language, locale, collection }
+}) => {
   return (
     <>
       <Head>
@@ -51,29 +58,35 @@ export const BearCollectionPagePresenter: FC<TBearCollectionPageProps> = ({ stat
             <div className="container p-6 mx-auto ">
               <div className="pb-20">
                 <div className="flex flex-wrap -m-4">
-                  <div className="p-4 md:w-1/4">
-                    <Link href={`/${locale}/bears/neo`}>
-                      <a>
-                        <div className="overflow-hidden h-full rounded-lg border-2 border-gray-200">
-                          <Image
-                            alt="Bear Name Neo"
-                            className="rounded-lg"
-                            src="/assets/images/body-neo.png"
-                            layout={'responsive'}
-                            width={960}
-                            height={960}
-                          />
+                  {collection &&
+                    collection.items.length > 0 &&
+                    collection.items.map((item: Domain.Bear.Entity, index: number) => {
+                      const { slug, keyVisualImage, name } = item
 
-                          <div className="p-6">
-                            <h2 className="text-xs text-gray-600">🐻 Name</h2>
-                            <h1 className="mt-4 text-xl font-bold text-gray-900 md:text-3xl">
-                              {language.page.aboutPage.section.neo.name}
-                            </h1>
-                          </div>
-                        </div>
-                      </a>
-                    </Link>
-                  </div>
+                      return (
+                        <React.Fragment key={index}>
+                          <Link href={`/${locale}/bears/${slug}`}>
+                            <a className="block p-4 w-full md:w-1/3">
+                              <div className="overflow-hidden h-full rounded-2xl border-2 border-gray-200">
+                                <Image
+                                  alt={`Bear Name ${name}`}
+                                  className="rounded-lg"
+                                  src={keyVisualImage.url}
+                                  layout={'responsive'}
+                                  width={960}
+                                  height={960}
+                                />
+
+                                <div className="p-6">
+                                  <h2 className="text-xs font-medium tracking-widest text-gray-600">🐻 NAME</h2>
+                                  <h1 className="mt-4 text-xl font-bold text-gray-900 lg:text-3xl">{name}</h1>
+                                </div>
+                              </div>
+                            </a>
+                          </Link>
+                        </React.Fragment>
+                      )
+                    })}
                 </div>
               </div>
             </div>
@@ -84,7 +97,7 @@ export const BearCollectionPagePresenter: FC<TBearCollectionPageProps> = ({ stat
   )
 }
 
-export const BearCollectionPage: FC = () => {
+export const BearCollectionPage: FC<TBearCollectionPageProps> = ({ state: { collection } }) => {
   const {
     state: { language, locale }
   } = Hooks.Locale.useLocaleContext()
@@ -92,8 +105,9 @@ export const BearCollectionPage: FC = () => {
   return (
     <BearCollectionPagePresenter
       state={{
-        language,
-        locale
+        locale,
+        collection,
+        language
       }}
     />
   )
