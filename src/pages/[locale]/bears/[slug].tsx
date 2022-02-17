@@ -6,13 +6,13 @@ import { Domain, Context, Usecase } from '@/features'
 import { Pages } from '@/components'
 import { getLocale, UnknownLocale } from '@/utils/translations/locales'
 
-type BearSinglePageProps = InferGetStaticPropsType<typeof getStaticProps>
+type TBearSinglePageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 type State = {
   page: {
     locale?: string | typeof UnknownLocale
-    collection: Domain.Bear.Collection | null
-    content: null
+    collection: Domain.Bear.TCollection | null
+    bear: Domain.Bear.TEntity | null
   }
 }
 
@@ -22,7 +22,7 @@ type TBearStaticProps = {
 
 type TBearParams = ParsedUrlQuery & {
   locale: string
-  slug: string
+  slug: Domain.Bear.TBearNameSlug
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -32,7 +32,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = availableLocales.map((local) => slugs.map((slug) => `/${local}/bears/${slug}`))
 
   return {
-    // TODO: うまくなおす
+    // TODO: きれいにする
     paths: paths[0].concat(paths[1]),
     fallback: false
   }
@@ -40,12 +40,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<TBearStaticProps, TBearParams> = async ({ params }) => {
   const locale = getLocale(params?.locale)
+  const slug = params?.slug
   let collection = null
-  const content = null
+  let bear = null
 
   if (locale === 'ja' || locale === 'en') {
     collection = await Usecase.Bear.bearCollection({ locale })
     //bearDetail = await Usecase.Bear.bearCollection({ locale })
+  }
+
+  if (slug && (locale === 'ja' || locale === 'en')) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    bear = await Usecase.Bear.bearSingle({ locale, slug })
   }
 
   return {
@@ -53,7 +59,7 @@ export const getStaticProps: GetStaticProps<TBearStaticProps, TBearParams> = asy
       state: {
         page: {
           locale,
-          content,
+          bear,
           collection
         }
       }
@@ -61,12 +67,15 @@ export const getStaticProps: GetStaticProps<TBearStaticProps, TBearParams> = asy
   }
 }
 
-const BearSinglePage: NextPage<BearSinglePageProps> = ({
+const BearSinglePage: NextPage<TBearSinglePageProps> = ({
   state: {
-    page: { locale, collection }
+    page: { locale, collection, bear }
   }
 }) => {
   if (locale === undefined || locale === typeof UnknownLocale) {
+    return <ErrorPage statusCode={404} />
+  }
+  if (bear === null) {
     return <ErrorPage statusCode={404} />
   }
 
@@ -74,7 +83,7 @@ const BearSinglePage: NextPage<BearSinglePageProps> = ({
 
   return (
     <Context.LocaleContext.LocaleContextProvider value={{ locale: locale as 'en' | 'ja', path }}>
-      <Pages.BearSinglePage state={{ collection }} />
+      <Pages.BearSinglePage state={{ collection, bear }} />
     </Context.LocaleContext.LocaleContextProvider>
   )
 }

@@ -14,7 +14,7 @@ export interface IBitBearFields {
   locale?: string | undefined
 
   /** description */
-  description?: Document | undefined
+  description: Document
 
   /** ogpImage */
   ogpImage?: Asset | undefined

@@ -11,7 +11,7 @@ import type { TLocale } from '@/types/locale'
 
 export type TBearCollectionPageProps = {
   state: {
-    collection: Domain.Bear.Collection | null
+    collection: Domain.Bear.TCollection | null
   }
 }
 
@@ -19,7 +19,7 @@ export type TBearCollectionPagePresenterProps = {
   state: {
     language: TLanguage
     locale: TLocale
-    collection: Domain.Bear.Collection | null
+    collection: Domain.Bear.TCollection | null
   }
 }
 
@@ -60,7 +60,7 @@ export const BearCollectionPagePresenter: FC<TBearCollectionPagePresenterProps> 
                 <div className="flex flex-wrap -m-4">
                   {collection &&
                     collection.items.length > 0 &&
-                    collection.items.map((item: Domain.Bear.Entity, index: number) => {
+                    collection.items.map((item: Domain.Bear.TEntity, index: number) => {
                       const { slug, keyVisualImage, name } = item
 
                       return (

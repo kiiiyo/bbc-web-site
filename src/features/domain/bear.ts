@@ -5,59 +5,68 @@ import { IBitBearFields } from '@/types/contentful'
 import { TLocale } from '@/types/locale'
 export const ContentType = 'bitBear'
 
-export type Fields = IBitBearFields
-export type Entry = ContentfulEntry<Fields>
-export type EntryCollection = ContentfulEntryCollection<Fields>
+export type TFields = IBitBearFields
+export type TEntry = ContentfulEntry<TFields>
+export type TEntryCollection = ContentfulEntryCollection<TFields>
 
-export type CollectionQuery = {
+export type TBearNameSlug = 'neo' | 'moo' | 'smith' | 'oracle' | 'trinity' | 'dujour' | 'link' | 'thomas'
+
+export type TCollectionQuery = {
   locale: TLocale
 }
 
-export type Image = {
+export type TSingleQuery = {
+  locale: TLocale
+  slug: TBearNameSlug
+}
+
+export type TImage = {
   title: string
   url: string
 }
 
-export type Entity = {
+export type TEntity = {
   name: string
   slug: string
-  description?: Document | null
-  keyVisualImage: Image
+  description: Document
+  keyVisualImage: TImage
+  ogpImage: TImage | null
+  metadata?: Record<string, any> | null
 }
 
-export type Collection = {
+export type TCollection = {
   total: number
-  items: Array<Entity>
+  items: Array<TEntity>
 }
 
 // Mapper
 
-export const bearsMapping = (bears: EntryCollection): Collection => {
+export const bearsMapping = (bears: TEntryCollection): TCollection => {
   return {
     total: bears.total,
     items: bears.items.map((bear) => bearMapping(bear))
   }
 }
 
-export const bearMapping = (bear: Entry): Entity => {
+export const bearMapping = (bear: TEntry): TEntity => {
   const {
-    fields: { name, slug, description, keyVisualImage }
+    fields: { name, slug, description, keyVisualImage, ogpImage, metadata }
   } = bear
 
   return {
     name: name || '',
     slug: slug || '',
-    description: description || null,
+    description: description,
     keyVisualImage: {
       title: keyVisualImage.fields.title,
       url: `https:${keyVisualImage.fields.file.url}`
-    }
-
-    // image: image
-    //   ? {
-    //       title: image?.fields.title,
-    //       url: image?.fields.file.url
-    //     }
-    //   : null
+    },
+    ogpImage: ogpImage
+      ? {
+          title: ogpImage?.fields.title,
+          url: ogpImage?.fields.file.url
+        }
+      : null,
+    metadata: metadata || null
   }
 }

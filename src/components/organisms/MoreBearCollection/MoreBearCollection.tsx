@@ -9,22 +9,20 @@ import type { TLocale } from '@/types/locale'
 
 export type TMoreBearCollectionProps = {
   state: {
-    collection: Domain.Bear.Collection
+    collection: Domain.Bear.TCollection
   }
 }
 
 export type TMoreBearCollectionPresenterProps = {
   state: {
     locale: TLocale
-    collection: Domain.Bear.Collection
+    collection: Domain.Bear.TCollection
   }
 }
 
 export const MoreBearCollectionPresenter: FC<TMoreBearCollectionPresenterProps> = ({
   state: { locale, collection }
 }) => {
-  console.log(locale)
-  console.log(collection)
   return (
     <section>
       <div className="mt-8">
@@ -34,13 +32,13 @@ export const MoreBearCollectionPresenter: FC<TMoreBearCollectionPresenterProps> 
       <div className="flex flex-wrap -m-4 mt-2">
         {collection &&
           collection.items.length > 0 &&
-          collection.items.map((item: Domain.Bear.Entity, index: number) => {
+          collection.items.map((item: Domain.Bear.TEntity, index: number) => {
             const { slug, keyVisualImage, name } = item
 
             return (
               <React.Fragment key={index}>
                 <Link href={`/${locale}/bears/${slug}`}>
-                  <a className="block p-4 w-1/2 md:w-1/3 lg:w-1/6">
+                  <a className="block p-3 w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
                     <div className="overflow-hidden h-full rounded-2xl border-2 border-gray-200">
                       <Image
                         alt={`Bear Name ${name}`}
@@ -50,9 +48,9 @@ export const MoreBearCollectionPresenter: FC<TMoreBearCollectionPresenterProps> 
                         height={960}
                       />
 
-                      <div className="p-6">
+                      <div className="p-4 text-center">
                         <h2 className="text-xs font-medium tracking-widest text-gray-600">🐻 NAME</h2>
-                        <h1 className="mt-2 font-bold text-gray-900 lg:text-xl">{name}</h1>
+                        <h1 className="mt-2 font-bold text-gray-800 lg:text-lg">{name}</h1>
                       </div>
                     </div>
                   </a>

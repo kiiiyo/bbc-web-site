@@ -6,12 +6,12 @@ import { Domain, Context, Usecase } from '@/features'
 import { Pages } from '@/components'
 import { getLocale, UnknownLocale } from '@/utils/translations/locales'
 
-type BearCollectionPageProps = InferGetStaticPropsType<typeof getStaticProps>
+type TBearCollectionPageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 type State = {
   page: {
     locale?: string | typeof UnknownLocale
-    collection: Domain.Bear.Collection | null
+    collection: Domain.Bear.TCollection | null
   }
 }
 
@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps<TBearsStaticProps, TBearsParams> = a
   }
 }
 
-const BearCollectionPage: NextPage<BearCollectionPageProps> = ({
+const BearCollectionPage: NextPage<TBearCollectionPageProps> = ({
   state: {
     page: { locale, collection }
   }
