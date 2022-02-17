@@ -5,3 +5,10 @@ declare global {
     dataLayer: Record<string, unknown>[]
   }
 }
+
+export const SendLinkClckTrigger = (label: string): void => {
+  window.dataLayer.push({
+    event: 'link_click_trigger',
+    link_click_trigger: label
+  })
+}

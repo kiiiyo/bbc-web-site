@@ -1,0 +1,1 @@
+export { BearSinglePage } from './BearSinglePage'
