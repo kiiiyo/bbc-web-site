@@ -74,7 +74,7 @@ const BearSinglePage: NextPage<BearSinglePageProps> = ({
 
   return (
     <Context.LocaleContext.LocaleContextProvider value={{ locale: locale as 'en' | 'ja', path }}>
-      <Pages.BearCollectionPage state={{ collection }} />
+      <Pages.BearSinglePage state={{ collection }} />
     </Context.LocaleContext.LocaleContextProvider>
   )
 }
