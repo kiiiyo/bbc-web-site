@@ -1,0 +1,1 @@
+export { BearCollectionPage } from './BearCollectionPage'
