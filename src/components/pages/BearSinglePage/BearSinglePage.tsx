@@ -1,12 +1,12 @@
 import { FC, Key, useCallback } from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
-
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 //
 import { Constants } from '@/env'
 import { Hooks, Domain } from '@/features'
-import { Templates, Organisms } from '@/components'
+import { Templates, Organisms, Atoms } from '@/components'
 import { SendLinkClckTrigger } from '@/utils/gtm'
 import type { TLocale } from '@/types/locale'
 
@@ -35,12 +35,15 @@ export type TBearSinglePagePresenterProps = {
 }
 
 export const BearSinglePagePresenter: FC<TBearSinglePagePresenterProps> = ({
-  state: { collection, bear },
+  state: { collection, bear, locale },
   actions: { onLinkClick }
 }) => {
-  const { description, keyVisualImage, name, metadata } = bear
+  const { description, keyVisualImage, slug, name, nickname, shareText, metadata } = bear
 
   const content = documentToReactComponents(description)
+  const twitterShare = 'https://twitter.com/intent/tweet'
+  const twitterShareUrl = `https://www.bitbearclub.art/${locale}/bears/${slug}`
+  const shareLink = `${twitterShare}?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(twitterShareUrl)}`
   return (
     <>
       <Head>
@@ -63,7 +66,7 @@ export const BearSinglePagePresenter: FC<TBearSinglePagePresenterProps> = ({
                   <>
                     <span className="inline-block mr-3">🐻</span>
                     <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
-                      BitBear {name}
+                      {name}
                     </span>
                   </>
                 )
@@ -71,7 +74,16 @@ export const BearSinglePagePresenter: FC<TBearSinglePagePresenterProps> = ({
             />
             <div className="container p-6 mx-auto">
               <div className="pb-20">
-                <div className="flex flex-col mx-auto mt-16 lg:flex-row lg:mt-24 lg:w-4/5">
+                <div className="flex overflow-y-auto items-center py-4 whitespace-nowrap">
+                  <Link href={`/${locale}/bears`}>
+                    <a className="font-bold text-gray-600 underline hover:underline">🐻 BitBear&#39;s</a>
+                  </Link>
+                  <span className="mx-3 text-gray-500 ">/</span>
+                  <Link href={`/${locale}/bears/${slug}`}>
+                    <a className="font-bold text-blue-600 underline hover:underline">{name}</a>
+                  </Link>
+                </div>
+                <div className="flex flex-col mx-auto mt-4 lg:flex-row lg:mt-16 lg:w-4/5">
                   <div className="object-cover object-top overflow-hidden w-full h-64 rounded lg:object-center lg:w-1/2 lg:h-auto">
                     <Image
                       alt={`BitBear ${name}`}
@@ -160,6 +172,19 @@ export const BearSinglePagePresenter: FC<TBearSinglePagePresenterProps> = ({
                         )}
                       </>
                     )}
+                    <hr className="pb-4 mt-8" />
+                    <div>
+                      <h4 className=" text-sm tracking-widest text-gray-500">Share:</h4>
+                      <Link href={shareLink}>
+                        <a
+                          target="_blank"
+                          className="block py-6 mt-4 w-full text-lg font-bold text-center text-white bg-sky-500 hover:bg-sky-600 rounded-md transition-colors duration-200 md:text-xl lg:text-3xl"
+                        >
+                          <Atoms.TwitterIcon className="w-6 h-6" />
+                          <span className="inline-block pl-4">{nickname}</span>
+                        </a>
+                      </Link>
+                    </div>
                   </div>
                 </div>
 
