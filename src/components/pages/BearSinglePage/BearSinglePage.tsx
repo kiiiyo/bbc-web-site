@@ -38,7 +38,7 @@ export const BearSinglePagePresenter: FC<TBearSinglePagePresenterProps> = ({
   state: { collection, bear, locale },
   actions: { onLinkClick }
 }) => {
-  const { description, keyVisualImage, slug, name, nickname, shareText, metadata } = bear
+  const { description, keyVisualImage, slug, name, nickname, shareText, metadata, ogpImage } = bear
 
   const content = documentToReactComponents(description)
   const twitterShare = 'https://twitter.com/intent/tweet'
@@ -50,6 +50,7 @@ export const BearSinglePagePresenter: FC<TBearSinglePagePresenterProps> = ({
         <title>
           🐻 BitBear {bear.name} - {Constants.SITE_TITLE}
         </title>
+        <meta property="og:image" content={ogpImage ? ogpImage.url : Constants.OGP_BEARS_IMAGE} />
       </Head>
       <Templates.GenericTemplate
         state={{
