@@ -1,0 +1,1 @@
+export { MoreBearCollection } from './MoreBearCollection'
