@@ -9,7 +9,7 @@ export type TFields = IBitBearFields
 export type TEntry = ContentfulEntry<TFields>
 export type TEntryCollection = ContentfulEntryCollection<TFields>
 
-export type TBearNameSlug = 'neo' | 'moo' | 'smith' | 'oracle' | 'trinity' | 'dujour' | 'link' | 'thomas'
+export type TBearNameSlug = 'neo' | 'moo' | 'smith' | 'oracle' | 'trinity' | 'dujour' | 'link' | 'thomas' | 'bearly'
 
 export type TCollectionQuery = {
   locale: TLocale
@@ -28,6 +28,8 @@ export type TImage = {
 export type TEntity = {
   name: string
   slug: string
+  nickname: string
+  shareText: string
   description: Document
   keyVisualImage: TImage
   ogpImage: TImage | null
@@ -50,12 +52,14 @@ export const bearsMapping = (bears: TEntryCollection): TCollection => {
 
 export const bearMapping = (bear: TEntry): TEntity => {
   const {
-    fields: { name, slug, description, keyVisualImage, ogpImage, metadata }
+    fields: { name, slug, description, keyVisualImage, nickname, shareText, ogpImage, metadata }
   } = bear
 
   return {
     name: name || '',
     slug: slug || '',
+    nickname: nickname || '',
+    shareText: shareText || '',
     description: description,
     keyVisualImage: {
       title: keyVisualImage.fields.title,

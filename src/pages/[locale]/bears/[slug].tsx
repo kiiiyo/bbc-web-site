@@ -28,7 +28,7 @@ type TBearParams = ParsedUrlQuery & {
 export const getStaticPaths: GetStaticPaths = async () => {
   // TODO: 切り出す
   const availableLocales = ['ja', 'en']
-  const slugs = ['neo', 'moo', 'smith', 'oracle', 'link', 'thomas', 'trinity', 'dujour']
+  const slugs = ['neo', 'moo', 'smith', 'oracle', 'link', 'thomas', 'trinity', 'dujour', 'bearly']
   const paths = availableLocales.map((local) => slugs.map((slug) => `/${local}/bears/${slug}`))
 
   return {

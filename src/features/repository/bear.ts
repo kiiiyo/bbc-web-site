@@ -10,7 +10,7 @@ export const bearCollection: (query: Domain.Bear.TCollectionQuery) => Promise<Do
   const data = await contentfulClient.getEntries<Domain.Bear.TFields>({
     content_type: Domain.Bear.ContentType,
     'fields.locale': locale,
-    order: 'sys.createdAt'
+    order: '-fields.sortOrder'
   })
 
   return await Domain.Bear.bearsMapping(data)
