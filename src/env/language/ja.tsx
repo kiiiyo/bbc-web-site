@@ -59,9 +59,9 @@ export const language: TLanguage = {
       }
     },
     aboutPage: {
-      title: '🐻 達について',
+      title: '🐻 BitBear',
       hero: {
-        title: '達について',
+        title: 'BitBearについて',
         description: 'BitBear達をご紹介します。'
       },
       section: {

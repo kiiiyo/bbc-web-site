@@ -16,8 +16,9 @@ export const GLOBAL_MENU_LIST = {
     {
       name: 'ABOUT',
       icon: '🐻',
-      label: '達について',
-      path: '/ja/about'
+      // eslint-disable-next-line quotes
+      label: "BitBear's",
+      path: '/ja/bears'
     },
     {
       name: 'ROADMAP',
@@ -48,8 +49,9 @@ export const GLOBAL_MENU_LIST = {
     {
       name: 'ABOUT',
       icon: '🐻',
-      label: 'About',
-      path: '/en/about'
+      // eslint-disable-next-line quotes
+      label: "BitBear's",
+      path: '/en/bears'
     },
     {
       name: 'ROADMAP',
