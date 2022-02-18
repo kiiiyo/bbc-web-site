@@ -7,11 +7,17 @@ export interface IBitBearFields {
   /** Name */
   name?: string | undefined
 
+  /** Nickname */
+  nickname: string
+
   /** slug */
   slug?: string | undefined
 
   /** locale */
   locale?: string | undefined
+
+  /** shareText */
+  shareText: string
 
   /** description */
   description: Document

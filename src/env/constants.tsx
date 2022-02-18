@@ -2,6 +2,9 @@ export const MOBILE_BREAK_POINT_SIZE = 767
 
 export const SITE_TITLE = 'BitBearClub'
 
+export const OGP_BEARS_IMAGE =
+  'https://images.ctfassets.net/od632j3oj9wg/3kT9M54CHsSluxKdpIxodr/ce98f8d583dbd8cc3ab2e66dfc4640a2/ogp_image_bears_1200x630.png'
+
 export const GLOBAL_MENU_LIST = {
   ja: [
     {

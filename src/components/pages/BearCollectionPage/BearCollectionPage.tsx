@@ -32,6 +32,7 @@ export const BearCollectionPagePresenter: FC<TBearCollectionPagePresenterProps> 
         <title>
           {language.page.aboutPage.title} - {Constants.SITE_TITLE}
         </title>
+        <meta property="og:image" content={Constants.OGP_BEARS_IMAGE} />
       </Head>
       <Templates.GenericTemplate
         state={{
@@ -66,7 +67,7 @@ export const BearCollectionPagePresenter: FC<TBearCollectionPagePresenterProps> 
                       return (
                         <React.Fragment key={index}>
                           <Link href={`/${locale}/bears/${slug}`}>
-                            <a className="block p-4 w-full md:w-1/3">
+                            <a className="block p-4 w-full md:w-1/3 lg:w-1/4">
                               <div className="overflow-hidden h-full rounded-2xl border-2 border-gray-200">
                                 <Image
                                   alt={`Bear Name ${name}`}
@@ -79,7 +80,7 @@ export const BearCollectionPagePresenter: FC<TBearCollectionPagePresenterProps> 
 
                                 <div className="p-6">
                                   <h2 className="text-xs font-medium tracking-widest text-gray-600">🐻 NAME</h2>
-                                  <h1 className="mt-4 text-xl font-bold text-gray-900 lg:text-3xl">{name}</h1>
+                                  <h1 className="mt-2 text-xl font-bold text-gray-900 lg:text-3xl">{name}</h1>
                                 </div>
                               </div>
                             </a>
