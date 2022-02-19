@@ -71,7 +71,7 @@ export const BearCollectionPagePresenter: FC<TBearCollectionPagePresenterProps> 
                               <div className="overflow-hidden h-full rounded-2xl border-2 border-gray-200">
                                 <Image
                                   alt={`Bear Name ${name}`}
-                                  className="rounded-lg"
+                                  className="rounded-lg rounded-b-none"
                                   src={keyVisualImage.url}
                                   layout={'responsive'}
                                   width={960}
