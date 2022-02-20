@@ -68,7 +68,7 @@ export const bearMapping = (bear: TEntry): TEntity => {
     ogpImage: ogpImage
       ? {
           title: ogpImage?.fields.title,
-          url: ogpImage?.fields.file.url
+          url: `https:${ogpImage.fields.file.url}`
         }
       : null,
     metadata: metadata || null

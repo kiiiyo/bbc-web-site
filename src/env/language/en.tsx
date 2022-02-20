@@ -56,9 +56,9 @@ export const language: TLanguage = {
       }
     },
     aboutPage: {
-      title: 'About',
+      title: 'BitBear',
       hero: {
-        title: 'About',
+        title: 'BitBear',
         description: 'Here are the BitBears.'
       },
       section: {

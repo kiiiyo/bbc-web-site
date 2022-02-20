@@ -44,6 +44,7 @@ export const MoreBearCollectionPresenter: FC<TMoreBearCollectionPresenterProps> 
                         alt={`Bear Name ${name}`}
                         src={keyVisualImage.url}
                         layout={'responsive'}
+                        className="rounded-md rounded-b-none"
                         width={960}
                         height={960}
                       />
