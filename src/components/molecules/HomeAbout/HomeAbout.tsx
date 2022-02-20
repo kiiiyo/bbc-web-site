@@ -35,7 +35,7 @@ export const HomeAboutPresenter: FC<THomeAboutPresenterProps> = ({ state: { loca
             </h1>
             <p className="mt-6 leading-8">{language.page.homePage.section.about.description}</p>
 
-            <Link href={`/${locale}/about`}>
+            <Link href={`/${locale}/bears`}>
               <a className="inline-flex items-center py-3 px-5 mx-1 mt-8 text-lg leading-5 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200 md:mx-0 md:mt-16">
                 <span>{language.page.homePage.section.about.buttonLabel}</span>
                 <Atoms.ArrowSmRightIcon className="ml-4 w-6 h-6" />
