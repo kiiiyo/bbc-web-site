@@ -7,6 +7,17 @@ import { AboutOracle } from './AboutOracle'
 //
 import { AvatarSeries } from './AvatarSeries'
 import { GraffitiSeries } from './GraffitiSeries'
+import { SeriesItem } from './SeriesItem'
 
 //
-export { HomeAbout, AboutMoo, AboutNeo, AboutSmith, AboutOracle, HomeCampaign, AvatarSeries, GraffitiSeries }
+export {
+  HomeAbout,
+  AboutMoo,
+  AboutNeo,
+  AboutSmith,
+  AboutOracle,
+  HomeCampaign,
+  AvatarSeries,
+  GraffitiSeries,
+  SeriesItem
+}
