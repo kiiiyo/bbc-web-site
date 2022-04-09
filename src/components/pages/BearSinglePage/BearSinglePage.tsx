@@ -135,11 +135,9 @@ export const BearSinglePagePresenter: FC<TBearSinglePagePresenterProps> = ({
                         </div>
                       </>
                     )}
-
-                    <h4 className="mt-8 text-sm tracking-widest text-gray-500">Series:</h4>
-
                     {metadata && metadata.opensea.series && (
                       <>
+                        <h4 className="mt-8 text-sm tracking-widest text-gray-500">Series:</h4>
                         {metadata.opensea.series.map(
                           (
                             item: {
