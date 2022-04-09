@@ -1,0 +1,1 @@
+export { AvatarSeries } from './AvatarSeries'

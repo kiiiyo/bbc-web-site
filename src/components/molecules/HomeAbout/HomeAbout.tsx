@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 //
 import { Hooks } from '@/features'
-import { Atoms } from '@/components'
 import type { TLanguage } from '@/types/language'
 import type { TLocale } from '@/types/locale'
 
@@ -29,18 +28,23 @@ export const HomeAboutPresenter: FC<THomeAboutPresenterProps> = ({ state: { loca
               height={630}
             />
           </div>
-          <div className="w-full lg:pl-10 lg:mt-0 lg:w-1/2">
-            <h1 className="mt-8 text-4xl font-medium text-gray-900 md:mt-4">
+          <div className="w-full lg:pl-16 lg:mt-0 lg:w-1/2">
+            <h1 className="mt-4 text-2xl font-medium text-gray-900 md:mt-8 md:text-4xl lg:mt-1">
               {language.page.homePage.section.about.title}
             </h1>
             <p className="mt-6 leading-8">{language.page.homePage.section.about.description}</p>
 
-            <Link href={`/${locale}/bears`}>
-              <a className="inline-flex items-center py-3 px-5 mx-1 mt-8 text-lg leading-5 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200 md:mx-0 md:mt-16">
-                <span>{language.page.homePage.section.about.buttonLabel}</span>
-                <Atoms.ArrowSmRightIcon className="ml-4 w-6 h-6" />
-              </a>
-            </Link>
+            <div className="flex justify-center mt-6 md:justify-start md:mt-6">
+              <Link href={`/${locale}/bears`}>
+                <a
+                  className="rounded-md transition-colors duration-200 md:w-fit md:mx-0 md:mt-6
+inline-flex items-center py-4 px-8 text-lg leading-5 text-center text-white bg-gradient-to-r from-neutral-700 to-neutral-800"
+                >
+                  <span className="mr-3">🐻</span>
+                  <span>{language.page.homePage.section.about.buttonLabel}</span>
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

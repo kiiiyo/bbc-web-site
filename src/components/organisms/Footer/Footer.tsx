@@ -83,6 +83,13 @@ export const FooterPresenter: FC<FooterPresenter> = ({ state: { language, menuLi
                   </Link>
                 </li>
                 <li className="mt-6">
+                  <Link href="https://www.tiktok.com/@bitbearclub">
+                    <a target="_blank" className="font-normal text-gray-600 hover:underline">
+                      <span className="inline-block">Tiktok</span>
+                    </a>
+                  </Link>
+                </li>
+                <li className="mt-6">
                   <Link href="https://linktr.ee/BitBearClub">
                     <a target="_blank" className="font-normal text-gray-600 hover:underline">
                       <span className="inline-block">Linktree</span>
