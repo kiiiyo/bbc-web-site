@@ -52,6 +52,8 @@ export const HomePagePresenter: FC<THomePageProps> = ({ state: { language } }) =
           }}
         />
         <Molecules.HomeAbout />
+        <Molecules.AvatarSeries />
+        <Molecules.GraffitiSeries />
       </Templates.GenericTemplate>
     </>
   )

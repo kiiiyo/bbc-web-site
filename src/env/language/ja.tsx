@@ -40,7 +40,7 @@ export const language: TLanguage = {
               彼らはとても表情豊か✨ で可愛い💕 やつらです。そんな彼らの様子を👀 見ていていってください。
             </>
           ),
-          buttonLabel: 'BitBearもっと知る'
+          buttonLabel: 'BitBearって？'
         },
         campaign: {
           title: '🎉 キャンペーン 🎉',
