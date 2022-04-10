@@ -36,7 +36,7 @@ export const FindSectionPresenter: FC<TFindSectionPresenterProps> = ({
             src="/assets/images/ogp-find.png"
             layout={'responsive'}
             width={1200}
-            height={630}
+            height={480}
           />
         </div>
         <div className="px-4 md:py-6 md:pl-10 md:mt-0 lg:w-3/5">
