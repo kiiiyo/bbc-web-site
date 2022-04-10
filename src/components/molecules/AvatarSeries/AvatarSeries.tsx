@@ -94,10 +94,9 @@ export const AvatarSeriesPresenter: FC = () => {
             </div>
 
             <div className="flex justify-center mt-16">
-              <Link href={'https://opensea.io/collection/bit-bear-club-avatar-series'}>
+              <Link href="https://opensea.io/collection/bit-bear-club-avatar-series">
                 <a
                   className="flex items-center py-2 px-4 mx-1 text-sm font-medium leading-5 text-center text-white bg-blue-500 hover:bg-blue-600 rounded-md transition-colors duration-200 md:mx-0"
-                  href="https://opensea.io/BitBearClub"
                   target="_blank"
                   rel="noreferrer"
                 >
