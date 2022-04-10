@@ -65,6 +65,10 @@ export const RoadmapSectionPresenter: FC<RoadmapSectionPresenterProps> = ({ stat
                 </h3>
                 <ul>
                   <li>{language.page.roadmapPage.section.q2.objectives[0]}</li>
+                  <li>{language.page.roadmapPage.section.q2.objectives[1]}</li>
+                  <li>{language.page.roadmapPage.section.q2.objectives[2]}</li>
+                  <li>{language.page.roadmapPage.section.q2.objectives[3]}</li>
+                  <li>{language.page.roadmapPage.section.q2.objectives[4]}</li>
                 </ul>
               </div>
             </div>
