@@ -135,6 +135,7 @@ export const language: TLanguage = {
             '🏃 NFT Bear Verse Service Launch',
             '🏃 Bit Bear Avatar Series NFT item 512 drop.',
             '🏃 Bit Bear Graffiti Series NFT item 64 drop.',
+            '🏃 Bit Bear PFPs Series NFT item 64 drop.',
             '🏃 OpenSea Volume Trade 0.1.'
           ]
         },
