@@ -37,7 +37,7 @@ export const RoadmapSectionPresenter: FC<RoadmapSectionPresenterProps> = ({ stat
                 <Atoms.FlagIcon className="w-5 h-5" />
               </div>
               <div className="grow pl-4">
-                <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">Q1</h2>
+                <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">1Q</h2>
                 <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">
                   {language.page.roadmapPage.section.q1.title}
                 </h3>
@@ -59,7 +59,7 @@ export const RoadmapSectionPresenter: FC<RoadmapSectionPresenterProps> = ({ stat
                 <Atoms.FlagIcon className="w-5 h-5" />
               </div>
               <div className="grow pl-4">
-                <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">Q2</h2>
+                <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">2Q</h2>
                 <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">
                   {language.page.roadmapPage.section.q2.title}
                 </h3>
@@ -80,7 +80,7 @@ export const RoadmapSectionPresenter: FC<RoadmapSectionPresenterProps> = ({ stat
                 <Atoms.FlagIcon className="w-5 h-5" />
               </div>
               <div className="grow pl-4">
-                <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">Q3</h2>
+                <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">3Q</h2>
                 <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">
                   {language.page.roadmapPage.section.q3.title}
                 </h3>
@@ -92,7 +92,7 @@ export const RoadmapSectionPresenter: FC<RoadmapSectionPresenterProps> = ({ stat
                 <Atoms.FlagIcon className="w-5 h-5" />
               </div>
               <div className="grow pl-4">
-                <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">Q4</h2>
+                <h2 className="mb-1 text-3xl font-bold tracking-wider text-gray-900">4Q</h2>
                 <h3 className="mb-1 text-xl font-bold tracking-wider text-gray-900">
                   {language.page.roadmapPage.section.q4.title}
                 </h3>
