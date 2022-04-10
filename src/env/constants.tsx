@@ -25,6 +25,12 @@ export const GLOBAL_MENU_LIST = {
       icon: '🏃',
       label: 'ロードマップ',
       path: '/ja/roadmap'
+    },
+    {
+      name: 'FIND',
+      icon: '🔍',
+      label: '探す',
+      path: '/ja/find'
     }
     // {
     //   name: 'GALLERY',
@@ -52,6 +58,12 @@ export const GLOBAL_MENU_LIST = {
       icon: '🏃',
       label: 'Roadmap',
       path: '/en/roadmap'
+    },
+    {
+      name: 'FIND',
+      icon: '🔍',
+      label: 'Find',
+      path: '/en/find'
     }
     // {
     //   name: 'GALLERY',

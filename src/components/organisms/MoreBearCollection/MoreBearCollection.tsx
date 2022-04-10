@@ -49,7 +49,7 @@ export const MoreBearCollectionPresenter: FC<TMoreBearCollectionPresenterProps> 
                         height={960}
                       />
 
-                      <div className="p-4 text-center">
+                      <div className="p-4">
                         <h2 className="text-xs font-medium tracking-widest text-gray-600">🐻 NAME</h2>
                         <h1 className="mt-2 font-bold text-gray-800 lg:text-lg">{name}</h1>
                       </div>
