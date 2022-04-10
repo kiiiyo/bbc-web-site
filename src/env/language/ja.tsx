@@ -121,17 +121,22 @@ export const language: TLanguage = {
         q1: {
           title: '期間: 1月 - 3月',
           objectives: [
-            '🎉  Bit Bear Club official site open .',
-            '🏃 Bit Bear Avatar Series NFT item 512 drop.',
-            '🏃 Bit Bear New Series NFT item 64 drop.',
-            '🏃 Twitter Follower 1000.',
-            '🏃 OpenSea Volume Trade 0.1.'
+            '🎉 Bit Bear Club official site open .',
+            '😂 Bit Bear Avatar Series NFT item 512 drop.',
+            '😂 Bit Bear New Series NFT item 64 drop.',
+            '🎉 Twitter Follower 1000.',
+            '😂 OpenSea Volume Trade 0.1.'
           ]
         },
         q2: {
           title: '期間: 4月 - 6月',
           // prettier-ignore
-          objectives: ['🤔 I\'m thinking about it.']
+          objectives: [
+            '🏃 NFT Bear Verse Service Launch',
+            '🏃 Bit Bear Avatar Series NFT item 512 drop.',
+            '🏃 Bit Bear Graffiti Series NFT item 64 drop.',
+            '🏃 OpenSea Volume Trade 0.1.'
+          ]
         },
         q3: {
           title: '期間: 7月 - 9月',
